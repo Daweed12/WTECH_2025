@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/html/account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/wishlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/all_products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/current_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login_register_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_address_deatils.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shopping_cart_address_deatils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shopping_cart_final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shopping_cart_payment_method.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shopping_cart_preview.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +36,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Data/VS/4.Semester/WTECH/WTECH_2025&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Data/VS/4.Semester/WTECH/WTECH_2025",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\css" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +74,9 @@
       <option name="presentableId" value="Default" />
       <updated>1741000211871</updated>
       <workItem from="1741000213144" duration="99000" />
-      <workItem from="1741000408805" duration="4480000" />
+      <workItem from="1741000408805" duration="5980000" />
+      <workItem from="1741092609237" duration="4866000" />
+      <workItem from="1741181912408" duration="7541000" />
     </task>
     <servers />
   </component>

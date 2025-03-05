@@ -1,0 +1,34 @@
+/* Štýly pre vyhľadávacie pole */
+.custom-search {
+    width: 250px; /* Normálna šírka */
+    padding: 5px 10px; /* Menší vertikálny padding */
+    height: 32px; /* Výška inputu */
+    font-size: 0.9rem; /* Menšie písmo */
+    border: 1px solid #ccc; /* Jemná sivá hranica */
+    border-radius: 5px; /* Zaoblené rohy */
+    transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Efekt pri kliknutí - rozšírenie a zmena farby hranice */
+.custom-search:focus {
+    outline: none; /* Odstránenie modrého obrysu */
+    box-shadow: none;
+    border-color: #007bff; /* Modrá hranica */
+}
+
+
+
+/* Úprava pozície */
+.search-form {
+    flex-grow: 1; /* Rozšíri input v rámci formy */
+    max-width: 300px; /* Maximálna šírka */
+    margin-left: 20px; /* Posunutie mierne doľava */
+}
+.sign-in-link {
+    font-size: 0.9rem; /* Menší text */
+    transition: transform 0.2s ease, color 0.2s ease; /* Plynulý efekt */
+}
+
+.sign-in-link:hover {
+    color: black;
+}

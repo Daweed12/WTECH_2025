@@ -1,0 +1,131 @@
+/* Štýly pre vyhľadávacie pole */
+.custom-search {
+    width: 250px; /* Normálna šírka */
+    padding: 5px 10px; /* Menší vertikálny padding */
+    height: 32px; /* Výška inputu */
+    font-size: 0.9rem; /* Menšie písmo */
+    border: 1px solid #ccc; /* Jemná sivá hranica */
+    border-radius: 5px; /* Zaoblené rohy */
+    transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Efekt pri kliknutí - rozšírenie a zmena farby hranice */
+.custom-search:focus {
+    outline: none; /* Odstránenie modrého obrysu */
+    box-shadow: none;
+    border-color: black; /* Modrá hranica */
+}
+
+/* Úprava pozície */
+.search-form {
+    max-width: 300px; /* Maximálna šírka */
+    margin-left: 0; /* Odstránenie posunutia doľava */
+    margin-right: 20px; /* Pridanie medzery medzi search a ikonami */
+}
+
+
+.sign-in-link {
+    font-size: 0.9rem; /* Menší text */
+    transition: transform 0.2s ease, color 0.2s ease; /* Plynulý efekt */
+}
+
+.sign-in-link:hover {
+    color: black;
+}
+
+/* Fixed Top Bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f8f9fa; /* Light gray background */
+    z-index: 1050; /* Higher than navbar */
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed Navbar (below top bar) */
+.navbar {
+    position: fixed;
+    top: 35px; /* Adjust based on top bar height */
+    left: 0;
+    width: 100%;
+    background: #7fecec;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent content from hiding behind fixed elements */
+body {
+    padding-top: 90px; /* Adjust for the height of both fixed elements */
+}
+
+/* Rectangular frame for images */
+.image-frame {
+    width: 100%; /* Full width of column */
+    height: 250px; /* Fixed height for all images */
+    overflow: hidden; /* Hide overflowing parts */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Optional: Light gray background */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Category images inside the frame */
+.category-image {
+    width: 100%; /* Fit width */
+    height: 100%;
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+/* Underline effect */
+.category-underline {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 5px auto;
+}
+
+.top-bar-image{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.category-button{
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Efekt pri hover - zmení farbu pozadia a mierne zdvihne tlačidlo */
+.category-button:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+}
+
+/* Efekt pri kliknutí - mierne zatlačenie tlačidla */
+.category-button:active {
+    transform: scale(0.95);
+}
+footer {
+    background-color: #f8f9fa; /* Nastaví farbu na celý footer */
+    width: 100%; /* Zabezpečí, že sa rozšíri cez celú stránku */
+    padding: 40px 0; /* Pridá padding hore a dole */
+}
+
+/* Footer content styling */
+.footer-custom {
+    max-width: 1200px; /* Obmedzí obsah na strednú šírku */
+    margin: 0 auto; /* Vycentruje obsah */
+    text-align: left; /* Zarovná text do stredu */
+}
+.logo{
+    font-size: 35px;
+}

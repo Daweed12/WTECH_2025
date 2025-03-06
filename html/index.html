@@ -10,18 +10,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="container-fluid bg-light py-2">
+<!-- SIGN IN TOP BAR -->
+<div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
         <a href="#" class="nav-link small sign-in-link">Sign In / Sign Up</a>
     </div>
 </div>
 
-<nav class="navbar navbar-expand" style="background: #7fecec">
-    <div class="container">
+<!--NAVIGATION BAR -->
+<nav class="navbar navbar-expand">
+    <div class="container d-flex w-100 justify-content-between">
         <!-- Logo -->
         <a href="#" class="navbar-brand" style="color: black"><b>NYX</b></a>
 
@@ -42,9 +44,10 @@
         </ul>
 
         <!-- Vyhľadávacie pole upravené podľa požiadaviek -->
-        <form class="d-flex mx-auto search-form">
+        <form class="d-flex ms-auto search-form">
             <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
         </form>
+
 
         <!-- Ikony zarovnané na pravú stranu -->
         <ul class="navbar-nav ms-auto">
@@ -66,6 +69,87 @@
         </ul>
     </div>
 </nav>
+
+<!-- MAIN BAR IMAGE-->
+<div class="top-bar-image">
+    <img src="/html/images/banner_image.jpg" alt="Product Image" class="img-fluid">
+</div>
+
+<hr>
+<!-- CATEGORIES -->
+<section class="container my-5">
+    <div class="row text-center">
+        <!-- Necklaces -->
+        <div class="col-md-3">
+            <a href="#" class="category-button">
+                <div class="image-frame">
+                    <img src="images/necklace_category.jpg" alt="Necklaces" class="category-image">
+                </div>
+                <br>
+                <h4>Necklaces</h4>
+                <span class="category-underline"></span>
+            </a>
+        </div>
+
+        <!-- Earrings -->
+        <div class="col-md-3">
+            <a href="#" class="category-button">
+                <div class="image-frame">
+                    <img src="images/earrings_category.jpg" alt="Earrings" class="category-image">
+                </div>
+                <br>
+                <h4>Earrings</h4>
+                <span class="category-underline"></span>
+            </a>
+        </div>
+
+        <!-- Bracelets -->
+        <div class="col-md-3">
+            <a href="#" class="category-button">
+                <div class="image-frame">
+                    <img src="images/bracelet_category.jpg" alt="Bracelets" class="category-image">
+                </div>
+                <br>
+                <h4>Bracelets</h4>
+                <span class="category-underline"></span>
+            </a>
+        </div>
+
+        <!-- Rings -->
+        <div class="col-md-3">
+            <a href="#" class="category-button">
+                <div class="image-frame">
+                    <img src="images/ring_category.jpg" alt="Rings" class="category-image">
+                </div>
+                <br>
+                <h4>Rings</h4>
+                <span class="category-underline"></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<hr>
+<!-- MAIN BAR IMAGE-->
+<div class="top-bar-image">
+    <img src="/html/images/banner_image2.jpg" alt="Product Image" class="img-fluid">
+</div>
+
+</div>
+
+
+<footer>
+    <section class="container my-5 footer-custom">
+        <p class = "logo"><b>NYX</b></p>
+        <p> Sparkle, elegance, and timeless beauty – jewelry <br>
+            that tells your unique story and shines <br>
+            in every precious moment of your life
+        </p>
+        <p>contacts</p>
+        <hr>
+        <p>© nyx. all rights reserved.</p>
+    </section>
+</footer>
 
 </body>
 </html>

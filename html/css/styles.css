@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
 /* Štýly pre vyhľadávacie pole */
 .custom-search {
     width: 250px; /* Normálna šírka */
@@ -51,9 +58,12 @@
     top: 35px; /* Adjust based on top bar height */
     left: 0;
     width: 100%;
-    background: #7fecec;
+    background: #9de6ff;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: bold;
 }
 
 /* Prevent content from hiding behind fixed elements */
@@ -114,18 +124,104 @@ body {
 .category-button:active {
     transform: scale(0.95);
 }
+/* Footer */
 footer {
-    background-color: #f8f9fa; /* Nastaví farbu na celý footer */
-    width: 100%; /* Zabezpečí, že sa rozšíri cez celú stránku */
-    padding: 40px 0; /* Pridá padding hore a dole */
+    background-color: #919191;
+    color: #ffffff;
+    padding: 2rem 0;
 }
-
-/* Footer content styling */
-.footer-custom {
-    max-width: 1200px; /* Obmedzí obsah na strednú šírku */
-    margin: 0 auto; /* Vycentruje obsah */
-    text-align: left; /* Zarovná text do stredu */
+footer .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+footer hr {
+    border: 1px solid #ced4da;
 }
 .logo{
     font-size: 35px;
+}
+
+.signin-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+hr {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.form-label {
+    font-weight: bold;
+}
+.btn-signin {
+    width: 100%;
+    background-color: #868e96;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.btn-signin:hover {
+    background-color: #6c757d;
+}
+
+/* Account section */
+.account-section {
+    padding: 2rem 0;
+}
+.account-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.account-section hr {
+    margin-bottom: 1.5rem;
+}
+.account-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Forms layout: two columns side by side */
+.form-divider {
+    border-right: 1px solid #ccc;
+}
+
+/* Form labels and inputs */
+.account-section form label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+.account-section input[type=text],
+.account-section input[type=password],
+.account-section input[type=email] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: #9da5ab;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.btn-custom:hover {
+    background-color: #7d8388;
 }

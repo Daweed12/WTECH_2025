@@ -225,3 +225,26 @@ hr {
 .btn-custom:hover {
     background-color: #7d8388;
 }
+/* DAVID VACH css*/
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.final-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}

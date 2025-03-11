@@ -1,43 +1,150 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NYX</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYX - Paying Method</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<!-- SIGN IN TOP BAR -->
+<div class="container-fluid bg-light py-2 top-bar">
+    <div class="container d-flex justify-content-end align-items-center">
+        <a href="login_register_user.html" class="nav-link small sign-in-link">Sign In / Sign Up</a>
+    </div>
+</div>
 
-<a href="login_register_user.html" target="_self">
-    <p>Sign In / Sign Up</p>
-</a>
-<a href="index.html" target="_self">
-    <h1>NYX</h1>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>NECKLACES</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>RINGS</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>BRACELETS</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>EARINGS</h4>
-</a>
-<p>SEARCH</p>
-<a href="wishlist.html" target="_self">
-    <p>HEART</p>
-</a>
-<a href="account.html" target="_self">
-    <p>PROFIL</p>
-</a>
-<a href="shopping_cart_preview.html" target="_self">
-    <p>SHOPPING_CART</p>
-</a>
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #89e5fa;">
+    <div class="container d-flex w-100 justify-content-between">
+        <a href="index.html" class="navbar-brand text-dark"><b>NYX</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="categoriesMenu">
+            <ul class="navbar-nav d-flex justify-content-start">
+                <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center ms-auto">
+            <form class="d-flex me-3">
+                <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <a href="#" class="nav-link me-2"><i class="fa-solid fa-heart"></i></a>
+            <a href="#" class="nav-link me-2"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+</nav>
 
+<!-- MAIN CONTENT: PAYING METHOD -->
+<main class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-3">Paying Method</h2>
+            <p class="text-muted">
+                Progress of paying: <i>cart preview, address & shipping </i>, <b>Payment </b>, <i>order review</i>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <!-- LEFT COLUMN: DELIVERY METHOD SELECTION -->
+        <div class="col-lg-8 mb-5">
+            <h4 class="mb-3">Choose delivery method</h4>
+            <form>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method1" value="Card online" checked>
+                        <label for="method1" class="form-check-label">Card online</label>
+                    </div>
+                    <span>$0</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method2" value="Payment in cash/card to courier">
+                        <label for="method2" class="form-check-label">Payment in cash / card to courier</label>
+                    </div>
+                    <span>$2.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method3" value="GoPay">
+                        <label for="method3" class="form-check-label">GoPay</label>
+                    </div>
+                    <span>$1.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method4" value="PayPal">
+                        <label for="method4" class="form-check-label">PayPal</label>
+                    </div>
+                    <span>$0.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method5" value="Tatrabanka app">
+                        <label for="method5" class="form-check-label">Tatrabanka app</label>
+                    </div>
+                    <span>$0.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input me-2" type="radio" name="deliveryMethod" id="method6" value="Packeta">
+                        <label for="method6" class="form-check-label">Packeta</label>
+                    </div>
+                    <span>$4.99</span>
+                </div>
+                <div class="mt-4">
+                    <a href="shopping_cart_address_details.html" class="btn btn-secondary me-3">Back to address</a>
+                    <a href="shopping_cart_final.html" class="btn btn-primary">Confirm</a>
+                </div>
+            </form>
+        </div>
+        <!-- RIGHT COLUMN: ORDER SUMMARY -->
+        <div class="col-lg-4">
+            <div class="border p-4">
+                <h4 class="mb-3">Order Summary</h4>
+                <div class="mb-2 d-flex justify-content-between"><span>Item 1</span><span>$99</span></div>
+                <div class="mb-2 d-flex justify-content-between"><span>Item 2</span><span>$120</span></div>
+                <div class="mb-2 d-flex justify-content-between"><span>Item 3</span><span>$50</span></div>
+                <hr>
+                <div class="mb-2 d-flex justify-content-between"><span>Subtotal</span><span>$269</span></div>
+                <div class="mb-2 d-flex justify-content-between"><span>Shipping</span><span>$10</span></div>
+                <div class="mb-2 d-flex justify-content-between"><span>Taxes</span><span>$5</span></div>
+                <div class="mb-2 d-flex justify-content-between"><span>Discount</span><span>-$20</span></div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold"><span>Total</span><span>$264</span></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <section class="container footer-custom">
+        <p class="logo">NYX</p>
+        <p>
+            Sparkle, elegance, and timeless beauty – jewelry <br>
+            that tells your unique story and shines <br>
+            in every precious moment of your life
+        </p>
+        <p>contacts</p>
+        <hr>
+        <p>© nyx. all rights reserved.</p>
+    </section>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

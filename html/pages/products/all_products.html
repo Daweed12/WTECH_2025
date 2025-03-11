@@ -3,41 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          content="width=device-width, initial-scale=1.0">
     <title>NYX</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+    >
+    <!-- Font Awesome Icons -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #89e5fa;">
+    <div class="container d-flex w-100 justify-content-between">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-brand text-dark"><b>NYX</b></a>
 
-<a href="../login_register/login_register_user.html" target="_self">
-    <p>Sign In / Sign Up</p>
-</a>
-<a href="../home/index.html" target="_self">
-    <h1>NYX</h1>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>NECKLACES</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>RINGS</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>BRACELETS</h4>
-</a>
-<a href="all_products.html" target="_self">
-    <h4>EARINGS</h4>
-</a>
-<p>SEARCH</p>
-<a href="../wishlist/wishlist.html" target="_self">
-    <p>HEART</p>
-</a>
-<a href="../account/account.html" target="_self">
-    <p>PROFIL</p>
-</a>
-<a href="../shopping_cart/preview/shopping_cart_preview.html" target="_self">
-    <p>SHOPPING_CART</p>
-</a>
+        <!-- Hamburger toggler on the left for categories only -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#categoriesMenu"
+                aria-controls="categoriesMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Category Links -->
+        <div class="collapse navbar-collapse" id="categoriesMenu">
+            <ul class="navbar-nav d-flex justify-content-start">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">SHOP ALL</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">NECKLACES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">RINGS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">EARINGS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">BRACELETS</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Search Bar and Icons remain always visible -->
+        <div class="d-flex align-items-center ms-auto">
+            <form class="d-flex me-3">
+                <input
+                        class="form-control custom-search"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                >
+            </form>
+            <a href="#" class="nav-link me-2">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="nav-link me-2">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </div>
+</nav>
 
 </body>
 </html>

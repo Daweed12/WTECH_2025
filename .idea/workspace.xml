@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="index_working">
-      <change afterPath="$PROJECT_DIR$/html/pages/account/account.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/home/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/login_register/login_register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/product/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" afterDir="false" />
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="ordering pages + making individual css">
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741375717938</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ordering pages + making individual css">
+      <option name="closed" value="true" />
+      <created>1741688705469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741688705469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +141,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="index_working" />
-    <option name="LAST_COMMIT_MESSAGE" value="index_working" />
+    <MESSAGE value="ordering pages + making individual css" />
+    <option name="LAST_COMMIT_MESSAGE" value="ordering pages + making individual css" />
   </component>
 </project>

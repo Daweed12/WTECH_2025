@@ -24,29 +24,65 @@
 <!-- NAVIGATION BAR -->
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #89e5fa;">
     <div class="container d-flex w-100 justify-content-between">
-        <a href="../home/index.html" class="navbar-brand text-dark"><b>NYX</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-brand text-dark"><b>NYX</b></a>
+
+        <!-- Hamburger toggler on the left for categories only -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#categoriesMenu"
+                aria-controls="categoriesMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Collapsible Category Links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">SHOP ALL</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">NECKLACES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">RINGS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">EARINGS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">BRACELETS</a>
+                </li>
             </ul>
         </div>
+
+        <!-- Search Bar and Icons remain always visible -->
         <div class="d-flex align-items-center ms-auto">
             <form class="d-flex me-3">
-                <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
+                <input
+                        class="form-control custom-search"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                >
             </form>
-            <a href="#" class="nav-link me-2"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="nav-link me-2"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" class="nav-link me-2">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="nav-link me-2">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
         </div>
     </div>
 </nav>
-
 <!-- MAIN CONTENT: ADMIN MODE -->
 <main class="container my-5">
     <div class="row">

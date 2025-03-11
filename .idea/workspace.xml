@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="index_working">
+      <change afterPath="$PROJECT_DIR$/html/pages/account/account.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/home/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/login_register/login_register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/product/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +41,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,26 +56,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Data/VS/4.Semester/WTECH/WTECH_2025&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Data/VS/4.Semester/WTECH/WTECH_2025",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\css" />
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html" />
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\css" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\preview" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\payment_method" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\final" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\sc_address_details" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\wishlist" />
     </key>
   </component>
   <component name="SharedIndexes">

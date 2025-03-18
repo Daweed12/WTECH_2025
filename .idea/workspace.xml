@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="updating navbar + adding SHOP ALL">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="updating navbar: adding href to home page + updating css for categories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/address_details/shopping_cart_address_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/final/shopping_cart_final.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/preview/shopping_cart_preview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +27,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "C:/Data/VS/4.Semester/WTECH/WTECH_2025",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Data/VS/4.Semester/WTECH/WTECH_2025&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\preview" />
@@ -97,6 +93,10 @@
       <workItem from="1741375028191" duration="1930000" />
       <workItem from="1741557416548" duration="98000" />
       <workItem from="1741558242980" duration="4107000" />
+      <workItem from="1741698204267" duration="5591000" />
+      <workItem from="1741712573797" duration="83000" />
+      <workItem from="1742164216112" duration="581000" />
+      <workItem from="1742294405504" duration="3492000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -122,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741689152738</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updating navbar: adding href to home page + updating css for categories">
+      <option name="closed" value="true" />
+      <created>1741693884819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741693884819</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +163,7 @@
     <MESSAGE value="index_working" />
     <MESSAGE value="ordering pages + making individual css" />
     <MESSAGE value="updating navbar + adding SHOP ALL" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating navbar + adding SHOP ALL" />
+    <MESSAGE value="updating navbar: adding href to home page + updating css for categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating navbar: adding href to home page + updating css for categories" />
   </component>
 </project>

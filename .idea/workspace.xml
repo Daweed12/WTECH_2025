@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="updating navbar: adding href to home page + updating css for categories">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="all_product_page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/wishlist/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +94,8 @@
       <workItem from="1741698204267" duration="5591000" />
       <workItem from="1741712573797" duration="83000" />
       <workItem from="1742164216112" duration="581000" />
-      <workItem from="1742294405504" duration="3492000" />
+      <workItem from="1742294405504" duration="3800000" />
+      <workItem from="1742303024501" duration="3386000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -130,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741693884819</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="all_product_page">
+      <option name="closed" value="true" />
+      <created>1742298472978</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742298472978</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +171,7 @@
     <MESSAGE value="ordering pages + making individual css" />
     <MESSAGE value="updating navbar + adding SHOP ALL" />
     <MESSAGE value="updating navbar: adding href to home page + updating css for categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating navbar: adding href to home page + updating css for categories" />
+    <MESSAGE value="all_product_page" />
+    <option name="LAST_COMMIT_MESSAGE" value="all_product_page" />
   </component>
 </project>

@@ -1,0 +1,86 @@
+/* Kontajner pre celý produkt */
+.product-container {
+    width: 300px;               /* Môžeš upraviť podľa potreby */
+    margin: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+/* Rámik a pozadie obrázka */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;     /* Jemné orámovanie obrázka */
+    border-radius: 4px;         /* Zaoblené rohy (voliteľné) */
+}
+
+/* Samotný obrázok */
+.product-image {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Prispôsobí obrázok, aby vyplnil celý blok */
+    transition: transform 0.5s ease;
+}
+.product-image:hover {
+    transform: scale(1.1); /* Zväčší obrázok pri hoveri */
+}
+
+/* Štítok "SOLD OUT" v pravom hornom rohu */
+.sold-out-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #000;     /* Farba pozadia pre badge */
+    color: #fff;                /* Farba textu v badge */
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Názov produktu */
+.product-title {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    letter-spacing: 1px;
+}
+
+/* Cena produktu */
+.product-price {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Štítok DPH */
+.tax {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 5px;
+}
+.products-grid {
+    display: grid;             /* Aktivuje CSS Grid */
+    gap: 20px;                 /* Medzera medzi bunkami gridu */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /*
+      repeat(auto-fill, minmax(250px, 1fr)) znamená:
+      - vytvor toľko stĺpcov, koľko sa zmestí (auto-fill)
+      - každý stĺpec má minimálnu šírku 250px a maximálne sa natiahne na 1fr (flexibilný zlomok)
+    */
+}
+.products-wrapper {
+    display: flex;        /* Aktivuje Flexbox */
+    flex-wrap: wrap;      /* Umožní zalamovanie do nového riadku, keď nie je miesto */
+    gap: 20px;            /* Medzera medzi prvkami */
+    justify-content: center; /* Zarovnanie doľava; môžeš zmeniť na center, space-between, atď. */
+    padding: 20px;        /* Nepovinné, ak chceš vnútorný okraj */
+}
+.btn-pos {
+    display: block;
+    width: 150px; /* Pevná šírka tlačidla */
+    margin: 20px auto; /* Auto zarovná tlačidlo na stred */
+    text-align: center;
+
+}
+

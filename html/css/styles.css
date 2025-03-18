@@ -1,3 +1,4 @@
+/* Body base styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
@@ -5,54 +6,54 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Štýly pre vyhľadávacie pole */
+
+/* Search input styling */
 .custom-search {
-    width: 250px; /* Normálna šírka */
-    padding: 5px 10px; /* Menší vertikálny padding */
-    height: 32px; /* Výška inputu */
-    font-size: 0.9rem; /* Menšie písmo */
-    border: 1px solid #ccc; /* Jemná sivá hranica */
-    border-radius: 5px; /* Zaoblené rohy */
+    width: 250px; /* Normal width */
+    padding: 5px 10px;
+    height: 32px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* Efekt pri kliknutí - rozšírenie a zmena farby hranice */
+/* Search input focus effect */
 .custom-search:focus {
-    outline: none; /* Odstránenie modrého obrysu */
+    outline: none;
     box-shadow: none;
-    border-color: black; /* Modrá hranica */
+    border-color: black;
 }
 
-/* Úprava pozície */
+/* Search form positioning */
 .search-form {
-    max-width: 300px; /* Maximálna šírka */
-    margin-left: 0; /* Odstránenie posunutia doľava */
-    margin-right: 20px; /* Pridanie medzery medzi search a ikonami */
+    max-width: 300px;
+    margin-left: 0;
+    margin-right: 20px;
 }
 
-
+/* Sign-in link styling */
 .sign-in-link {
-    font-size: 0.9rem; /* Menší text */
-    transition: transform 0.2s ease, color 0.2s ease; /* Plynulý efekt */
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
-
 .sign-in-link:hover {
     color: black;
 }
 
-/* Fixed Top Bar */
+/* Fixed top bar */
 .top-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #f8f9fa; /* Light gray background */
-    z-index: 1050; /* Higher than navbar */
+    background: #f8f9fa;
+    z-index: 1050;
     padding: 8px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed Navbar (below top bar) */
+/* Fixed navbar below the top bar */
 .navbar {
     position: fixed;
     top: 35px; /* Adjust based on top bar height */
@@ -68,63 +69,72 @@ body {
 
 /* Prevent content from hiding behind fixed elements */
 body {
-    padding-top: 90px; /* Adjust for the height of both fixed elements */
+    padding-top: 90px; /* Adjust for the combined height of both fixed elements */
 }
 
-/* Rectangular frame for images */
+/* Container to frame images */
 .image-frame {
-    width: 100%; /* Full width of column */
-    height: 250px; /* Fixed height for all images */
-    overflow: hidden; /* Hide overflowing parts */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5; /* Optional: Light gray background */
-    border-radius: 10px; /* Optional: Rounded corners */
-}
-
-/* Category images inside the frame */
-.category-image {
-    width: 100%; /* Fit width */
-    height: 100%;
-    object-fit: cover; /* Cover the area without distortion */
-}
-
-/* Underline effect */
-.category-underline {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    margin: 5px auto;
-}
-
-.top-bar-image{
+    position: relative; /* Important for absolute positioning of the overlay */
     width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    background-color: #f5f5f5;
 }
-.category-button{
+
+.image-frame-shop {
+    position: relative; /* Important for absolute positioning of the overlay */
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+/* Category images */
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom effect on hover */
+}
+
+/* The overlay text container (initially hidden at the bottom) */
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    padding: 15px;
+    transform: translateY(100%); /* Starts off hidden below the frame */
+    transition: transform 0.5s ease;
+}
+
+/* Category button styling (the link that wraps the image and overlay) */
+.category-button {
     display: block;
     text-decoration: none;
     color: black;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-/* Efekt pri hover - zmení farbu pozadia a mierne zdvihne tlačidlo */
-.category-button:hover {
-    background-color: #f8f9fa;
-    transform: scale(1.05);
+    overflow: hidden; /* Important to clip the zooming image within the container */
 }
 
-/* Efekt pri kliknutí - mierne zatlačenie tlačidla */
-.category-button:active {
-    transform: scale(0.95);
+/* On hover, zoom the image and slide up the overlay text */
+.category-button:hover .category-image {
+    transform: scale(1.1);
 }
-/* Footer */
+.category-button:hover .category-overlay {
+    transform: translateY(0);
+}
+
+/* Footer styling */
 footer {
     background-color: #919191;
     color: #ffffff;
@@ -137,10 +147,11 @@ footer .logo {
 footer hr {
     border: 1px solid #ced4da;
 }
-.logo{
+.logo {
     font-size: 35px;
 }
 
+/* Sign-in container */
 .signin-container {
     max-width: 400px;
     margin: 50px auto;
@@ -174,7 +185,7 @@ hr {
     background-color: #6c757d;
 }
 
-/* Account section */
+/* Account section styling */
 .account-section {
     padding: 2rem 0;
 }
@@ -190,13 +201,9 @@ hr {
     margin-bottom: 1rem;
     font-weight: bold;
 }
-
-/* Forms layout: two columns side by side */
 .form-divider {
     border-right: 1px solid #ccc;
 }
-
-/* Form labels and inputs */
 .account-section form label {
     font-weight: 500;
     margin-bottom: 0.3rem;
@@ -212,7 +219,7 @@ hr {
     border-radius: 4px;
 }
 
-/* Buttons */
+/* Custom button styling */
 .btn-custom {
     background-color: #9da5ab;
     color: #fff;
@@ -225,7 +232,8 @@ hr {
 .btn-custom:hover {
     background-color: #7d8388;
 }
-/* DAVID VACH css*/
+
+/* Avatar container */
 .avatar-container {
     width: 150px;
     height: 150px;
@@ -233,7 +241,6 @@ hr {
     overflow: hidden;
     margin: 0 auto;
 }
-
 .avatar-img {
     width: 100%;
     height: 100%;
@@ -241,6 +248,7 @@ hr {
     display: block;
 }
 
+/* Final large image style */
 .final-image {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

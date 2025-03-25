@@ -21,6 +21,16 @@
     >
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Voliteľný inline CSS pre ukážku -->
+    <style>
+        /* Len príklad, ak chceš mať input trochu širší a vycentrovaný text */
+        .quantity-spin-only {
+            width: 60px;          /* uprav podľa potreby */
+            text-align: center;   /* číslo bude zarovnané na stred */
+            margin-left: 0.5rem;  /* menšia medzera od textu "Quantity:" */
+        }
+    </style>
 </head>
 <body>
 
@@ -28,7 +38,7 @@
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
         <a href="../../login_register/login_register_user.html" class="nav-link small sign-in-link">
-            Sign In / Sign Up
+            Welcome, Adriana Dobrovnik!
         </a>
     </div>
 </div>
@@ -95,6 +105,7 @@
         </div>
     </div>
 </nav>
+
 <!-- OBSAH STRÁNKY (SHOPPING CART) -->
 <main class="container my-5">
     <!-- HLAVIČKA KOŠÍKA -->
@@ -115,40 +126,61 @@
             <!-- Prvý produkt -->
             <div class="row mb-4">
                 <div class="col-md-3">
-                    <div class="image-frame-shop">
-                        <img
-                                src="../../../images/example_product_image.jpg"
-                                alt="Picture of item"
-                                class="category-image"
-                        >
-                    </div>
+                    <img
+                            src="../../../images/product1.jpg"
+                            alt="Picture of item"
+                            class="img-fluid"
+                    >
                 </div>
                 <div class="col-md-9">
-                    <h5>NAME_OF_ITEM</h5>
+                    <h5>PRODUCT 1</h5>
                     <p class="mb-1">Size: <span>L</span></p>
                     <p class="mb-1">Colour: <span>Gold</span></p>
-                    <p class="mb-1">PRICE_FOR_ALL_ITEMS: <span>$99</span></p>
-                    <p class="mb-1">QUANTITY: <span>1</span></p>
+                    <p class="mb-1">Price: <span>$99.99</span></p>
+                    <p class="mb-1">
+                        Quantity:
+                        <!-- Iba spin arrow, žiadne písanie -->
+                        <input
+                                type="number"
+                                class="quantity-spin-only"
+                                value="4"
+                                min="1"
+                                onkeydown="return false;"
+                                onkeypress="return false;"
+                                onpaste="return false;"
+                                ondrop="return false;"
+                        >
+                    </p>
                 </div>
             </div>
 
             <!-- Druhý produkt -->
             <div class="row mb-4">
                 <div class="col-md-3">
-                    <div class="image-frame-shop">
-                        <img
-                                src="../../../images/example_product_image.jpg"
-                                alt="Picture of item"
-                                class="category-image"
-                        >
-                    </div>
+                    <img
+                            src="../../../images/product5.jpg"
+                            alt="Picture of item"
+                            class="img-fluid"
+                    >
                 </div>
                 <div class="col-md-9">
-                    <h5>NAME_OF_ITEM_2</h5>
+                    <h5>PRODUCT 2</h5>
                     <p class="mb-1">Size: <span>M</span></p>
                     <p class="mb-1">Colour: <span>Silver</span></p>
-                    <p class="mb-1">PRICE_FOR_ALL_ITEMS: <span>$120</span></p>
-                    <p class="mb-1">QUANTITY: <span>2</span></p>
+                    <p class="mb-1">Price: <span>$120</span></p>
+                    <p class="mb-1">
+                        Quantity:
+                        <input
+                                type="number"
+                                class="quantity-spin-only"
+                                value="2"
+                                min="1"
+                                onkeydown="return false;"
+                                onkeypress="return false;"
+                                onpaste="return false;"
+                                ondrop="return false;"
+                        >
+                    </p>
                 </div>
             </div>
         </div>
@@ -159,7 +191,7 @@
                 <h4 class="mb-3">Summary</h4>
                 <div class="mb-3 d-flex justify-content-between">
                     <span>Subtotal:</span>
-                    <span class="fw-bold">$219</span>
+                    <span class="fw-bold">$219.99</span>
                 </div>
                 <div class="mb-3">
                     <label for="promoCode" class="form-label">Promo Code</label>
@@ -185,51 +217,55 @@
     <!-- BEST SELLERS -->
     <div class="row mt-5">
         <h3 class="mb-4">Best Sellers</h3>
+
         <!-- Prvý bestseller produkt -->
-        <div class="col-md-3 text-center mb-4">
-            <a href="#" class="category-button">
+        <div class="col-md-3 mb-4">
+            <a href="#" class="text-decoration-none text-dark">
                 <div class="image-frame-shop">
                     <img
-                            src="../../../images/banner_image.jpg"
+                            src="../../../images/product8.jpg"
                             alt="Bestseller 1"
                             class="category-image"
                     >
                 </div>
-                <p class="mt-2">Product name</p>
-                <p class="text-muted">$99</p>
+                <p class="mt-2">Necklace 1</p>
+                <p class="text-muted">79.99 $</p>
             </a>
         </div>
+
         <!-- Druhý bestseller produkt -->
-        <div class="col-md-3 text-center mb-4">
-            <a href="#" class="category-button">
+        <div class="col-md-3 mb-4">
+            <a href="#" class="text-decoration-none text-dark">
                 <div class="image-frame-shop">
                     <img
-                            src="../../../images/banner_image.jpg"
+                            src="../../../images/product7.jpg"
                             alt="Bestseller 2"
                             class="category-image"
                     >
                 </div>
-                <p class="mt-2">Product name</p>
-                <p class="text-muted">$99</p>
+                <p class="mt-2">Necklace 2</p>
+                <p class="text-muted">199.99$</p>
             </a>
         </div>
+
         <!-- Tretí bestseller produkt -->
-        <div class="col-md-3 text-center mb-4">
-            <a href="#" class="category-button">
+        <div class="col-md-3 mb-4">
+            <a href="#" class="text-decoration-none text-dark">
                 <div class="image-frame-shop">
                     <img
-                            src="../../../images/banner_image.jpg"
+                            src="../../../images/product4.jpg"
                             alt="Bestseller 3"
                             class="category-image"
                     >
                 </div>
-                <p class="mt-2">Product name</p>
-                <p class="text-muted">$99</p>
+                <p class="mt-2">Bracelet 1</p>
+                <p class="text-muted">39.99 $</p>
             </a>
         </div>
+
         <!-- Štvrtý bestseller produkt -->
-        <div class="col-md-3 text-center mb-4">
-            <a href="#" class="category-button">
+        <div class="col-md-3 mb-4">
+            <a href="#" class="text-decoration-none text-dark">
                 <div class="image-frame-shop">
                     <img
                             src="../../../images/banner_image.jpg"
@@ -237,8 +273,8 @@
                             class="category-image"
                     >
                 </div>
-                <p class="mt-2">Product name</p>
-                <p class="text-muted">$99</p>
+                <p class="mt-2">Neklace 3</p>
+                <p class="text-muted">99.99 $</p>
             </a>
         </div>
     </div>
@@ -268,6 +304,3 @@
 
 </body>
 </html>
-
-
-

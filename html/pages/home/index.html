@@ -76,9 +76,6 @@
         <div class="d-flex align-items-center ms-auto">
             <form class="d-flex me-3">
                 <input
-                        NYX
-
-                        Search
                         class="form-control custom-search"
                         type="search"
                         placeholder="Search"
@@ -91,8 +88,20 @@
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
+
+            <!-- Košík s červeným badge -->
+            <a href="../shopping_cart/preview/shopping_cart_preview.html"
+               class="nav-link position-relative"
+            >
                 <i class="fa-solid fa-cart-shopping"></i>
+                <!-- Badge s číslom -->
+                <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.8rem;"
+                >
+                    2
+                    <span class="visually-hidden">items in cart</span>
+                </span>
             </a>
         </div>
     </div>
@@ -112,7 +121,6 @@
 <!-- CATEGORIES -->
 <section class="container my-5">
     <div class="row text-center">
-
         <!-- Necklaces -->
         <div class="col-md-3">
             <a href="#" class="category-button">
@@ -177,10 +185,8 @@
                 </div>
             </a>
         </div>
-
     </div>
 </section>
-
 
 <hr>
 

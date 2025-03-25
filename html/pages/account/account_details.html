@@ -21,6 +21,14 @@
     >
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="../../css/styles.css">
+
+    <style>
+        /* Príklad zmenšenia badge */
+        .small-badge {
+            font-size: 0.7rem;     /* zmenši text */
+            padding: 0.2em 0.4em;  /* zmenši vnútorné odsadenie */
+        }
+    </style>
 </head>
 <body>
 
@@ -28,7 +36,7 @@
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
         <a href="../login_register/login_register_user.html" class="nav-link small sign-in-link">
-            Sign In / Sign Up
+            Welcome, Adrianna Dobrovnik
         </a>
     </div>
 </div>
@@ -89,8 +97,14 @@
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
+
+            <!-- Ikonka košíka s menším badge -->
+            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger small-badge">
+                    2
+                    <span class="visually-hidden">items in cart</span>
+                </span>
             </a>
         </div>
     </div>

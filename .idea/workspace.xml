@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="updating pages">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="updatinc css + filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/slider.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -97,6 +98,7 @@
       <workItem from="1742303024501" duration="3386000" />
       <workItem from="1742313480574" duration="898000" />
       <workItem from="1742890161975" duration="4868000" />
+      <workItem from="1742924117138" duration="2987000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

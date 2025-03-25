@@ -9,7 +9,7 @@ body {
 
 /* Search input styling */
 .custom-search {
-    width: 250px; /* Normal width */
+    width: 100%; /* Normal width */
     padding: 5px 10px;
     height: 32px;
     font-size: 0.9rem;

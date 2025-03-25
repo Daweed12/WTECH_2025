@@ -96,3 +96,106 @@
     background-color: #fff;
 }
 
+/* Overlay stmavenie stránky */
+/* základný štýl (pre desktop/tablet) */
+#filterSidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    transition: right 0.3s ease;
+    z-index: 2001; /* už upravené */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Prekrytie stránky */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 2000; /* už upravené */
+}
+
+/* ========== MOBILNÉ ZOBRAZENIE ========== */
+@media screen and (max-width: 768px) {
+    #filterSidebar {
+        width: 100%;          /* Na mobile šírka 100% */
+        right: -100%;         /* defaultne skrytý napravo */
+    }
+
+    /* keď je aktívny, bude mať right: 0 nastavené JavaScriptom */
+}
+
+
+/* Hlavička sidebaru */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Zatváracie tlačidlo */
+.close-filter {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px); /* scrollovateľný obsah ak je príliš dlhý */
+    padding-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.btn-apply-filter {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.btn-apply-filter:hover {
+    background-color: #333;
+}
+.price-input{
+    display: flex;
+    width: 100%;
+}
+.price-input .field{
+
+}
+.field .input{
+    width: 100%;
+    text-align: center;
+    background: red;
+}
+
+

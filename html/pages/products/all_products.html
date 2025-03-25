@@ -222,6 +222,76 @@
 <a href="all_products.html" class="btn btn-primary btn-custom btn-pos">
     Load more
 </a>
+<!-- Overlay stmavenie -->
+<div id="overlay" onclick="closeFilter()"></div>
+
+<!-- Sidebar filter -->
+<div id="filterSidebar">
+    <div class="filter-header">
+        <span class="close-filter" onclick="closeFilter()">&times;</span>
+        <h2>Filter</h2>
+    </div>
+    <!-- sem pôjdu tvoje filtre -->
+    <div class="filter-content">
+
+        <!-- Category filter -->
+        <div class="filter-group">
+            <h5>Category</h5>
+            <label><input type="checkbox" value="necklaces"> Necklaces</label><br>
+            <label><input type="checkbox" value="rings"> Rings</label><br>
+            <label><input type="checkbox" value="earrings"> Earrings</label><br>
+            <label><input type="checkbox" value="bracelets"> Bracelets</label>
+        </div>
+        <hr>
+
+        <!-- Material filter -->
+        <div class="filter-group">
+            <h5>Material</h5>
+            <label><input type="checkbox" value="gold"> Gold</label><br>
+            <label><input type="checkbox" value="silver"> Silver</label><br>
+            <label><input type="checkbox" value="rose-gold"> Rose Gold</label>
+        </div>
+        <hr>
+
+        <!-- Stones filter -->
+        <div class="filter-group">
+            <h5>Stones</h5>
+            <label><input type="checkbox" value="diamond"> Diamond</label><br>
+            <label><input type="checkbox" value="pearl"> Pearl</label><br>
+            <label><input type="checkbox" value="sapphire"> Sapphire</label><br>
+            <label><input type="checkbox" value="emerald"> Emerald</label>
+        </div>
+        <hr>
+
+        <!-- Color filter -->
+        <div class="filter-group">
+            <h5>Color</h5>
+            <label><input type="checkbox" value="golden"> Golden</label><br>
+            <label><input type="checkbox" value="silver"> Silver</label><br>
+            <label><input type="checkbox" value="white"> White</label><br>
+            <label><input type="checkbox" value="pink"> Pink</label>
+        </div>
+
+        <div class="price-input">
+            <div class="field">
+                <span>Min</span>
+                <input type="number" class="input-min" value="0">
+            </div>
+            <div class="field">
+                <span>Max</span>
+                <input type="number" class="input-min" value="500">
+            </div>
+            <div class="slider">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <button class="btn-apply-filter">Apply Filters</button>
+
+
+    </div>
+
+</div>
 
 
 <footer>
@@ -243,5 +313,20 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
 ></script>
+<script>
+    // otvorenie sidebar filtra
+    document.querySelector(".btn").addEventListener("click", function(e) {
+        e.preventDefault();  // zastaví default akciu odkazu
+        document.getElementById("filterSidebar").style.right = "0";
+        document.getElementById("overlay").style.display = "block";
+    });
+
+    // zatvorenie sidebar filtra
+    function closeFilter() {
+        document.getElementById("filterSidebar").style.right = "-400px";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
 </body>
 </html>

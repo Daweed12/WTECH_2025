@@ -1,56 +1,60 @@
-/* Kontajner pre celý produkt */
+/* =========================
+   KONTAJNER PRE JEDEN PRODUKT
+   ========================= */
 .product-container {
-    width: 300px;               /* Môžeš upraviť podľa potreby */
-    margin: 20px;
+    /* Zrušili sme pevné height a width: 300px,
+       aby grid mohol dynamicky meniť šírku. */
+    width: 100%;
+    max-width: 300px;         /* nech sa nepretiahne príliš */
+    margin: 0 auto;           /* vycentruje box, keď je menej stĺpcov */
     font-family: sans-serif;
-    text-align: center;
+    text-align: left;         /* metaformi.sk má text zarovnaný doľava */
     position: relative;
 }
 
-/* Rámik a pozadie obrázka */
+/* =========================
+   OBRÁZOK
+   ========================= */
 .image-wrapper {
     position: relative;
     overflow: hidden;
-    border: 1px solid #ccc;     /* Jemné orámovanie obrázka */
-    border-radius: 4px;         /* Zaoblené rohy (voliteľné) */
+    border: none;             /* odstránime rámik */
+    border-radius: 0;         /* odstránime zaoblenie */
+    width: 100%;              /* obrázok vyplní celý kontajner */
+    aspect-ratio: 1 / 1;      /* obrázok bude v pomere 1:1 (štvorec) */
 }
 
 /* Samotný obrázok */
 .product-image {
     width: 100%;
+    height: 100%;
     display: block;
-    object-fit: cover; /* Prispôsobí obrázok, aby vyplnil celý blok */
-    transition: transform 0.5s ease;
+    object-fit: cover;      /* zobrazí šperk celý, bez orezania */
+    transition: transform 0.3s ease;
 }
 .product-image:hover {
-    transform: scale(1.1); /* Zväčší obrázok pri hoveri */
+    transform: scale(1.05);   /* jemné priblíženie pri hoveri */
 }
 
-/* Štítok "SOLD OUT" v pravom hornom rohu */
-.sold-out-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: #000;     /* Farba pozadia pre badge */
-    color: #fff;                /* Farba textu v badge */
-    font-size: 0.8rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Názov produktu */
+/* =========================
+   NÁZOV PRODUKTU
+   ========================= */
 .product-title {
-    font-size: 1.2rem;
-    margin: 10px 0 5px 0;
-    letter-spacing: 1px;
+    font-size: 1rem;         /* menšie písmo, ako býva pri minimalistických e-shopoch */
+    margin: 10px 0 0 0;
+    font-weight: 400;        /* tenší font pre elegantný vzhľad */
+    text-align: left;
 }
 
-/* Cena produktu */
+/* =========================
+   CENA PRODUKTU
+   ========================= */
 .product-price {
     font-size: 1rem;
-    color: #333;
+    font-weight: 500;
+    color: #111;
+    margin-top: 5px;         /* menšia medzera medzi názvom a cenou */
+    text-align: left;
 }
 
 /* Štítok DPH */
@@ -59,28 +63,36 @@
     color: #666;
     margin-left: 5px;
 }
-.products-grid {
-    display: grid;             /* Aktivuje CSS Grid */
-    gap: 20px;                 /* Medzera medzi bunkami gridu */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /*
-      repeat(auto-fill, minmax(250px, 1fr)) znamená:
-      - vytvor toľko stĺpcov, koľko sa zmestí (auto-fill)
-      - každý stĺpec má minimálnu šírku 250px a maximálne sa natiahne na 1fr (flexibilný zlomok)
-    */
-}
+
+/* =========================
+   GRID WRAPPER PRE VŠETKY PRODUKTY
+   ========================= */
 .products-wrapper {
-    display: flex;        /* Aktivuje Flexbox */
-    flex-wrap: wrap;      /* Umožní zalamovanie do nového riadku, keď nie je miesto */
-    gap: 20px;            /* Medzera medzi prvkami */
-    justify-content: center; /* Zarovnanie doľava; môžeš zmeniť na center, space-between, atď. */
-    padding: 20px;        /* Nepovinné, ak chceš vnútorný okraj */
+    display: grid;
+    /* repeat(auto-fill, minmax(...)) – dynamické rozloženie
+       toľko stĺpcov, koľko sa zmestí do šírky */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px 20px;          /* väčšia medzera medzi riadkami, menšia medzi stĺpcami */
+    padding: 40px 20px;      /* okraje zvnútra, aby neboli produkty nalepené na kraji */
+    width: 100%;
+    box-sizing: border-box;  /* nech sa padding započítava do šírky */
+    align-items: start;      /* zarovná produkty zhora */
 }
+
+/* =========================
+   TLAČIDLO "LOAD MORE"
+   ========================= */
 .btn-pos {
     display: block;
-    width: 150px; /* Pevná šírka tlačidla */
-    margin: 20px auto; /* Auto zarovná tlačidlo na stred */
+    width: 150px;            /* Pevná šírka tlačidla */
+    margin: 40px auto;       /* väčšia medzera od gridu, vycentrované */
     text-align: center;
-
+}
+.order-by {
+    float: right;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
 }
 

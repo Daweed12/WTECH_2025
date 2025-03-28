@@ -12,6 +12,53 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="admin.css">
+    <style>
+        /* Umiestnenie overlayu a jeho prvkov */
+        .product-container .image-wrapper {
+            position: relative;
+        }
+        .admin-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-wrapper:hover .admin-overlay {
+            opacity: 1;
+        }
+        /* Trash ikona v ľavom hornom rohu */
+        .admin-overlay .delete-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        /* Plus ikona v pravom hornom rohu */
+        .admin-overlay .edit-link {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        /* Názov produktu umiestnený v strede dole */
+        .admin-overlay .product-name {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,15 +76,8 @@
         <a href="../home/index.html" class="navbar-brand text-dark"><b>NYX</b></a>
 
         <!-- Hamburger toggler on the left for categories only -->
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#categoriesMenu"
-                aria-controls="categoriesMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
+                aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -62,20 +102,15 @@
             </ul>
         </div>
 
-        <!-- Search Bar and Icons remain always visible -->
+        <!-- Vyhľadávanie a ikony -->
         <div class="d-flex align-items-center ms-auto">
             <form class="d-flex me-3">
-                <input
-                        class="form-control custom-search"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                >
+                <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
             </form>
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-heart"></i>
             </a>
-            <a href="#" class="nav-link me-2">
+            <a href="../account/account_details.html" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
             <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
@@ -84,6 +119,7 @@
         </div>
     </div>
 </nav>
+
 <!-- MAIN CONTENT: ADMIN MODE -->
 <main class="container my-5">
     <div class="row">
@@ -94,129 +130,190 @@
     </div>
     <hr>
 
-    <!-- GRID PRODUKTOV: -->
-    <div class="products-wrapper">
-        <div class="product-container">
+    <!-- GRID PRODUKTOV -->
+    <div class="products-wrapper row">
+        <!-- Produkt 1 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">BRACELET 1</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">BRACELET 1</h2>
             <div class="product-price">
                 99.99 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 2 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">RING 1</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">RING 1</h2>
             <div class="product-price">
                 109.99 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 3 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">RING 2</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">RING 2</h2>
             <div class="product-price">
                 123.45 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 4 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">BRACELET 2</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">BRACELET 2</h2>
             <div class="product-price">
                 543.21 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 5 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">RING 3</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">RING 3</h2>
             <div class="product-price">
                 11.99 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 6 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">RING 4</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">RING 4</h2>
             <div class="product-price">
                 44.99 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 7 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">NECKLACE 1</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">NECKLACE 1</h2>
             <div class="product-price">
                 115.00 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 8 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">NECKLACE 2</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">NECKLACE 2</h2>
             <div class="product-price">
                 119.29 € <span class="tax">s DPH</span>
             </div>
         </div>
-        <div class="product-container">
+        <!-- Produkt 9 -->
+        <div class="product-container col-md-4 mb-4">
             <div class="image-wrapper">
                 <a href="#" class="image-link">
-                    <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image" />
+                    <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image img-fluid" />
                 </a>
+                <div class="admin-overlay">
+                    <span class="delete-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                    <span class="product-name">NECKLACE 3</span>
+                    <a href="admin_edit_product.html" class="edit-link">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
             </div>
-
-            <h2 class="product-title">NECKLACE 3</h2>
             <div class="product-price">
                 119.99 € <span class="tax">s DPH</span>
             </div>
         </div>
-
     </div>
-
     <hr>
-
-    <!-- TLAČIDLÁ PRE ADMIN AKCIE -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <button class="btn btn-warning me-2">Edit item</button>
-            <button class="btn btn-danger me-2">Remove item</button>
-            <button class="btn btn-success">Add item</button>
-        </div>
-    </div>
 </main>
 
 <!-- FOOTER -->
@@ -234,6 +331,18 @@
     </section>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- JavaScript pre spracovanie kliknutia na delete ikonu -->
+<script>
+    document.querySelectorAll('.delete-icon').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            if (confirm("Naozaj to chcete spraviť?")) {
+                alert("Produkt bol odstránený");
+            }
+        });
+    });
+</script>
 </body>
 </html>

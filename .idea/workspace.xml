@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="filter done">
-      <change afterPath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

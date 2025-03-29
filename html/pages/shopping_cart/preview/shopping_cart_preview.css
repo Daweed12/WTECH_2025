@@ -1,0 +1,145 @@
+/* Multi-step progress bar */
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+/* Multi-step progress bar */
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.stepper-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #dee2e6;
+    top: 20px;
+    left: 0;
+    z-index: -1;
+}
+
+.step-counter {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #6c757d;
+    z-index: 1;
+}
+
+.step-name {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.stepper-item:first-child::before {
+    width: 50%;
+    left: 50%;
+}
+
+.stepper-item:last-child::before {
+    width: 50%;
+    left: 0;
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.stepper-item.active .step-counter {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Quantity input */
+.quantity-spin-only {
+    width: 60px;
+    text-align: center;
+    margin-left: 0.5rem;
+}
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.stepper-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #dee2e6;
+    top: 20px;
+    left: 0;
+    z-index: -1;
+}
+
+.step-counter {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #6c757d;
+    z-index: 1;
+}
+
+.step-name {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.stepper-item:first-child::before {
+    width: 50%;
+    left: 50%;
+}
+
+.stepper-item:last-child::before {
+    width: 50%;
+    left: 0;
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.stepper-item.active .step-counter {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Quantity input */
+.quantity-spin-only {
+    width: 60px;
+    text-align: center;
+    margin-left: 0.5rem;
+}

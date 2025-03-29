@@ -1,0 +1,54 @@
+.progress-steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.progress-steps .step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; /* nad čiarou */
+}
+
+/* Sivá čiara vzadu */
+.progress-steps .progress-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ccc;
+    z-index: 0;
+}
+
+/* Tu je kľúč: 0–66% bordová, 66–100% prechod do žltej */
+.progress-steps .progress-line-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%; /* upravujeme inline (style="width: 100%") */
+    z-index: 1;
+    background: linear-gradient(
+            to right,
+            #722243 0%,
+            #722243 66%,
+            #ffc107 100%
+    );
+}
+
+/* Príklady farieb pre completed/active kroky */
+.progress-steps .step.completed .icon,
+.progress-steps .step.completed .label {
+    color: #722243;
+}
+
+.progress-steps .step.active .icon,
+.progress-steps .step.active .label {
+    color: #ffc107;
+}

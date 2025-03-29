@@ -44,29 +44,23 @@
 </div>
 
 <!-- NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #89e5fa;">
-    <div class="container d-flex w-100 justify-content-between">
-        <!-- Logo -->
-        <a href="../../home/index.html" class="navbar-brand text-dark"><b>NYX</b></a>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container d-flex w-100 justify-content-between align-items-center">
 
         <!-- Hamburger toggler on the left for categories only -->
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#categoriesMenu"
-                aria-controls="categoriesMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
+                aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Logo -->
+        <a href="../../home/index.html" class="navbar-brand"><b>NYX</b></a>
 
         <!-- Collapsible Category Links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">SHOP ALL</a>
+                    <a href="../../products/all_products.html" class="nav-link">SHOP ALL</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">NECKLACES</a>
@@ -83,28 +77,40 @@
             </ul>
         </div>
 
-        <!-- Search Bar and Icons remain always visible -->
+        <!-- Ikonky (vrátane search ikonky) -->
         <div class="d-flex align-items-center ms-auto">
-            <form class="d-flex me-3">
-                <input
-                        class="form-control custom-search"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                >
-            </form>
+            <!-- Search ikonka s collapse atribútmi -->
+            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+               aria-expanded="false" aria-controls="navbarSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-heart"></i>
             </a>
-            <a href="#" class="nav-link me-2">
+            <a href="../../account/account_details.html" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link">
+            <!-- Košík s badge -->
+            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                      style="font-size: 0.8rem;">
+                    2
+                    <span class="visually-hidden">items in cart</span>
+                </span>
             </a>
         </div>
     </div>
 </nav>
+
+<!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+<div class="collapse search-bar" id="navbarSearch">
+    <div class="container">
+        <form class="d-flex my-2">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+</div>
 
 <!-- OBSAH STRÁNKY (SHOPPING CART) -->
 <main class="container my-5">
@@ -302,5 +308,43 @@
         crossorigin="anonymous"
 ></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Element search ikonky
+        const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
+        // Element collapse kategórií
+        const categoriesMenu = document.getElementById('categoriesMenu');
+        // Element collapse search baru
+        const searchBar = document.getElementById('navbarSearch');
+
+        // Inicializácia collapse pre kategórie a search bar (bez automatického toggle)
+        const categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
+        const searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
+
+        // Keď používateľ klikne na search ikonku:
+        searchLink.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            // Ak sú kategórie otvorené, zatvoríme ich
+            if (categoriesMenu.classList.contains("show")) {
+                categoriesCollapse.hide();
+            }
+            // Search bar sa otvorí/zatvorí
+            searchCollapse.toggle();
+        });
+
+        // Vyberieme hamburger tlačidlo, ktoré otvára kategórie
+        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
+        // Keď používateľ klikne na hamburger tlačidlo:
+        hamburgerToggler.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent default button behavior
+            // Ak je search bar otvorený, zatvoríme ho
+            if (searchBar.classList.contains("show")) {
+                searchCollapse.hide();
+            }
+            // Kategórie sa otvoria/zatvoria
+            categoriesCollapse.toggle();
+        });
+    });
+</script>
 </body>
 </html>

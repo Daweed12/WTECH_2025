@@ -9,7 +9,7 @@ body {
 
 /* Search input styling */
 .custom-search {
-    width: 100%; /* Normal width */
+    width: 100%;
     padding: 5px 10px;
     height: 32px;
     font-size: 0.9rem;
@@ -52,7 +52,14 @@ body {
     padding: 8px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.sliding-image{
+.top-bar-image{
+    margin: 0 auto;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.sliding-image {
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -61,25 +68,26 @@ body {
 /* Fixed navbar below the top bar */
 .navbar {
     position: fixed;
-    top: 35px; /* Adjust based on top bar height */
+    top: 35px;
     left: 0;
     width: 100%;
     background: #4b0830;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .navbar-brand {
     font-weight: bold;
 }
 
 /* Prevent content from hiding behind fixed elements */
 body {
-    padding-top: 90px; /* Adjust for the combined height of both fixed elements */
+    padding-top: 90px;
 }
 
 /* Container to frame images */
 .image-frame {
-    position: relative; /* Important for absolute positioning of the overlay */
+    position: relative;
     width: 100%;
     height: 350px;
     overflow: hidden;
@@ -90,7 +98,7 @@ body {
 }
 
 .image-frame-shop {
-    position: relative; /* Important for absolute positioning of the overlay */
+    position: relative;
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -106,10 +114,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Smooth zoom effect on hover */
+    transition: transform 0.5s ease;
 }
 
-/* The overlay text container (initially hidden at the bottom) */
+/* The overlay text container */
 .category-overlay {
     position: absolute;
     bottom: 0;
@@ -118,17 +126,17 @@ body {
     color: #fff;
     text-align: left;
     padding: 15px;
-    transform: translateY(100%); /* Starts off hidden below the frame */
+    transform: translateY(100%);
     transition: transform 0.5s ease;
 }
 
-/* Category button styling (the link that wraps the image and overlay) */
+/* Category button styling */
 .category-button {
     display: block;
     text-decoration: none;
     color: black;
     text-align: center;
-    overflow: hidden; /* Important to clip the zooming image within the container */
+    overflow: hidden;
 }
 
 /* On hover, zoom the image and slide up the overlay text */
@@ -145,13 +153,16 @@ footer {
     color: #ffffff;
     padding: 2rem 0;
 }
+
 footer .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 footer hr {
     border: 1px solid #ced4da;
 }
+
 .logo {
     font-size: 35px;
 }
@@ -165,18 +176,22 @@ footer hr {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
+
 hr {
     border: 1px solid #ddd;
     margin-bottom: 20px;
 }
+
 .form-label {
     font-weight: bold;
 }
+
 .btn-signin {
     width: 100%;
     background-color: #868e96;
@@ -186,6 +201,7 @@ hr {
     border-radius: 5px;
     font-size: 16px;
 }
+
 .btn-signin:hover {
     background-color: #6c757d;
 }
@@ -194,25 +210,31 @@ hr {
 .account-section {
     padding: 2rem 0;
 }
+
 .account-section h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
+
 .account-section hr {
     margin-bottom: 1.5rem;
 }
+
 .account-section h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
+
 .form-divider {
     border-right: 1px solid #ccc;
 }
+
 .account-section form label {
     font-weight: 500;
     margin-bottom: 0.3rem;
 }
+
 .account-section input[type=text],
 .account-section input[type=password],
 .account-section input[type=email] {
@@ -234,6 +256,7 @@ hr {
     cursor: pointer;
     margin-top: 0.5rem;
 }
+
 .btn-custom:hover {
     background-color: #7d8388;
 }
@@ -246,18 +269,15 @@ hr {
     overflow: hidden;
     margin: 0 auto;
 }
+
 .avatar-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-/* Final large image style */
 .final-image {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-height: 400px;
     width: 100%;
+    height: 100%;
     object-fit: cover;
-}
+} 

@@ -3,13 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Zabráni zalamovaniu krokov na menších obrazovkách */
-    flex-wrap: nowrap;
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
 
-/* Jeden krok (ikona + label) */
 .progress-steps .step {
     position: relative;
     display: flex;
@@ -29,14 +26,13 @@
     z-index: 0;
 }
 
-/* Farebná výplň s viacerými zástavkami:
-   0–66% bordová, 66–100% prechod do žltej */
+/* Tu je kľúč: 0–66% bordová, 66–100% prechod do žltej */
 .progress-steps .progress-line-fill {
     position: absolute;
     bottom: 0;
     left: 0;
     height: 2px;
-    width: 0%; /* upravíš inline (napr. style="width: 66%;") */
+    width: 0%; /* upravujeme inline (style="width: 100%") */
     z-index: 1;
     background: linear-gradient(
             to right,
@@ -46,48 +42,15 @@
     );
 }
 
-/* Farby pre completed/active */
+/* Príklady farieb pre completed/active kroky */
 .progress-steps .step.completed .icon,
 .progress-steps .step.completed .label {
-    color: #722243; /* bordová */
+    color: #722243;
 }
+
 .progress-steps .step.active .icon,
 .progress-steps .step.active .label {
-    color: #ffc107; /* žltá */
-}
-
-/* MEDIA QUERY pre malé obrazovky (max-width: 576px) */
-@media (max-width: 576px) {
-    /* Povolíme horizontálne scrollovanie,
-       ak by sa kroky nezmestili do šírky mobilu */
-    .progress-steps {
-        overflow-x: auto;
-        margin-bottom: 1rem; /* menšie odsadenie */
-        padding: 1rem 0;
-    }
-
-    /* Kroky budú vedľa seba "inline-flex",
-       aby sa nezalomili do ďalšieho riadku */
-    .progress-steps .step {
-        display: inline-flex;
-        margin-right: 1rem; /* malá medzera medzi krokmi */
-    }
-
-    /* Zmenšíme ikony aj text */
-    .progress-steps .step .icon {
-        font-size: 20px; /* menšie ikony na mobile */
-    }
-    .progress-steps .step .label {
-        font-size: 0.85rem; /* trocha menší text */
-    }
-
-    /* Znížime výšku čiary (aby lepšie sedela na malých displejoch) */
-    .progress-steps .progress-line {
-        height: 1px;
-    }
-    .progress-steps .progress-line-fill {
-        height: 1px;
-    }
+    color: #ffc107;
 }
 
 .btn-back{

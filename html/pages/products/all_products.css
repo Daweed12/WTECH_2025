@@ -230,7 +230,7 @@ input[type="number"]::-webkit-inner-spin-button {
     right: 0%;
     position: absolute;
     border-radius: 5px;
-    background: #17A2B8;
+    background: #4b0830;
 }
 .range-input{
     position: relative;
@@ -249,7 +249,7 @@ input[type="range"]::-webkit-slider-thumb{
     height: 17px;
     width: 17px;
     border-radius: 50%;
-    background: #17A2B8;
+    background: #4b0830;
     pointer-events: auto;
     -webkit-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
@@ -259,7 +259,7 @@ input[type="range"]::-moz-range-thumb{
     width: 17px;
     border: none;
     border-radius: 50%;
-    background: #17A2B8;
+    background: #4b0830;
     pointer-events: auto;
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);

@@ -89,3 +89,26 @@
         height: 1px;
     }
 }
+
+.btn-back{
+    background-color: lightgray;
+}
+
+.btn-back:hover{
+    background-color: #ffc107;
+    color: #111111;
+}
+
+.btn-primary{
+    background-color: #722243;
+}
+
+.btn-primary:hover{
+    background-color: #ffc107;
+    color: #111111;
+}
+
+.btn-primary:active {
+    background-color: #ffc107;
+    color: #111111;
+}

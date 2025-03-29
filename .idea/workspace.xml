@@ -7,11 +7,14 @@
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="nav bar update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/images/banner_product3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/html/images/banner_product3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/images/banner_product4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/html/images/banner_product4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/images/banner_product5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/html/images/banner_product5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/account/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/account/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_address_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_payment_method.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +106,7 @@
       <workItem from="1742890161975" duration="4868000" />
       <workItem from="1742924117138" duration="2987000" />
       <workItem from="1743252961776" duration="4388000" />
+      <workItem from="1743277394112" duration="2300000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

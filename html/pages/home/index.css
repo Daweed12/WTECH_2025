@@ -1,0 +1,25 @@
+.banner-text-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    /* background-color: rgba(255, 255, 255, 0.8);  Odstráňte alebo zakomentujte */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.3rem; /* zväčší text */
+    font-weight: bold; /* voliteľné, ak chceš tučné písmo */
+}
+
+.banner-text-bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #000;
+    /* background-color: rgba(255, 255, 255, 0.8);  Odstráňte alebo zakomentujte */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 1.3rem; /* zväčší text */
+    font-weight: bold; /* voliteľné, ak chceš tučné písmo */
+}

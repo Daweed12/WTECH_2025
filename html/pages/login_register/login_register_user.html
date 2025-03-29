@@ -169,7 +169,7 @@
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
 
-        // Získame už existujúce collapse inštancie, alebo vytvoríme nové
+        // Získame existujúce collapse inštancie, ak neexistujú, vytvoríme nové s toggle: false
         let categoriesCollapse = bootstrap.Collapse.getInstance(categoriesMenu);
         if (!categoriesCollapse) {
             categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
@@ -179,24 +179,43 @@
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
 
-        // Vyhľadávacia ikonka – pri kliknutí zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar
+        // Referencie na tlačidlá pre toggle
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
+        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
+
+        // Pri kliknutí na search ikonku: zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar.
         searchLink.addEventListener("click", function(e) {
-            // Ak sú kategórie otvorené, zatvoríme ich
+            // Zastavíme default akciu, aby nedošlo k nečakaným prejavom.
+            e.preventDefault();
             if (categoriesMenu.classList.contains("show")) {
                 categoriesCollapse.hide();
             }
-            // Toggle search baru
             searchCollapse.toggle();
         });
 
-        // Hamburger tlačidlo – pri kliknutí zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie
-        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
+        // Pri kliknutí na hamburger tlačidlo: zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie.
         hamburgerToggler.addEventListener("click", function(e) {
+            e.preventDefault();
             if (searchBar.classList.contains("show")) {
                 searchCollapse.hide();
             }
             categoriesCollapse.toggle();
+        });
+
+        // Globálny listener, ktorý zatvorí collapse panely, ak používateľ klikne mimo nich.
+        document.addEventListener("click", function(e) {
+            // Ak je search bar otvorený, ale klikol používateľ mimo search baru a mimo tlačidla search ikonky, zatvoríme ho.
+            if (searchBar.classList.contains("show") &&
+                !searchBar.contains(e.target) &&
+                !searchLink.contains(e.target)) {
+                searchCollapse.hide();
+            }
+            // Ak sú kategórie otvorené, ale klikol používateľ mimo nich a mimo hamburger tlačidla, zatvoríme ich.
+            if (categoriesMenu.classList.contains("show") &&
+                !categoriesMenu.contains(e.target) &&
+                !hamburgerToggler.contains(e.target)) {
+                categoriesCollapse.hide();
+            }
         });
     });
 </script>

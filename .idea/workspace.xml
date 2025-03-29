@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="filter done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/images/banner_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/images/banner_image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/payment_method/shopping_cart_payment_method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/account/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{

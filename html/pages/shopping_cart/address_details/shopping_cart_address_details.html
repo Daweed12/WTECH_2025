@@ -45,11 +45,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Logo -->
+        <a href="../../home/index.html" class="navbar-brand"><b>NYX</b></a>
+
         <!-- Collapsible Category Links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">SHOP ALL</a>
+                    <a href="../../products/all_products.html" class="nav-link">SHOP ALL</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">NECKLACES</a>
@@ -66,24 +69,26 @@
             </ul>
         </div>
 
-        <!-- Search Bar and Icons remain always visible -->
+        <!-- Ikonky (vrátane search ikonky) -->
         <div class="d-flex align-items-center ms-auto">
-            <form class="d-flex me-3">
-                <input
-                        class="form-control custom-search"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                >
-            </form>
+            <!-- Search ikonka s collapse atribútmi -->
+            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+               aria-expanded="false" aria-controls="navbarSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-heart"></i>
             </a>
-            <a href="#" class="nav-link me-2">
+            <a href="../../account/account_details.html" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
             <a href="../preview/shopping_cart_preview.html" class="nav-link">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                      style="font-size: 0.8rem;">
+                    2
+                    <span class="visually-hidden">items in cart</span>
+                </span>
             </a>
         </div>
     </div>

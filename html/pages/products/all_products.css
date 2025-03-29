@@ -271,3 +271,74 @@ input[type="range"]::-moz-range-thumb{
 }
 
 
+/* Štýly pre Bootstrap pagination s farbou #722243 */
+.pagination .page-link {
+    color: #722243;
+    border-color: #722243;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #722243;
+    border-color: #722243;
+    color: #fff; /* aktívny prvok má biely text */
+}
+
+.pagination .page-link:hover {
+    background-color: #722243;
+    color: #fff;
+    border-color: #722243;
+}
+
+/* FILTER */
+
+.btn-filter {
+    display: inline-block;
+    background-color: #722243;
+    color: #fff;
+    padding: 8px 16px;
+    border: 2px solid #722243;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-filter:hover {
+    background-color: #fff;
+    color: #722243;
+    border-color: #722243;
+    text-decoration: none;
+}
+
+.order-by {
+    background-color: #722243;     /* bordová farba pozadia */
+    color: #fff;                   /* biely text */
+    border: 2px solid #722243;    /* bordová obruba */
+    border-radius: 20px;          /* zaoblené rohy */
+    padding: 8px 16px;            /* vnútorné odsadenie */
+    font-weight: bold;            /* tučné písmo */
+    text-transform: uppercase;    /* veľké písmená (voliteľné) */
+    cursor: pointer;              /* kurzor ruky pri hoveri */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    /* Odstránenie natívneho vzhľadu šípky (Chrome, Safari, Firefox) */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Voliteľne zrušenie natívnej šípky vo Windows/IE (ak by bolo treba) */
+    /*::-ms-expand {
+        display: none;
+    } */
+}
+
+.order-by:hover {
+    background-color: #fff;        /* pri hoveri biele pozadie */
+    color: #722243;               /* a text bordový */
+    border-color: #722243;        /* zachovať bordovú obrubu */
+}
+
+.order-by:focus {
+    outline: none;                /* odstránenie obrysu (voliteľné) */
+}

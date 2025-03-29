@@ -21,7 +21,7 @@
     >
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="../../../css/styles.css">
-
+    <link rel="stylesheet" href="../shopping_cart.css">
     <!-- Voliteľný inline CSS pre ukážku -->
     <style>
         /* Len príklad, ak chceš mať input trochu širší a vycentrovaný text */
@@ -91,7 +91,7 @@
                 <i class="fa-solid fa-user"></i>
             </a>
             <!-- Košík s badge -->
-            <a href="../shopping_cart/preview/shopping_cart_preview.html" class="nav-link position-relative">
+            <a href="../preview/shopping_cart_preview.html" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
                       style="font-size: 0.8rem;">
@@ -114,6 +114,47 @@
 
 <!-- OBSAH STRÁNKY (SHOPPING CART) -->
 <main class="container my-5">
+
+    <div class="progress-steps">
+        <!-- Sivá čiara + farebná výplň (gradient) -->
+        <div class="progress-line">
+            <!-- width: 66% znamená, že sa zobrazí len 0–66% z nášho gradientu -->
+            <div class="progress-line-fill" style="width: 0%;"></div>
+        </div>
+
+        <!-- Krok 1 - completed -->
+        <div class="step active">
+    <span class="icon">
+      <i class="fas fa-shopping-cart"></i>
+    </span>
+            <span class="label">Cart Preview</span>
+        </div>
+
+        <!-- Krok 2 - completed -->
+        <div class="step">
+    <span class="icon">
+      <i class="fas fa-truck"></i>
+    </span>
+            <span class="label">Address & Shipping</span>
+        </div>
+
+        <!-- Krok 3 - active -->
+        <div class="step">
+    <span class="icon">
+      <i class="fas fa-credit-card"></i>
+    </span>
+            <span class="label">Payment</span>
+        </div>
+
+        <!-- Krok 4 - zatiaľ neprejdený -->
+        <div class="step">
+    <span class="icon">
+      <i class="fas fa-check"></i>
+    </span>
+            <span class="label">Order Review</span>
+        </div>
+    </div>
+
     <!-- HLAVIČKA KOŠÍKA -->
     <div class="row">
         <div class="col-12">
@@ -274,7 +315,7 @@
             <a href="#" class="text-decoration-none text-dark">
                 <div class="image-frame-shop">
                     <img
-                            src="../../../images/banner_image.jpg"
+                            src="../../../images/banner_product5.jpg"
                             alt="Bestseller 4"
                             class="category-image"
                     >

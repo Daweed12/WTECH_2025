@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0" />
-    <title>NYX - Address Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYX - Paying Method</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -19,9 +17,8 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     >
-    <!-- Your custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../../css/styles.css">
-    <link rel="stylesheet" href="shopping_cart_address_details.css">
 </head>
 <body>
 
@@ -103,130 +100,196 @@
     </div>
 </div>
 
-<!-- MAIN CONTENT: ADDRESS DETAILS -->
+<!-- MAIN CONTENT: PAYING METHOD -->
 <main class="container my-5">
+
+    <div class="progress-steps">
+        <!-- Sivá čiara + farebná výplň (gradient) -->
+        <div class="progress-line">
+            <!-- width: 66% znamená, že sa zobrazí len 0–66% z nášho gradientu -->
+            <div class="progress-line-fill" style="width: 67%;"></div>
+        </div>
+
+        <!-- Krok 1 - completed -->
+        <div class="step completed">
+    <span class="icon">
+      <i class="fas fa-shopping-cart"></i>
+    </span>
+            <span class="label">Cart Preview</span>
+        </div>
+
+        <!-- Krok 2 - completed -->
+        <div class="step completed">
+    <span class="icon">
+      <i class="fas fa-truck"></i>
+    </span>
+            <span class="label">Address & Shipping</span>
+        </div>
+
+        <!-- Krok 3 - active -->
+        <div class="step active">
+    <span class="icon">
+      <i class="fas fa-credit-card"></i>
+    </span>
+            <span class="label">Payment</span>
+        </div>
+
+        <!-- Krok 4 - zatiaľ neprejdený -->
+        <div class="step">
+    <span class="icon">
+      <i class="fas fa-check"></i>
+    </span>
+            <span class="label">Order Review</span>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-12">
-            <h2 class="mb-3">Address Details</h2>
+            <h2 class="mb-3">Paying Method</h2>
             <p class="text-muted">
-                Progress of paying: <i>cart preview</i>, <b>Address & Shipping </b>, <i>payment, order review</i>
+                Progress of paying:
+                <i>cart preview, address & shipping </i>,
+                <b>Payment </b>,
+                <i>order review</i>
             </p>
         </div>
     </div>
     <hr>
-
     <div class="row">
-        <!-- LEFT COLUMN: AVATAR + SHIPPING ADDRESS FORM -->
-        <div class="col-lg-8">
-            <div class="row mb-4 align-items-center">
-                <div class="col-md-3 text-center mb-3 mb-md-0">
-                    <div class="avatar-container">
-                        <img
-                                src="../../../images/example_avatar_image.jpg"
-                                alt="Avatar"
-                                class="avatar-img"
-                        >
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <h5>Adrianna Dobrovnik</h5>
-                    <p class="mb-1">adrianna.dobrovnik@gmail.com</p>
-                    <p class="mb-1">(+999) 123 456 789</p>
-                </div>
-            </div>
-
-            <h4 class="mb-3">Shipping Address</h4>
+        <!-- LEFT COLUMN: PAYMENT + DELIVERY METHOD -->
+        <div class="col-lg-8 mb-5">
+            <!-- PAYMENT METHOD SECTION -->
+            <h4 class="mb-3">Choose payment method</h4>
             <form>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="firstName" class="form-label">First Name</label>
+                <!-- Payment method radios -->
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
                         <input
-                                type="text"
-                                class="form-control"
-                                id="firstName"
-                                placeholder="First Name"
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="paymentMethod"
+                                id="method1"
+                                value="Card online"
+                                checked
                         >
+                        <label for="method1" class="form-check-label">Card online</label>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="lastName" class="form-label">Last Name</label>
+                    <span>$0</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
                         <input
-                                type="text"
-                                class="form-control"
-                                id="lastName"
-                                placeholder="Last Name"
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="paymentMethod"
+                                id="method2"
+                                value="Payment in cash/card to courier"
                         >
+                        <label for="method2" class="form-check-label">
+                            Payment in cash / card to courier
+                        </label>
                     </div>
+                    <span>$2.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="paymentMethod"
+                                id="method3"
+                                value="GoPay"
+                        >
+                        <label for="method3" class="form-check-label">GoPay</label>
+                    </div>
+                    <span>$1.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="paymentMethod"
+                                id="method4"
+                                value="PayPal"
+                        >
+                        <label for="method4" class="form-check-label">PayPal</label>
+                    </div>
+                    <span>$0.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="paymentMethod"
+                                id="method5"
+                                value="Tatrabanka app"
+                        >
+                        <label for="method5" class="form-check-label">Tatrabanka app</label>
+                    </div>
+                    <span>$0.99</span>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="emailAddress" class="form-label">E-mail Address</label>
+                <hr class="my-4">
+
+                <!-- DELIVERY METHOD SECTION -->
+                <h4 class="mb-3">Delivery Method</h4>
+                <!-- Delivery method radios -->
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
                         <input
-                                type="email"
-                                class="form-control"
-                                id="emailAddress"
-                                placeholder="your.email@example.com"
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="deliveryMethod"
+                                id="delivery1"
+                                value="Courier"
+                                checked
                         >
+                        <label for="delivery1" class="form-check-label">Courier</label>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <span>$3.99</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
                         <input
-                                type="tel"
-                                class="form-control"
-                                id="phoneNumber"
-                                placeholder="(+xxx) xxx xxx xxx"
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="deliveryMethod"
+                                id="delivery2"
+                                value="Packeta Box"
                         >
+                        <label for="delivery2" class="form-check-label">Packeta Box</label>
                     </div>
+                    <span>$2.49</span>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div>
+                        <input
+                                class="form-check-input me-2"
+                                type="radio"
+                                name="deliveryMethod"
+                                id="delivery3"
+                                value="Post Office"
+                        >
+                        <label for="delivery3" class="form-check-label">Post Office</label>
+                    </div>
+                    <span>$3.49</span>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="country" class="form-label">Country</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="country"
-                                placeholder="Country"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="zipCode" class="form-label">ZIP Code</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="zipCode"
-                                placeholder="ZIP Code"
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="city" class="form-label">City</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="city"
-                                placeholder="City"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="address" class="form-label">Address</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="address"
-                                placeholder="Street, House number"
-                        >
-                    </div>
-                </div>
-
+                <!-- ACTION BUTTONS -->
                 <div class="mt-4">
-                    <a href="../preview/shopping_cart_preview.html" class="btn btn-secondary me-3">
-                        Back
+                    <a
+                            href="../address_details/shopping_cart_address_details.html"
+                            class="btn btn-secondary me-3"
+                    >
+                        Back to address
                     </a>
-                    <a href="../payment_method/shopping_cart_payment_method.html" class="btn btn-primary">
-                        Continue
+                    <a
+                            href="../final/shopping_cart_final.html"
+                            class="btn btn-primary"
+                    >
+                        Confirm
                     </a>
                 </div>
             </form>
@@ -236,34 +299,28 @@
         <div class="col-lg-4">
             <div class="border p-4">
                 <h4 class="mb-3">Order Summary</h4>
-
                 <div class="mb-2 d-flex justify-content-between">
-                    <span>Item 1</span>
-                    <span>$99.99</span>
+                    <span>Item 1</span><span>$99.99</span>
                 </div>
                 <div class="mb-2 d-flex justify-content-between">
-                    <span>Item 2</span>
-                    <span>$120</span>
-                </div>
-
-
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Shipping</span>
-                    <span>$10</span>
-                </div>
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Taxes</span>
-                    <span>$5</span>
-                </div>
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Discount</span>
-                    <span>-$20</span>
+                    <span>Item 2</span><span>$120</span>
                 </div>
                 <hr>
-
+                <div class="mb-2 d-flex justify-content-between">
+                    <span>Subtotal</span><span>$219.99</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-between">
+                    <span>Shipping</span><span>$10</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-between">
+                    <span>Taxes</span><span>$5</span>
+                </div>
+                <div class="mb-2 d-flex justify-content-between">
+                    <span>Discount</span><span>-$20</span>
+                </div>
+                <hr>
                 <div class="d-flex justify-content-between fw-bold">
-                    <span>Total</span>
-                    <span>$214.99</span>
+                    <span>Total</span><span>$214.99</span>
                 </div>
             </div>
         </div>
@@ -285,7 +342,6 @@
     </section>
 </footer>
 
-<!-- Bootstrap JS -->
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -330,6 +386,5 @@
         });
     });
 </script>
-
 </body>
 </html>

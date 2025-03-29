@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NYX - Sign In / Create Account</title>
 
     <!-- Bootstrap CSS -->
@@ -11,8 +11,51 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../pages/login_register/login_register.css">
+    <link rel="stylesheet" href="../../pages/home/index.css">
 
+    <!-- Inline CSS pre tlačidlá a overlay texty -->
+    <style>
+        /* Overlay texty pre bannery (ak sú použité) */
+        .banner-text-top {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            color: #000;
+            padding: 10px;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .banner-text-bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: #000;
+            padding: 10px;
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Štýl pre tlačidlá (SIGN IN / CREATE ACCOUNT) */
+        .btn-custom {
+            background-color: #722243; /* fialové pozadie */
+            color: #fff;               /* biely text */
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #5a1d33; /* mierne tmavší odtieň */
+            color: #fff;
+        }
+    </style>
 
 </head>
 <body>
@@ -148,11 +191,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
-<<<<<<< HEAD
-=======
 
-        // Získame existujúce collapse inštancie, ak neexistujú, vytvoríme nové s toggle: false
->>>>>>> origin/main
         let categoriesCollapse = bootstrap.Collapse.getInstance(categoriesMenu);
         if (!categoriesCollapse) {
             categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
@@ -161,32 +200,17 @@
         if (!searchCollapse) {
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
-<<<<<<< HEAD
-=======
 
-        // Referencie na tlačidlá pre toggle
->>>>>>> origin/main
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
-        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
-
-        // Pri kliknutí na search ikonku: zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar.
         searchLink.addEventListener("click", function(e) {
-<<<<<<< HEAD
-=======
-            // Zastavíme default akciu, aby nedošlo k nečakaným prejavom.
             e.preventDefault();
->>>>>>> origin/main
             if (categoriesMenu.classList.contains("show")) {
                 categoriesCollapse.hide();
             }
             searchCollapse.toggle();
         });
-<<<<<<< HEAD
-        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
-=======
 
-        // Pri kliknutí na hamburger tlačidlo: zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie.
->>>>>>> origin/main
+        const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
         hamburgerToggler.addEventListener("click", function(e) {
             e.preventDefault();
             if (searchBar.classList.contains("show")) {
@@ -195,15 +219,13 @@
             categoriesCollapse.toggle();
         });
 
-        // Globálny listener, ktorý zatvorí collapse panely, ak používateľ klikne mimo nich.
+        // Globálny listener pre zatváranie collapse panelov, ak klikne používateľ mimo nich.
         document.addEventListener("click", function(e) {
-            // Ak je search bar otvorený, ale klikol používateľ mimo search baru a mimo tlačidla search ikonky, zatvoríme ho.
             if (searchBar.classList.contains("show") &&
                 !searchBar.contains(e.target) &&
                 !searchLink.contains(e.target)) {
                 searchCollapse.hide();
             }
-            // Ak sú kategórie otvorené, ale klikol používateľ mimo nich a mimo hamburger tlačidla, zatvoríme ich.
             if (categoriesMenu.classList.contains("show") &&
                 !categoriesMenu.contains(e.target) &&
                 !hamburgerToggler.contains(e.target)) {

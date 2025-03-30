@@ -163,3 +163,24 @@
     font-size: 1.1rem;
     text-align: center;
 }
+
+button.btn.btn-primary {
+    background-color: #4b0830 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+button.btn.btn-primary:hover {
+    background-color: #ffc107 !important;
+    color: black !important;
+}
+
+button.btn.btn-primary:focus,
+button.btn.btn-primary:active,
+button.btn.btn-primary:focus:active {
+    background-color: #4b0830 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: white !important;
+}

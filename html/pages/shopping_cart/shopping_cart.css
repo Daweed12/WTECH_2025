@@ -62,11 +62,7 @@
     background-color: lightgray;
 }
 
-/* Primary button styling (burgundy by default) */
-.btn-primary {
-    background-color: #722243;
-    color: #fff;
-}
+
 
 /* Hover effect for back button (changes to yellow background) */
 .btn-back:hover {
@@ -74,14 +70,23 @@
     color: #111111; /* Dark text for better readability */
 }
 
-/* Hover effect for primary button (changes to yellow background) */
-.btn-primary:hover {
-    background-color: #ffc107;
-    color: #111111; /* Dark text for contrast */
+.btn-primary {
+    background-color: #4b0830 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Active (clicked) state for primary button (yellow background) */
-.btn-primary:active {
-    background-color: #ffc107;
-    color: #111111;
+.btn-primary:hover {
+    background-color: #ffc107 !important;
+    color: black !important;
+}
+
+button.btn.btn-primary:focus,
+button.btn.btn-primary:active,
+button.btn.btn-primary:focus:active {
+    background-color: #4b0830 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: white !important;
 }

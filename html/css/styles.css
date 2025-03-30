@@ -344,6 +344,7 @@ hr {
 /* Custom button hover effect */
 .btn-custom:hover {
     background-color: #4b0830;
+    color: #fff
 }
 
 /* Avatar container styling */

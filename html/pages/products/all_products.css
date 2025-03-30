@@ -1,93 +1,81 @@
-/* =========================
-   KONTAJNER PRE JEDEN PRODUKT
-   ========================= */
+/* Container for a single product */
 .product-container {
-    /* Zrušili sme pevné height a width: 300px,
-       aby grid mohol dynamicky meniť šírku. */
     width: 100%;
-    max-width: 300px;         /* nech sa nepretiahne príliš */
-    margin: 0 auto;           /* vycentruje box, keď je menej stĺpcov */
+    max-width: 300px;
+    margin: 0 auto;
     font-family: sans-serif;
-    text-align: left;         /* metaformi.sk má text zarovnaný doľava */
+    text-align: left;
     position: relative;
 }
 
-/* =========================
-   OBRÁZOK
-   ========================= */
+/* Wrapper for product image */
 .image-wrapper {
     position: relative;
     overflow: hidden;
-    border: none;             /* odstránime rámik */
-    border-radius: 0;         /* odstránime zaoblenie */
-    width: 100%;              /* obrázok vyplní celý kontajner */
-    aspect-ratio: 1 / 1;      /* obrázok bude v pomere 1:1 (štvorec) */
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
-/* Samotný obrázok */
+/* Product image styling */
 .product-image {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;      /* zobrazí šperk celý, bez orezania */
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
+
+/* Image zoom on hover */
 .product-image:hover {
-    transform: scale(1.05);   /* jemné priblíženie pri hoveri */
+    transform: scale(1.05);
 }
 
-/* =========================
-   NÁZOV PRODUKTU
-   ========================= */
+/* Product title styling */
 .product-title {
-    font-size: 1rem;         /* menšie písmo, ako býva pri minimalistických e-shopoch */
+    font-size: 1rem;
     margin: 10px 0 0 0;
-    font-weight: 400;        /* tenší font pre elegantný vzhľad */
+    font-weight: 400;
     text-align: left;
 }
 
-/* =========================
-   CENA PRODUKTU
-   ========================= */
+/* Product price styling */
 .product-price {
     font-size: 1rem;
     font-weight: 500;
     color: #111;
-    margin-top: 5px;         /* menšia medzera medzi názvom a cenou */
+    margin-top: 5px;
     text-align: left;
 }
 
-/* Štítok DPH */
+/* VAT label */
 .tax {
     font-size: 0.9rem;
     color: #666;
     margin-left: 5px;
 }
 
-/* =========================
-   GRID WRAPPER PRE VŠETKY PRODUKTY
-   ========================= */
+/* Wrapper for all products using CSS grid */
 .products-wrapper {
     display: grid;
-    /* repeat(auto-fill, minmax(...)) – dynamické rozloženie
-       toľko stĺpcov, koľko sa zmestí do šírky */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px 20px;          /* väčšia medzera medzi riadkami, menšia medzi stĺpcami */
-    padding: 40px 20px;      /* okraje zvnútra, aby neboli produkty nalepené na kraji */
+    gap: 40px 20px;
+    padding: 40px 20px;
     width: 100%;
-    box-sizing: border-box;  /* nech sa padding započítava do šírky */
-    align-items: start;      /* zarovná produkty zhora */
+    box-sizing: border-box;
+    align-items: start;
 }
 
-/* =========================
-   TLAČIDLO "LOAD MORE"
-   ========================= */
+/* Load more button styling */
 .btn-pos {
     display: block;
-    width: 150px;            /* Pevná šírka tlačidla */
-    margin: 40px auto;       /* väčšia medzera od gridu, vycentrované */
+    width: 150px;
+    margin: 40px auto;
     text-align: center;
 }
+
+/* Order dropdown styling */
 .order-by {
     float: right;
     padding: 8px 12px;
@@ -96,28 +84,28 @@
     background-color: #fff;
 }
 
-/* Sidebar hidden by default with transform */
+/* Sidebar for filters, hidden by default */
 #filterSidebar {
     position: fixed;
     top: 0;
-    right: 0;           /* anchored to right edge */
+    right: 0;
     width: 300px;
     height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-    transform: translateX(100%); /* completely off-screen to the right */
+    transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 2001;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* When active, slide the sidebar into view */
+/* Show filter sidebar */
 #filterSidebar.active {
     transform: translateX(0);
 }
 
-/* Overlay hidden by default */
+/* Background overlay, hidden by default */
 #overlay {
     position: fixed;
     top: 0;
@@ -131,21 +119,20 @@
     z-index: 2000;
 }
 
-/* When active, show the overlay */
+/* Show background overlay */
 #overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Mobile adjustments, if needed */
+/* Mobile full-width filter sidebar */
 @media screen and (max-width: 768px) {
     #filterSidebar {
         width: 100%;
     }
 }
 
-
-/* Filter Sidebar Header */
+/* Header of filter sidebar */
 .filter-header {
     display: flex;
     justify-content: space-between;
@@ -153,33 +140,39 @@
     margin-bottom: 20px;
 }
 
+/* Close icon for filter sidebar */
 .close-filter {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
 }
 
+/* Scrollable content in filter */
 .filter-content {
     overflow-y: auto;
     max-height: calc(100vh - 60px);
     padding-bottom: 40px;
 }
 
+/* Individual filter group */
 .filter-group {
     margin-bottom: 20px;
 }
 
+/* Filter group title */
 .filter-group h5 {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Filter option labels */
 .filter-group label {
     font-size: 0.95rem;
     margin-bottom: 5px;
     cursor: pointer;
 }
 
+/* Apply filter button */
 .btn-apply-filter {
     width: 100%;
     padding: 10px;
@@ -191,21 +184,28 @@
     font-size: 1rem;
 }
 
+/* Hover state for apply filter button */
 .btn-apply-filter:hover {
     background-color: #333;
 }
-.price-input{
+
+/* Price input wrapper */
+.price-input {
     width: 100%;
     display: flex;
     margin: 30px 0 35px;
 }
-.price-input .field{
+
+/* Individual price input field */
+.price-input .field {
     display: flex;
     width: 100%;
     height: 45px;
     align-items: center;
 }
-.field input{
+
+/* Price input field styling */
+.field input {
     width: 100%;
     height: 100%;
     outline: none;
@@ -216,24 +216,32 @@
     border: 1px solid #999;
     -moz-appearance: textfield;
 }
+
+/* Remove number input arrows */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-.price-input .separator{
+
+/* Separator between min and max price */
+.price-input .separator {
     width: 130px;
     display: flex;
     font-size: 19px;
     align-items: center;
     justify-content: center;
 }
-.slider{
+
+/* Price range slider track */
+.slider {
     height: 5px;
     position: relative;
     background: #ddd;
     border-radius: 5px;
 }
-.slider .progress{
+
+/* Filled progress bar of range slider */
+.slider .progress {
     height: 100%;
     left: 0%;
     right: 0%;
@@ -241,10 +249,14 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 5px;
     background: #4b0830;
 }
-.range-input{
+
+/* Wrapper for range slider inputs */
+.range-input {
     position: relative;
 }
-.range-input input{
+
+/* Range slider input styling */
+.range-input input {
     position: absolute;
     width: 100%;
     height: 5px;
@@ -254,7 +266,9 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-input[type="range"]::-webkit-slider-thumb{
+
+/* Custom thumb for range slider (Webkit) */
+input[type="range"]::-webkit-slider-thumb {
     height: 17px;
     width: 17px;
     border-radius: 50%;
@@ -263,7 +277,9 @@ input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
-input[type="range"]::-moz-range-thumb{
+
+/* Custom thumb for range slider (Firefox) */
+input[type="range"]::-moz-range-thumb {
     height: 17px;
     width: 17px;
     border: none;
@@ -273,14 +289,15 @@ input[type="range"]::-moz-range-thumb{
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
-.sort-filter-container{
+
+/* Container for filter and order controls */
+.sort-filter-container {
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-
-/* Štýly pre Bootstrap pagination s farbou #722243 */
+/* Pagination styling with custom color */
 .pagination .page-link {
     color: #722243;
     border-color: #722243;
@@ -289,7 +306,7 @@ input[type="range"]::-moz-range-thumb{
 .pagination .page-item.active .page-link {
     background-color: #722243;
     border-color: #722243;
-    color: #fff; /* aktívny prvok má biely text */
+    color: #fff;
 }
 
 .pagination .page-link:hover {
@@ -298,8 +315,7 @@ input[type="range"]::-moz-range-thumb{
     border-color: #722243;
 }
 
-/* FILTER */
-
+/* Filter button styling */
 .btn-filter {
     display: inline-block;
     background-color: #722243;
@@ -313,6 +329,7 @@ input[type="range"]::-moz-range-thumb{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover state for filter button */
 .btn-filter:hover {
     background-color: #fff;
     color: #722243;
@@ -320,56 +337,49 @@ input[type="range"]::-moz-range-thumb{
     text-decoration: none;
 }
 
+/* Dropdown for order selection */
 .order-by {
-    background-color: #722243;     /* bordová farba pozadia */
-    color: #fff;                   /* biely text */
-    border: 2px solid #722243;    /* bordová obruba */
-    border-radius: 20px;          /* zaoblené rohy */
-    padding: 8px 16px;            /* vnútorné odsadenie */
-    font-weight: bold;            /* tučné písmo */
-    text-transform: uppercase;    /* veľké písmená (voliteľné) */
-    cursor: pointer;              /* kurzor ruky pri hoveri */
+    background-color: #722243;
+    color: #fff;
+    border: 2px solid #722243;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-
-    /* Odstránenie natívneho vzhľadu šípky (Chrome, Safari, Firefox) */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
-    /* Voliteľne zrušenie natívnej šípky vo Windows/IE (ak by bolo treba) */
-    /*::-ms-expand {
-        display: none;
-    } */
 }
 
 .order-by:hover {
-    background-color: #fff;        /* pri hoveri biele pozadie */
-    color: #722243;               /* a text bordový */
-    border-color: #722243;        /* zachovať bordovú obrubu */
+    background-color: #fff;
+    color: #722243;
+    border-color: #722243;
 }
 
 .order-by:focus {
-    outline: none;                /* odstránenie obrysu (voliteľné) */
+    outline: none;
 }
 
-
+/* Responsive layout for sort and filter */
 .sort-filter-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Filter on left, Order on right */
-    margin: 20px;                  /* or your desired spacing */
+    justify-content: space-between;
+    margin: 20px;
 }
 
 @media (max-width: 768px) {
     .sort-filter-container {
-        flex-direction: column;      /* stack vertically on mobile */
-        align-items: center;         /* center horizontally */
-        gap: 10px;                   /* small vertical gap between them */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .order-by {
-        width: auto;                 /* or 100% if you want full-width on mobile */
+        width: auto;
         text-align: center;
     }
 }
-

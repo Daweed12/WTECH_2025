@@ -12,68 +12,20 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="admin.css">
-    <style>
-        /* Umiestnenie overlayu a jeho prvkov */
-        .product-container .image-wrapper {
-            position: relative;
-        }
-        .admin-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .image-wrapper:hover .admin-overlay {
-            opacity: 1;
-        }
-        /* Trash ikona v ľavom hornom rohu */
-        .admin-overlay .delete-icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-        /* Plus ikona v pravom hornom rohu */
-        .admin-overlay .edit-link {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-        }
-        /* Názov produktu umiestnený v strede dole */
-        .admin-overlay .product-name {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.1rem;
-            text-align: center;
-        }
-    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 <div class="flex-fill">
-    <!-- SIGN IN TOP BAR -->
+    <!-- Top bar with sign in / sign up -->
     <div class="container-fluid bg-light py-2 top-bar">
         <div class="container d-flex justify-content-end align-items-center">
             <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
         </div>
     </div>
 
-    <!-- NAVIGATION BAR -->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container d-flex w-100 justify-content-between align-items-center">
-
-            <!-- Hamburger toggler on the left for categories only -->
+            <!-- Toggle button for categories -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
                     aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,30 +34,20 @@
             <!-- Logo -->
             <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
 
-            <!-- Collapsible Category Links -->
+            <!-- Collapsible category links -->
             <div class="collapse navbar-collapse" id="categoriesMenu">
                 <ul class="navbar-nav d-flex justify-content-start">
-                    <li class="nav-item">
-                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">NECKLACES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">RINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">EARINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">BRACELETS</a>
-                    </li>
+                    <li class="nav-item"><a href="../products/all_products.html" class="nav-link">SHOP ALL</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
                 </ul>
             </div>
 
-            <!-- Ikonky (vrátane search ikonky) -->
+            <!-- Icon section including search, wishlist, account, and cart -->
             <div class="d-flex align-items-center ms-auto">
-                <!-- Search ikonka s collapse atribútmi -->
+                <!-- Search icon toggles search input -->
                 <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
                    aria-expanded="false" aria-controls="navbarSearch">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -116,7 +58,7 @@
                 <a href="../account/account_details.html" class="nav-link me-2">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <!-- Košík s badge -->
+                <!-- Shopping cart icon with badge -->
                 <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -129,7 +71,7 @@
         </div>
     </nav>
 
-    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <!-- Collapsible search input below nav bar -->
     <div class="collapse search-bar" id="navbarSearch">
         <div class="container">
             <form class="d-flex my-2">
@@ -138,9 +80,8 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT: ADMIN MODE -->
+    <!-- Main content: Admin mode header and add product button -->
     <main class="container my-5">
-        <!-- Hlavička s Add Product tlačidlom -->
         <div class="row align-items-center mb-3">
             <div class="col">
                 <h2 class="mb-0">Admin mode</h2>
@@ -154,7 +95,7 @@
         </div>
         <hr>
 
-        <!-- GRID PRODUKTOV -->
+        <!-- Product grid -->
         <div class="products-wrapper row">
             <!-- Produkt 1 -->
             <div class="product-container col-md-4 mb-4">
@@ -338,24 +279,23 @@
             </div>
         </div>
     </main>
+
+    <!-- Pagination navigation -->
     <nav aria-label="Page navigation" class="mt-4">
-    <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-        </li>
-    </ul>
-    <br>
-</nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+        <br>
+    </nav>
 </div>
-    <!-- FOOTER -->
+
+<!-- Footer section -->
 <footer>
     <section class="container footer-custom">
         <p class="logo">NYX</p>
@@ -371,35 +311,30 @@
 </footer>
 
 <!-- Bootstrap JS -->
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Získame referencie na collapse elementy
+        /* Initialize collapse elements */
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
 
-        // Získame existujúce collapse inštancie, ak neexistujú, vytvoríme nové s toggle: false
         let categoriesCollapse = bootstrap.Collapse.getInstance(categoriesMenu);
         if (!categoriesCollapse) {
             categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
         }
+
         let searchCollapse = bootstrap.Collapse.getInstance(searchBar);
         if (!searchCollapse) {
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
 
-        // Referencie na tlačidlá pre toggle
+        /* Toggle buttons */
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
         const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
 
-        // Pri kliknutí na search ikonku: zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar.
+        /* Toggle search bar */
         searchLink.addEventListener("click", function(e) {
-            // Zastavíme default akciu, aby nedošlo k nečakaným prejavom.
             e.preventDefault();
             if (categoriesMenu.classList.contains("show")) {
                 categoriesCollapse.hide();
@@ -407,7 +342,7 @@
             searchCollapse.toggle();
         });
 
-        // Pri kliknutí na hamburger tlačidlo: zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie.
+        /* Toggle categories menu */
         hamburgerToggler.addEventListener("click", function(e) {
             e.preventDefault();
             if (searchBar.classList.contains("show")) {
@@ -416,15 +351,13 @@
             categoriesCollapse.toggle();
         });
 
-        // Globálny listener, ktorý zatvorí collapse panely, ak používateľ klikne mimo nich.
+        /* Close collapse elements when clicking outside */
         document.addEventListener("click", function(e) {
-            // Ak je search bar otvorený, ale klikol používateľ mimo search baru a mimo tlačidla search ikonky, zatvoríme ho.
             if (searchBar.classList.contains("show") &&
                 !searchBar.contains(e.target) &&
                 !searchLink.contains(e.target)) {
                 searchCollapse.hide();
             }
-            // Ak sú kategórie otvorené, ale klikol používateľ mimo nich a mimo hamburger tlačidla, zatvoríme ich.
             if (categoriesMenu.classList.contains("show") &&
                 !categoriesMenu.contains(e.target) &&
                 !hamburgerToggler.contains(e.target)) {
@@ -434,12 +367,12 @@
     });
 </script>
 
-<!-- JavaScript pre spracovanie kliknutia na delete ikonu -->
+<!-- Delete icon click handler -->
 <script>
     document.querySelectorAll('.delete-icon').forEach(function(element) {
         element.addEventListener('click', function(e) {
-            if (confirm("Naozaj to chcete spraviť?")) {
-                alert("Produkt bol odstránený");
+            if (confirm("Are you sure you want to delete this item?")) {
+                alert("Product has been deleted");
             }
         });
     });

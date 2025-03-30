@@ -1,19 +1,22 @@
-
-.btn-save{
+/* Style for the save button */
+.btn-save {
     background-color: darkgreen;
     color: white;
 }
 
-.btn-save:hover{
+/* Hover effect for the save button */
+.btn-save:hover {
     background-color: olive;
     color: white;
 }
 
-.btn-back{
+/* Style for the back button */
+.btn-back {
     background-color: lightgray;
 }
 
-.btn-back:hover{
+/* Hover effect for the back button */
+.btn-back:hover {
     background-color: darkgrey;
     color: #111111;
 }

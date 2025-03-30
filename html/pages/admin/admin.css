@@ -1,98 +1,82 @@
-/* =========================
-   KONTAJNER PRE JEDEN PRODUKT
-   ========================= */
-
-
+/* Container for a single product */
 .product-container {
-    /* Zrušili sme pevné height a width: 300px,
-       aby grid mohol dynamicky meniť šírku. */
     width: 100%;
-    max-width: 300px;         /* nech sa nepretiahne príliš */
-    margin: 0 auto;           /* vycentruje box, keď je menej stĺpcov */
+    max-width: 300px; /* Prevents container from becoming too wide */
+    margin: 0 auto; /* Center container when fewer columns are present */
     font-family: sans-serif;
-    text-align: left;         /* metaformi.sk má text zarovnaný doľava */
+    text-align: left;
     position: relative;
 }
 
-/* =========================
-   OBRÁZOK
-   ========================= */
+/* Product image container */
 .image-wrapper {
     position: relative;
     overflow: hidden;
-    border: none;             /* odstránime rámik */
-    border-radius: 0;         /* odstránime zaoblenie */
-    width: 100%;              /* obrázok vyplní celý kontajner */
-    aspect-ratio: 1 / 1;      /* obrázok bude v pomere 1:1 (štvorec) */
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Maintains square ratio */
 }
 
-/* Samotný obrázok */
+/* Product image styling */
 .product-image {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;      /* zobrazí šperk celý, bez orezania */
+    object-fit: cover; /* Ensures image fully fits without cropping */
     transition: transform 0.3s ease;
 }
+
+/* Hover effect for product image */
 .product-image:hover {
-    transform: scale(1.05);   /* jemné priblíženie pri hoveri */
+    transform: scale(1.05);
 }
 
-/* =========================
-   NÁZOV PRODUKTU
-   ========================= */
+/* Product title styling */
 .product-title {
-    font-size: 1rem;         /* menšie písmo, ako býva pri minimalistických e-shopoch */
+    font-size: 1rem;
     margin: 10px 0 0 0;
-    font-weight: 400;        /* tenší font pre elegantný vzhľad */
+    font-weight: 400;
     text-align: left;
 }
 
-/* =========================
-   CENA PRODUKTU
-   ========================= */
+/* Product price styling */
 .product-price {
     font-size: 1rem;
     font-weight: 500;
     color: #111;
-    margin-top: 5px;         /* menšia medzera medzi názvom a cenou */
+    margin-top: 5px;
     text-align: left;
 }
 
-/* Štítok DPH */
+/* Tax label styling */
 .tax {
     font-size: 0.9rem;
     color: #666;
     margin-left: 5px;
 }
 
-/* =========================
-   GRID WRAPPER PRE VŠETKY PRODUKTY
-   ========================= */
+/* Grid container for all products */
 .products-wrapper {
     display: grid;
-    /* repeat(auto-fill, minmax(...)) – dynamické rozloženie
-       toľko stĺpcov, koľko sa zmestí do šírky */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px 20px;          /* väčšia medzera medzi riadkami, menšia medzi stĺpcami */
-    padding: 40px 20px;      /* okraje zvnútra, aby neboli produkty nalepené na kraji */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 40px 20px; /* Row and column gaps */
+    padding: 40px 20px; /* Internal spacing */
     width: 100%;
-    box-sizing: border-box;  /* nech sa padding započítava do šírky */
-    align-items: start;      /* zarovná produkty zhora */
+    box-sizing: border-box;
+    align-items: start;
 }
 
-/*
-EDIT PRODUCT
- */
+/* Admin: product edit section */
 
-/* Box okolo obrázku produktu */
+/* Product image preview box */
 .admin-picture-box {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f8f9fa;
 }
 
-/* Placeholder pre obrázok */
+/* Placeholder for uploading a new product image */
 .admin-picture-placeholder {
     width: 100%;
     height: 200px;
@@ -105,30 +89,77 @@ EDIT PRODUCT
     background-color: #fff;
 }
 
-/* Formulár v admin sekcii */
+/* Spacing between input fields in admin form */
 .admin-form input,
 .admin-form textarea {
     margin-bottom: 1rem;
 }
 
-button.btn.btn-primary {
-    background-color: #4b0830 !important;
-    color: white !important;
-    border: none !important;
-    box-shadow: none !important;
+/* Custom pagination styles */
+
+/* Base pagination styling */
+.pagination .page-link {
+    color: #722243;
+    border-color: #722243;
 }
 
-button.btn.btn-primary:hover {
-    background-color: #ffc107 !important;
-    color: black !important;
+/* Active pagination item */
+.pagination .page-item.active .page-link {
+    background-color: #722243;
+    border-color: #722243;
+    color: #fff;
 }
 
-button.btn.btn-primary:focus,
-button.btn.btn-primary:active,
-button.btn.btn-primary:focus:active {
-    background-color: #4b0830 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: white !important;
+/* Hover effect for pagination links */
+.pagination .page-link:hover {
+    background-color: #722243;
+    color: #fff;
+    border-color: #722243;
 }
 
+/* Container for product image and overlay */
+.product-container .image-wrapper {
+    position: relative;
+}
+/* Admin overlay for actions */
+.admin-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.image-wrapper:hover .admin-overlay {
+    opacity: 1;
+}
+/* Delete icon (top left) */
+.admin-overlay .delete-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/* Edit icon (top right) */
+.admin-overlay .edit-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+/* Product name (bottom center) */
+.admin-overlay .product-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    text-align: center;
+}

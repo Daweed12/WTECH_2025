@@ -1,11 +1,11 @@
-/* Outer container without an outline */
+/* Outer container for quantity selector */
 .quantity-box {
     display: flex;
     align-items: center;
-    /* Removed border, border-radius, and background-color */
+    /* No border or background for a cleaner look */
 }
 
-/* Minus & Plus buttons */
+/* Buttons to decrease or increase quantity */
 .quantity-btn {
     background: none;
     border: none;
@@ -20,13 +20,14 @@
     box-shadow: none;
 }
 
+/* Hover and focus states for quantity buttons */
 .quantity-btn:hover,
 .quantity-btn:focus {
     color: #000;
     outline: none;
 }
 
-/* Numeric value in the middle */
+/* Input field displaying current quantity */
 .quantity-input {
     width: 40px;
     text-align: center;
@@ -39,7 +40,7 @@
     margin: 0;
 }
 
-/* Vertical separators */
+/* Line separator between quantity controls */
 .separator {
     width: 1px;
     height: 24px;

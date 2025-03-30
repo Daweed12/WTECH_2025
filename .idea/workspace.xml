@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="nav bar update">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/account/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/account/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/account/account_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_address_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_address_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_payment_method.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_payment_method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart_preview.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,18 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "xkmetk"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xkmetk&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Daweed12/WTECH_2025.git",
-    "accountId": "e2ae87d5-06f7-4ecd-a6fa-4b23d99de095"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Daweed12/WTECH_2025.git&quot;,
+    &quot;accountId&quot;: &quot;e2ae87d5-06f7-4ecd-a6fa-4b23d99de095&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -111,8 +128,7 @@
       <workItem from="1742924117138" duration="2987000" />
       <workItem from="1743252961776" duration="4388000" />
       <workItem from="1743277394112" duration="2300000" />
-      <workItem from="1743325457230" duration="723000" />
-      <workItem from="1743356123934" duration="315000" />
+      <workItem from="1743353405700" duration="5143000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -202,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743346468435</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="banner text finally aligned">
+      <option name="closed" value="true" />
+      <created>1743347257570</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743347257570</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +268,7 @@
     <MESSAGE value="product detail page update" />
     <MESSAGE value="admin page changing layout + some updates" />
     <MESSAGE value="filter repair + footer now sticks to bottom" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter repair + footer now sticks to bottom" />
+    <MESSAGE value="banner text finally aligned" />
+    <option name="LAST_COMMIT_MESSAGE" value="banner text finally aligned" />
   </component>
 </project>

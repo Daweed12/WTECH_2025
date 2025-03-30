@@ -1,25 +1,50 @@
-.banner-text-top {
+.banner-register {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #000;
-    /* background-color: rgba(255, 255, 255, 0.8);  Odstráňte alebo zakomentujte */
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: left;
-    font-size: 1.3rem; /* zväčší text */
-    font-weight: bold; /* voliteľné, ak chceš tučné písmo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
 }
 
-.banner-text-bottom {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: #000;
-    /* background-color: rgba(255, 255, 255, 0.8);  Odstráňte alebo zakomentujte */
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: right;
-    font-size: 1.3rem; /* zväčší text */
-    font-weight: bold; /* voliteľné, ak chceš tučné písmo */
+.banner-register h2 {
+    font-size: 2rem;
 }
+
+@media (min-width: 768px) {
+    .banner-register h2 {
+        font-size: 3rem;
+    }
+}
+
+.carousel-overlay-left {
+    position: absolute;
+    top: 50%;
+    left: 200px; /* Pre desktop */
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 10;
+}
+
+.carousel-overlay-left h2 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .carousel-overlay-left h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Pre mobil (max-width: 767px) */
+@media (max-width: 767px) {
+    .carousel-overlay-left {
+        left: 50%; /* Umiestnieme na stred */
+        transform: translate(-50%, -50%); /* Posunieme na stred horizontálne aj vertikálne */
+        text-align: center; /* Zarovnáme text na stred */
+    }
+}
+
+
+
+

@@ -41,11 +41,13 @@ body {
 
 /* Sign-in link styling */
 .sign-in-link {
+    text-decoration: none;
+    color: black;
     font-size: 0.9rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 .sign-in-link:hover {
-    color: black;
+    color: gray;
 }
 
 .search-bar {
@@ -101,9 +103,11 @@ body {
     color: white;
 }
 
-/* Zmeň hamburger ikonu na bielu */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 /* Odstráň orámovanie a tieň po kliknutí */
@@ -126,7 +130,7 @@ body {
     line-height: 1.2;
 }
 
-/* Pseudo-element, ktorý vytvorí „podčiarknutie“ */
+/* Pseudo-element, ktorý vytvorí "podčiarknutie" */
 .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
@@ -380,9 +384,6 @@ body {
 }
 .navbar-brand, .nav-link {
     color: #fff;
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' ...");
 }
 
 /* Zabráni obsahu, aby nebol prekrytý fixnými prvkami */

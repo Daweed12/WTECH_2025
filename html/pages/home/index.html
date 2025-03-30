@@ -28,7 +28,7 @@
 <!-- SIGN IN TOP BAR -->
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
-        <a href="../login_register/login_register_user.html" class="nav-link small sign-in-link">
+        <a href="../login_register/login_register_user.html" class="small sign-in-link">
             Sign In / Sign Up
         </a>
     </div>
@@ -47,6 +47,7 @@
                 aria-controls="categoriesMenu"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
+
         >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -122,66 +123,44 @@
 </div>
 
 <!-- MAIN BAR IMAGE (carousel) -->
-<div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
->
+<div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
+    <!-- Fixný overlay umiestnený v rámci carouselu -->
+    <div class="carousel-overlay-left">
+        <h2 class="text-white fw-bold">SPRING COLLECTION</h2>
+        <a href="../products/all_products.html" class="btn btn-outline-light fw-bold mt-3">SHOP ALL</a>
+    </div>
+
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img
-                    class="d-block w-100 sliding-image"
-                    src="../../images/banner_product1.jpg"
-                    alt="First slide"
-            >
+            <img class="d-block w-100 sliding-image" src="../../images/banner_product1.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img
-                    class="d-block w-100 sliding-image"
-                    src="../../images/banner_product2.jpg"
-                    alt="Second slide"
-            >
+            <img class="d-block w-100 sliding-image" src="../../images/banner_product2.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img
-                    class="d-block w-100 sliding-image"
-                    src="../../images/banner_product3.jpg"
-                    alt="Third slide"
-            >
+            <img class="d-block w-100 sliding-image" src="../../images/banner_product3.jpg" alt="Third slide">
         </div>
         <div class="carousel-item">
-            <img
-                    class="d-block w-100 sliding-image"
-                    src="../../images/banner_product4.jpg"
-                    alt="Fourth slide"
-            >
+            <img class="d-block w-100 sliding-image" src="../../images/banner_product4.jpg" alt="Fourth slide">
         </div>
     </div>
 
-    <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-    >
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-    >
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
 
+
 <hr>
 
 <!-- CATEGORIES -->
 <section class="container my-5">
+    <h2 class="text-center text-dark mb-4">CATEGORIES</h2>
     <div class="row text-center">
         <!-- Necklaces -->
         <div class="col-6 col-md-3 mb-4">
@@ -198,7 +177,6 @@
                 </div>
             </a>
         </div>
-
         <!-- Earrings -->
         <div class="col-6 col-md-3 mb-4">
             <a href="#" class="category-button">
@@ -214,7 +192,6 @@
                 </div>
             </a>
         </div>
-
         <!-- Bracelets -->
         <div class="col-6 col-md-3 mb-4">
             <a href="#" class="category-button">
@@ -230,7 +207,6 @@
                 </div>
             </a>
         </div>
-
         <!-- Rings -->
         <div class="col-6 col-md-3 mb-4">
             <a href="#" class="category-button">
@@ -249,39 +225,27 @@
     </div>
 </section>
 
+
 <hr>
 
 <!-- SECOND MAIN BAR IMAGE -->
-<div
-        id="secondBanner"
-        class="carousel slide"
-        data-bs-ride="carousel"
->
+<div id="secondBanner" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div
-                class="carousel-item active position-relative"
-        >
+        <div class="carousel-item active position-relative">
             <!-- Obrázok -->
-            <img
-                    class="d-block w-100 sliding-image"
-                    src="/html/images/banner_product6.jpg"
-                    alt="Product Image"
-            >
-            <!-- Text v ľavom hornom rohu -->
-            <div class="banner-text-top">
+            <img class="d-block w-100 sliding-image" src="/html/images/banner_product6.jpg" alt="Product Image">
 
-                <p>NYX Jewelry – where every piece is a masterpiece <br>of timeless elegance and modern design.
-                    Immerse <br>yourself in our world of unparalleled craftsmanship,<br>
-                    where refined aesthetics and luxurious details redefine sophistication.</p>
-            </div>
-            <!-- Text v pravom dolnom rohu -->
-            <div class="banner-text-bottom">
-
-                <p>"Indulge in the art of fine jewelry. Meticulously handcrafted using only the finest materials, <br>our collections celebrate passion, exquisite taste, and the beauty of life's most precious moments."</p>
+            <!-- Nový register overlay -->
+            <div class="banner-register text-center">
+                <h2 class="text-white fw-bold">
+                    REGISTER AND GET DISCOUT 10% FOR YOUR FIRST PURCHASE!
+                </h2>
+                <a href="../login_register/login_register_user.html" class="btn btn-outline-light fw-bold mt-3">Register</a>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- FOOTER -->
 <footer>

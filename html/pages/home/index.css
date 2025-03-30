@@ -1,3 +1,4 @@
+/* Centered registration banner text */
 .banner-register {
     position: absolute;
     top: 50%;
@@ -7,43 +8,45 @@
     text-align: center;
 }
 
+/* Heading size for registration banner */
 .banner-register h2 {
     font-size: 2rem;
 }
 
+/* Larger heading on tablet and up */
 @media (min-width: 768px) {
     .banner-register h2 {
         font-size: 3rem;
     }
 }
 
+/* Left-aligned overlay content for carousel (desktop default) */
 .carousel-overlay-left {
     position: absolute;
     top: 50%;
-    left: 25%; /* Pre desktop */
+    left: 25%;
     transform: translateY(-50%);
     text-align: left;
     z-index: 10;
 }
 
+/* Carousel overlay heading size */
 .carousel-overlay-left h2 {
     font-size: 2rem;
 }
 
+/* Larger heading for carousel overlay on tablet and up */
 @media (min-width: 768px) {
     .carousel-overlay-left h2 {
         font-size: 3rem;
     }
 }
 
-/* Pre mobil (max-width: 767px) */
+/* Center carousel overlay for mobile devices */
 @media (max-width: 767px) {
     .carousel-overlay-left {
-        left: 50%; /* Umiestnieme na stred */
-        transform: translate(-50%, -50%); /* Posunieme na stred horizontálne aj vertikálne */
-        text-align: center; /* Zarovnáme text na stred */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 }
-
-
-

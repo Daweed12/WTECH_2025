@@ -18,14 +18,15 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     >
-    <!-- Hlavný CSS súbor -->
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="../../css/styles.css">
-    <!-- Admin CSS (na špecifické úpravy pre admin sekciu) -->
+    <!-- Admin-specific styles -->
     <link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 <div class="flex-fill">
-    <!-- SIGN IN TOP BAR -->
+
+    <!-- Top bar with sign in / sign up -->
     <div class="container-fluid bg-light py-2 top-bar">
         <div class="container d-flex justify-content-end align-items-center">
             <a href="../login_register/login_register_user.html" class="small sign-in-link">
@@ -34,54 +35,46 @@
         </div>
     </div>
 
-    <!-- NAVIGATION BAR -->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container d-flex w-100 justify-content-between align-items-center">
 
-            <!-- Hamburger toggler on the left for categories only -->
+            <!-- Toggle button for categories -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
                     aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Logo -->
+            <!-- Logo link -->
             <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
 
-            <!-- Collapsible Category Links -->
+            <!-- Category links -->
             <div class="collapse navbar-collapse" id="categoriesMenu">
                 <ul class="navbar-nav d-flex justify-content-start">
-                    <li class="nav-item">
-                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">NECKLACES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">RINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">EARINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">BRACELETS</a>
-                    </li>
+                    <li class="nav-item"><a href="../products/all_products.html" class="nav-link">SHOP ALL</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
                 </ul>
             </div>
 
-            <!-- Ikonky (vrátane search ikonky) -->
+            <!-- Icon section (search, wishlist, account, cart) -->
             <div class="d-flex align-items-center ms-auto">
-                <!-- Search ikonka s collapse atribútmi -->
+                <!-- Search icon toggle -->
                 <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
                    aria-expanded="false" aria-controls="navbarSearch">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
+                <!-- Wishlist icon -->
                 <a href="#" class="nav-link me-2">
                     <i class="fa-solid fa-heart"></i>
                 </a>
+                <!-- Account icon -->
                 <a href="../account/account_details.html" class="nav-link me-2">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <!-- Košík s badge -->
+                <!-- Shopping cart icon with badge -->
                 <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -94,7 +87,7 @@
         </div>
     </nav>
 
-    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <!-- Search bar collapse section -->
     <div class="collapse search-bar" id="navbarSearch">
         <div class="container">
             <form class="d-flex my-2">
@@ -103,77 +96,76 @@
         </div>
     </div>
 
-    <!-- HLAVNÝ OBSAH: ADMIN MODE -->
+    <!-- Main content: Admin interface -->
     <div class="container my-5">
-    <h1 class="mb-3">Admin mode</h1>
-    <h2 class="mb-4">Current item</h2>
+        <h1 class="mb-3">Admin mode</h1>
+        <h2 class="mb-4">Current item</h2>
 
-    <!-- Admin formulár s carouselom obrázkov -->
-    <div class="row">
-        <!-- Sekcia pre carousel s obrázkami a tlačidlo Edit -->
-        <div class="col-md-4 mb-4">
-            <div id="adminProductCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Obrázok 1 -->
-                    <div class="carousel-item active">
-                        <img src="../../images/current_product1.jpg" class="d-block w-100" alt="Produkt 1">
+        <!-- Admin product form with image carousel -->
+        <div class="row">
+
+            <!-- Image carousel and edit button -->
+            <div class="col-md-4 mb-4">
+                <div id="adminProductCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../images/current_product1.jpg" class="d-block w-100" alt="Produkt 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../images/current_product2.jpg" class="d-block w-100" alt="Produkt 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../images/current_product3.jpg" class="d-block w-100" alt="Produkt 3">
+                        </div>
                     </div>
-                    <!-- Obrázok 2 -->
-                    <div class="carousel-item">
-                        <img src="../../images/current_product2.jpg" class="d-block w-100" alt="Produkt 2">
-                    </div>
-                    <!-- Obrázok 3 -->
-                    <div class="carousel-item">
-                        <img src="../../images/current_product3.jpg" class="d-block w-100" alt="Produkt 3">
-                    </div>
+                    <!-- Carousel navigation buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#adminProductCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#adminProductCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <!-- Ovládacie prvky carouselu -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#adminProductCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#adminProductCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <button class="btn btn-secondary w-100 mt-3">Edit Images</button>
             </div>
-            <button class="btn btn-secondary w-100 mt-3">Edit Images</button>
-        </div>
 
-        <!-- Sekcia pre formulár s detailmi produktu -->
-        <div class="col-md-8">
-            <form>
-                <div class="mb-3">
-                    <label for="productName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="productName" placeholder="Name of item">
-                </div>
-                <div class="mb-3">
-                    <label for="productPrice" class="form-label">Price</label>
-                    <input type="text" class="form-control" id="productPrice" placeholder="Price of item">
-                </div>
-                <div class="mb-3">
-                    <label for="productCategory" class="form-label">Category</label>
-                    <input type="text" class="form-control" id="productCategory" placeholder="Category of item">
-                </div>
-                <div class="mb-3">
-                    <label for="productDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="productDescription" rows="3" placeholder="Description of item"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="productID" class="form-label">ID</label>
-                    <input type="text" class="form-control" id="productID" placeholder="ID of item">
-                </div>
-                <div class="mb-3">
-                    <label for="productAvailability" class="form-label">Availability</label>
-                    <input type="text" class="form-control" id="productAvailability" placeholder="Availability of item">
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Save changes</button>
-            </form>
+            <!-- Product detail form -->
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="productName" placeholder="Name of item">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="productPrice" placeholder="Price of item">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productCategory" class="form-label">Category</label>
+                        <input type="text" class="form-control" id="productCategory" placeholder="Category of item">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="productDescription" rows="3" placeholder="Description of item"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productID" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="productID" placeholder="ID of item">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productAvailability" class="form-label">Availability</label>
+                        <input type="text" class="form-control" id="productAvailability" placeholder="Availability of item">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Save changes</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-</div>
-<!-- FOOTER -->
+
+<!-- Footer section -->
 <footer>
     <section class="container footer-custom">
         <p class="logo">NYX</p>
@@ -196,28 +188,27 @@
 ></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Získame referencie na collapse elementy
+    document.addEventListener("DOMContentLoaded", function () {
+        /* Initialize collapse elements */
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
 
-        // Získame existujúce collapse inštancie, ak neexistujú, vytvoríme nové s toggle: false
         let categoriesCollapse = bootstrap.Collapse.getInstance(categoriesMenu);
         if (!categoriesCollapse) {
             categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
         }
+
         let searchCollapse = bootstrap.Collapse.getInstance(searchBar);
         if (!searchCollapse) {
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
 
-        // Referencie na tlačidlá pre toggle
+        /* Toggle buttons */
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
         const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
 
-        // Pri kliknutí na search ikonku: zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar.
-        searchLink.addEventListener("click", function(e) {
-            // Zastavíme default akciu, aby nedošlo k nečakaným prejavom.
+        /* Toggle search bar when search icon is clicked */
+        searchLink.addEventListener("click", function (e) {
             e.preventDefault();
             if (categoriesMenu.classList.contains("show")) {
                 categoriesCollapse.hide();
@@ -225,8 +216,8 @@
             searchCollapse.toggle();
         });
 
-        // Pri kliknutí na hamburger tlačidlo: zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie.
-        hamburgerToggler.addEventListener("click", function(e) {
+        /* Toggle categories menu when hamburger is clicked */
+        hamburgerToggler.addEventListener("click", function (e) {
             e.preventDefault();
             if (searchBar.classList.contains("show")) {
                 searchCollapse.hide();
@@ -234,15 +225,14 @@
             categoriesCollapse.toggle();
         });
 
-        // Globálny listener, ktorý zatvorí collapse panely, ak používateľ klikne mimo nich.
-        document.addEventListener("click", function(e) {
-            // Ak je search bar otvorený, ale klikol používateľ mimo search baru a mimo tlačidla search ikonky, zatvoríme ho.
+        /* Close collapsible panels when clicking outside */
+        document.addEventListener("click", function (e) {
             if (searchBar.classList.contains("show") &&
                 !searchBar.contains(e.target) &&
                 !searchLink.contains(e.target)) {
                 searchCollapse.hide();
             }
-            // Ak sú kategórie otvorené, ale klikol používateľ mimo nich a mimo hamburger tlačidla, zatvoríme ich.
+
             if (categoriesMenu.classList.contains("show") &&
                 !categoriesMenu.contains(e.target) &&
                 !hamburgerToggler.contains(e.target)) {

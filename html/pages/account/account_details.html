@@ -2,39 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NYX - My Account</title>
 
     <!-- Bootstrap CSS -->
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
+
     <!-- Font Awesome Icons -->
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    >
-    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../pages/account/account.css">
 
     <style>
-        /* Príklad zmenšenia badge */
+        /* Smaller badge styling */
         .small-badge {
-            font-size: 0.7rem;     /* zmenši text */
-            padding: 0.2em 0.4em;  /* zmenši vnútorné odsadenie */
+            font-size: 0.7rem;
+            padding: 0.2em 0.4em;
         }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 <div class="flex-fill">
 
-    <!-- SIGN IN TOP BAR -->
+    <!-- Top bar with user greeting -->
     <div class="container-fluid bg-light py-2 top-bar">
         <div class="container d-flex justify-content-end align-items-center">
             <a href="../login_register/login_register_user.html" class="small sign-in-link">
@@ -43,54 +35,49 @@
         </div>
     </div>
 
-    <!-- NAVIGATION BAR -->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container d-flex w-100 justify-content-between align-items-center">
 
-            <!-- Hamburger toggler on the left for categories only -->
+            <!-- Hamburger button for category menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
                     aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Logo -->
+            <!-- Brand logo -->
             <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
 
-            <!-- Collapsible Category Links -->
+            <!-- Collapsible category links -->
             <div class="collapse navbar-collapse" id="categoriesMenu">
                 <ul class="navbar-nav d-flex justify-content-start">
-                    <li class="nav-item">
-                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">NECKLACES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">RINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">EARINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">BRACELETS</a>
-                    </li>
+                    <li class="nav-item"><a href="../products/all_products.html" class="nav-link">SHOP ALL</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
                 </ul>
             </div>
 
-            <!-- Ikonky (vrátane search ikonky) -->
+            <!-- Header icons -->
             <div class="d-flex align-items-center ms-auto">
-                <!-- Search ikonka s collapse atribútmi -->
+                <!-- Search icon toggles search bar -->
                 <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
                    aria-expanded="false" aria-controls="navbarSearch">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
+
+                <!-- Wishlist icon -->
                 <a href="#" class="nav-link me-2">
                     <i class="fa-solid fa-heart"></i>
                 </a>
+
+                <!-- Account icon -->
                 <a href="../account/account_details.html" class="nav-link me-2">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <!-- Košík s badge -->
+
+                <!-- Cart icon with item count badge -->
                 <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger small-badge">
@@ -102,7 +89,7 @@
         </div>
     </nav>
 
-    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <!-- Collapsible search bar -->
     <div class="collapse search-bar" id="navbarSearch">
         <div class="container">
             <form class="d-flex my-2">
@@ -111,198 +98,126 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT: MY ACCOUNT -->
+    <!-- Main content: Account details and summary -->
     <main class="container my-5">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="mb-3">My Account</h2>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3">My Account</h2>
+            </div>
         </div>
-    </div>
-    <hr>
+        <hr>
 
-    <div class="row">
-        <!-- LEFT COLUMN: AVATAR + USER INFO FORM -->
-        <div class="col-lg-8">
-            <!-- Avatar + Basic Info -->
-            <div class="row mb-4 align-items-center">
-                <div class="col-md-3 text-center mb-3 mb-md-0">
-                    <div class="avatar-container">
-                        <img
-                                src="../../images/example_avatar_image.jpg"
-                                alt="Avatar"
-                                class="avatar-img"
-                        >
+        <div class="row">
+            <!-- Left column: User details form -->
+            <div class="col-lg-8">
+                <!-- Avatar and user info -->
+                <div class="row mb-4 align-items-center">
+                    <div class="col-md-3 text-center mb-3 mb-md-0">
+                        <div class="avatar-container">
+                            <img src="../../images/example_avatar_image.jpg" alt="Avatar" class="avatar-img">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h5 class="mb-1">Adrianna Dobrovnik</h5>
+                        <p class="mb-1">adrianna.dobrovnik@gmail.com</p>
+                        <p class="mb-1">(+999) 123 456 789</p>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <h5 class="mb-1">Adrianna Dobrovnik</h5>
-                    <p class="mb-1">adrianna.dobrovnik@gmail.com</p>
-                    <p class="mb-1">(+999) 123 456 789</p>
-                </div>
+
+                <h4 class="mb-3">Update Your Details</h4>
+                <form>
+                    <!-- First and last name -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" value="Adrianna">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" value="Dobrovnik">
+                        </div>
+                    </div>
+
+                    <!-- Email and phone -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="emailAddress" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="emailAddress" value="adrianna.dobrovnik@gmail.com">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" value="(+999) 123 456 789">
+                        </div>
+                    </div>
+
+                    <!-- Country and ZIP -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" value="Slovakia">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="zipCode" class="form-label">ZIP Code</label>
+                            <input type="text" class="form-control" id="zipCode" value="12345">
+                        </div>
+                    </div>
+
+                    <!-- City and address -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" value="Bratislava">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" value="Main Street 123">
+                        </div>
+                    </div>
+
+                    <!-- Password and confirmation -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="password" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword">
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-back me-3">Cancel</button>
+                        <button type="submit" class="btn btn-save me-3">Save Changes</button>
+                        <button type="button" class="btn btn-danger">Log out</button>
+                    </div>
+                </form>
             </div>
 
-            <h4 class="mb-3">Update Your Details</h4>
-            <form>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="firstName"
-                                placeholder="First Name"
-                                value="Adrianna"
-                        >
+            <!-- Right column: Account summary -->
+            <div class="col-lg-4">
+                <div class="border p-4">
+                    <h4 class="mb-3">Account Summary</h4>
+                    <div class="mb-2 d-flex justify-content-between"><span>Orders Placed</span><span>12</span></div>
+                    <div class="mb-2 d-flex justify-content-between"><span>Wishlist Items</span><span>5</span></div>
+                    <div class="mb-2 d-flex justify-content-between"><span>Membership Level</span><span>Gold</span></div>
+                    <hr>
+                    <div class="mb-2">
+                        <p class="fw-bold mb-1">Recent Orders:</p>
+                        <ul class="list-unstyled">
+                            <li>Order #1234 - <span class="text-success">Delivered</span></li>
+                            <li>Order #1233 - <span class="text-warning">Processing</span></li>
+                            <li>Order #1232 - <span class="text-danger">Cancelled</span></li>
+                        </ul>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="lastName"
-                                placeholder="Last Name"
-                                value="Dobrovnik"
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="emailAddress" class="form-label">E-mail</label>
-                        <input
-                                type="email"
-                                class="form-control"
-                                id="emailAddress"
-                                placeholder="your.email@example.com"
-                                value="adrianna.dobrovnik@gmail.com"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input
-                                type="tel"
-                                class="form-control"
-                                id="phoneNumber"
-                                placeholder="(+xxx) xxx xxx xxx"
-                                value="(+999) 123 456 789"
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="country" class="form-label">Country</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="country"
-                                placeholder="Country"
-                                value="Slovakia"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="zipCode" class="form-label">ZIP Code</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="zipCode"
-                                placeholder="ZIP Code"
-                                value="12345"
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="city" class="form-label">City</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="city"
-                                placeholder="City"
-                                value="Bratislava"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="address" class="form-label">Address</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="address"
-                                placeholder="Street, House number"
-                                value="Main Street 123"
-                        >
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="password" class="form-label">New Password</label>
-                        <input
-                                type="password"
-                                class="form-control"
-                                id="password"
-                                placeholder="Enter new password"
-                        >
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input
-                                type="password"
-                                class="form-control"
-                                id="confirmPassword"
-                                placeholder="Confirm new password"
-                        >
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <button type="button" class="btn btn-back me-3">
-                        Cancel
-                    </button>
-                    <button type="submit" class="btn btn-save me-3">
-                        Save Changes
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        Log out
-                    </button>
-                </div>
-            </form>
-        </div>
-
-        <!-- RIGHT COLUMN: ACCOUNT SUMMARY -->
-        <div class="col-lg-4">
-            <div class="border p-4">
-                <h4 class="mb-3">Account Summary</h4>
-
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Orders Placed</span>
-                    <span>12</span>
-                </div>
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Wishlist Items</span>
-                    <span>5</span>
-                </div>
-                <div class="mb-2 d-flex justify-content-between">
-                    <span>Membership Level</span>
-                    <span>Gold</span>
-                </div>
-                <hr>
-
-                <div class="mb-2">
-                    <p class="fw-bold mb-1">Recent Orders:</p>
-                    <ul class="list-unstyled">
-                        <li>Order #1234 - <span class="text-success">Delivered</span></li>
-                        <li>Order #1233 - <span class="text-warning">Processing</span></li>
-                        <li>Order #1232 - <span class="text-danger">Cancelled</span></li>
-                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 </div>
-<!-- FOOTER -->
+
+<!-- Footer section -->
 <footer>
     <section class="container footer-custom">
         <p class="logo">NYX</p>
@@ -318,35 +233,30 @@
 </footer>
 
 <!-- Bootstrap JS -->
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Získame referencie na collapse elementy
+    document.addEventListener("DOMContentLoaded", function () {
+        /* Initialize collapse instances for category and search panels */
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
 
-        // Získame existujúce collapse inštancie, ak neexistujú, vytvoríme nové s toggle: false
         let categoriesCollapse = bootstrap.Collapse.getInstance(categoriesMenu);
         if (!categoriesCollapse) {
             categoriesCollapse = new bootstrap.Collapse(categoriesMenu, { toggle: false });
         }
+
         let searchCollapse = bootstrap.Collapse.getInstance(searchBar);
         if (!searchCollapse) {
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
 
-        // Referencie na tlačidlá pre toggle
+        /* Button references for toggling */
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
         const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
 
-        // Pri kliknutí na search ikonku: zatvoríme kategórie, ak sú otvorené, a toggle-ujeme search bar.
-        searchLink.addEventListener("click", function(e) {
-            // Zastavíme default akciu, aby nedošlo k nečakaným prejavom.
+        /* Toggle search bar on search icon click */
+        searchLink.addEventListener("click", function (e) {
             e.preventDefault();
             if (categoriesMenu.classList.contains("show")) {
                 categoriesCollapse.hide();
@@ -354,8 +264,8 @@
             searchCollapse.toggle();
         });
 
-        // Pri kliknutí na hamburger tlačidlo: zatvoríme search bar, ak je otvorený, a toggle-ujeme kategórie.
-        hamburgerToggler.addEventListener("click", function(e) {
+        /* Toggle categories menu on hamburger click */
+        hamburgerToggler.addEventListener("click", function (e) {
             e.preventDefault();
             if (searchBar.classList.contains("show")) {
                 searchCollapse.hide();
@@ -363,15 +273,14 @@
             categoriesCollapse.toggle();
         });
 
-        // Globálny listener, ktorý zatvorí collapse panely, ak používateľ klikne mimo nich.
-        document.addEventListener("click", function(e) {
-            // Ak je search bar otvorený, ale klikol používateľ mimo search baru a mimo tlačidla search ikonky, zatvoríme ho.
+        /* Close collapsible menus when clicking outside */
+        document.addEventListener("click", function (e) {
             if (searchBar.classList.contains("show") &&
                 !searchBar.contains(e.target) &&
                 !searchLink.contains(e.target)) {
                 searchCollapse.hide();
             }
-            // Ak sú kategórie otvorené, ale klikol používateľ mimo nich a mimo hamburger tlačidla, zatvoríme ich.
+
             if (categoriesMenu.classList.contains("show") &&
                 !categoriesMenu.contains(e.target) &&
                 !hamburgerToggler.contains(e.target)) {

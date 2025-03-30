@@ -1,77 +1,86 @@
+/* Container for the progress steps */
 .progress-steps {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    justify-content: space-between; /* Distributes steps evenly across */
+    align-items: center; /* Centers steps vertically */
+    padding: 2rem 0; /* Vertical spacing */
+    margin-bottom: 2rem; /* Space below the steps */
 }
 
+/* Individual progress step */
 .progress-steps .step {
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2; /* nad čiarou */
+    flex-direction: column; /* Stack icon and label vertically */
+    align-items: center; /* Center the contents horizontally */
+    z-index: 2; /* Ensures steps stay above the progress line */
 }
 
-/* Sivá čiara vzadu */
+/* Gray line in the background indicating full progress length */
 .progress-steps .progress-line {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2px;
-    background: #ccc;
-    z-index: 0;
+    height: 2px; /* Thickness of the progress line */
+    background: #ccc; /* Background color: gray */
+    z-index: 0; /* Positioned behind the steps */
 }
 
-/* Tu je kľúč: 0–66% bordová, 66–100% prechod do žltej */
+/* Colored progress line (dynamic fill) */
+/* Key part: 0–66% burgundy, transitions to yellow at 100% */
 .progress-steps .progress-line-fill {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
-    width: 0%; /* upravujeme inline (style="width: 100%") */
-    z-index: 1;
+    height: 2px; /* Matches height of gray line */
+    width: 0%; /* Dynamically changed inline via JS (style="width: 100%") */
+    z-index: 1; /* Positioned above the gray line, below the steps */
     background: linear-gradient(
             to right,
-            #722243 0%,
-            #722243 66%,
-            #ffc107 100%
+            #722243 0%,    /* Burgundy color from start */
+            #722243 66%,   /* Burgundy color until 66% */
+            #ffc107 100%   /* Transitions to yellow by 100% */
     );
 }
 
-/* Príklady farieb pre completed/active kroky */
+/* Colors for completed steps (burgundy) */
 .progress-steps .step.completed .icon,
 .progress-steps .step.completed .label {
     color: #722243;
 }
 
+/* Colors for the active step (yellow) */
 .progress-steps .step.active .icon,
 .progress-steps .step.active .label {
     color: #ffc107;
 }
 
-.btn-back{
+/* Back button styling (light gray by default) */
+.btn-back {
     background-color: lightgray;
 }
 
-
-.btn-primary{
+/* Primary button styling (burgundy by default) */
+.btn-primary {
     background-color: #722243;
+    color: #fff;
 }
 
-.btn-back:hover{
+/* Hover effect for back button (changes to yellow background) */
+.btn-back:hover {
     background-color: #ffc107;
-    color: #111111;
+    color: #111111; /* Dark text for better readability */
 }
 
-.btn-primary:hover{
+/* Hover effect for primary button (changes to yellow background) */
+.btn-primary:hover {
     background-color: #ffc107;
-    color: #111111;
+    color: #111111; /* Dark text for contrast */
 }
 
+/* Active (clicked) state for primary button (yellow background) */
 .btn-primary:active {
     background-color: #ffc107;
     color: #111111;

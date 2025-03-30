@@ -1,19 +1,21 @@
-/* Upravené overlay štýly pre banner */
+/* Banner overlay top text */
 .banner-text-top {
     position: absolute;
     top: 20px;
     left: 20px;
-    right: 20px; /* padding od oboch strán */
+    right: 20px;
     color: #000;
     padding: 10px;
     text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/* Banner overlay bottom text */
 .banner-text-bottom {
     position: absolute;
     bottom: 20px;
-    left: 20px;  /* padding od oboch strán */
+    left: 20px;
     right: 20px;
     color: #000;
     padding: 10px;
@@ -22,9 +24,9 @@
     font-weight: bold;
 }
 
-/* Nové štýly pre tlačidlá, aby mali fialové pozadie */
+/* Custom button style with purple background */
 .btn-custom {
-    background-color: #722243; /* fialová */
+    background-color: #722243;
     color: #fff;
     border: none;
     padding: 0.6rem 1.2rem;
@@ -35,7 +37,10 @@
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Custom button hover state */
 .btn-custom:hover {
     background-color: #5a1d33;
     color: #fff;
 }
+

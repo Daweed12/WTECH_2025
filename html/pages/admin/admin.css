@@ -111,20 +111,24 @@ EDIT PRODUCT
     margin-bottom: 1rem;
 }
 
-/* Štýly pre Bootstrap pagination s farbou #722243 */
-.pagination .page-link {
-    color: #722243;
-    border-color: #722243;
+button.btn.btn-primary {
+    background-color: #4b0830 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.pagination .page-item.active .page-link {
-    background-color: #722243;
-    border-color: #722243;
-    color: #fff; /* aktívny prvok má biely text */
+button.btn.btn-primary:hover {
+    background-color: #ffc107 !important;
+    color: black !important;
 }
 
-.pagination .page-link:hover {
-    background-color: #722243;
-    color: #fff;
-    border-color: #722243;
+button.btn.btn-primary:focus,
+button.btn.btn-primary:active,
+button.btn.btn-primary:focus:active {
+    background-color: #4b0830 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: white !important;
 }
+

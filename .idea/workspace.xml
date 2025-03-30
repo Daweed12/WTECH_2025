@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="filter repair + footer now sticks to bottom">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.css" afterDir="false" />
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="nav bar update">
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +111,8 @@
       <workItem from="1742924117138" duration="2987000" />
       <workItem from="1743252961776" duration="4388000" />
       <workItem from="1743277394112" duration="2300000" />
+      <workItem from="1743325457230" duration="723000" />
+      <workItem from="1743356123934" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

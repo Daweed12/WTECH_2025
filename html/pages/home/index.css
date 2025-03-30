@@ -20,7 +20,7 @@
 .carousel-overlay-left {
     position: absolute;
     top: 50%;
-    left: 200px; /* Pre desktop */
+    left: 25%; /* Pre desktop */
     transform: translateY(-50%);
     text-align: left;
     z-index: 10;
@@ -44,7 +44,6 @@
         text-align: center; /* Zarovnáme text na stred */
     }
 }
-
 
 
 

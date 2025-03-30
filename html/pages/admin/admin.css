@@ -81,9 +81,6 @@
     align-items: start;      /* zarovná produkty zhora */
 }
 
-
-
-
 /*
 EDIT PRODUCT
  */
@@ -112,4 +109,22 @@ EDIT PRODUCT
 .admin-form input,
 .admin-form textarea {
     margin-bottom: 1rem;
+}
+
+/* Štýly pre Bootstrap pagination s farbou #722243 */
+.pagination .page-link {
+    color: #722243;
+    border-color: #722243;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #722243;
+    border-color: #722243;
+    color: #fff; /* aktívny prvok má biely text */
+}
+
+.pagination .page-link:hover {
+    background-color: #722243;
+    color: #fff;
+    border-color: #722243;
 }

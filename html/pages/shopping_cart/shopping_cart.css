@@ -57,13 +57,14 @@
     background-color: lightgray;
 }
 
-.btn-back:hover{
-    background-color: #ffc107;
-    color: #111111;
-}
 
 .btn-primary{
     background-color: #722243;
+}
+
+.btn-back:hover{
+    background-color: #ffc107;
+    color: #111111;
 }
 
 .btn-primary:hover{

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="nav bar update">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="product detail page update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_mode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/products/all_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/products/all_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743266592426</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="product detail page update">
+      <option name="closed" value="true" />
+      <created>1743339756789</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743339756789</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +215,7 @@
     <MESSAGE value="filter done" />
     <MESSAGE value="nav bar update" />
     <MESSAGE value="index update + sign in update" />
-    <option name="LAST_COMMIT_MESSAGE" value="index update + sign in update" />
+    <MESSAGE value="product detail page update" />
+    <option name="LAST_COMMIT_MESSAGE" value="product detail page update" />
   </component>
 </project>

@@ -20,6 +20,7 @@
     >
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="current_product.css">
 </head>
 
 <body>
@@ -152,30 +153,129 @@
 
         <!-- Pravý stĺpec s detailmi produktu -->
         <div class="col-md-6">
-            <h1 class="mb-3">Názov produktu</h1>
-            <h4 class="text-muted">999S</h4>
+            <h1 class="mb-3">Lion Head - Ring</h1>
+            <h4 class="text-muted">35,99€</h4>
+            <span class="badge bg-success mb-3">In Stock</span>
             <p class="mt-4">
-                <strong>Detail produktu:</strong> <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse tristique fringilla lacus, nec semper enim.
+                <strong>Detail of product:</strong> <br>
+                This ring doesn’t whisper — it roars. Featuring a bold lion's head, it’s a symbol of strength,
+                courage, and untamed individuality. A striking result of the collaboration between YES and Zalewski,
+                this piece blends masterful craftsmanship with rebellious spirit. Made for those who lead, not follow.
             </p>
-            <!-- Tlačidlo na vloženie do košíka -->
-            <button class="btn btn-primary mb-4">
-                <i class="fa-solid fa-cart-plus me-2"></i>
-                Vložiť do košíka
-            </button>
+            <div class="d-flex align-items-center gap-3 mb-4">
+                <!-- Quantity container -->
+                <div class="quantity-box">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity()">−</button>
+                    <div class="separator"></div>
+                    <input
+                            type="text"
+                            id="productQuantity"
+                            class="quantity-input"
+                            value="1"
+                            readonly
+                    />
+                    <div class="separator"></div>
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+
+                <!-- Add to Cart button -->
+                <button class="btn btn-custom px-4">
+                    ADD TO CART&nbsp;&nbsp;<span id="totalPrice">35.99 €</span>
+                </button>
+            </div>
+
+
+
+
             <!-- Krátky popis produktu -->
             <p>
-                <strong>Krátky popis:</strong><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nullam pellentesque libero in scelerisque porta.
-                Fusce commodo efficitur mattis.
+                <strong>Description:</strong><br>
+                <ul>
+            <li>
+                Material: Gold-plated steel / gold & silver tones
+            </li>
+            <li>
+
+                Color: Glossy gold band with contrasting dark silver lion head
+            </li>
+            <li>
+                Details: 3D lion relief, engraved inner band: YES × ZALEWSKI
+            </li>
+            <li>
+                Style: Bold, modern statement ring with an edgy, fearless vibe
+            </li>
+        </ul>
             </p>
         </div>
     </div>
 </div>
 <!-- KONIEC HLAVNEJ SEKCIE PRODUKTU -->
 <hr>
+<div class="container my-5">
+    <div class="row mt-5">
+    <h3 class="mb-4">Best Sellers</h3>
+
+    <!-- Prvý bestseller produkt -->
+    <div class="col-md-3 mb-4">
+        <a href="#" class="text-decoration-none text-dark">
+            <div class="image-frame-shop">
+                <img
+                        src="../../images/product8.jpg"
+                        alt="Bestseller 1"
+                        class="category-image"
+                >
+            </div>
+            <p class="mt-2">Necklace 1</p>
+            <p class="text-muted">79.99 $</p>
+        </a>
+    </div>
+
+    <!-- Druhý bestseller produkt -->
+    <div class="col-md-3 mb-4">
+        <a href="#" class="text-decoration-none text-dark">
+            <div class="image-frame-shop">
+                <img
+                        src="../../images/product7.jpg"
+                        alt="Bestseller 2"
+                        class="category-image"
+                >
+            </div>
+            <p class="mt-2">Necklace 2</p>
+            <p class="text-muted">199.99$</p>
+        </a>
+    </div>
+
+    <!-- Tretí bestseller produkt -->
+    <div class="col-md-3 mb-4">
+        <a href="#" class="text-decoration-none text-dark">
+            <div class="image-frame-shop">
+                <img
+                        src="../../images/product4.jpg"
+                        alt="Bestseller 3"
+                        class="category-image"
+                >
+            </div>
+            <p class="mt-2">Bracelet 1</p>
+            <p class="text-muted">39.99 $</p>
+        </a>
+    </div>
+
+    <!-- Štvrtý bestseller produkt -->
+    <div class="col-md-3 mb-4">
+        <a href="#" class="text-decoration-none text-dark">
+            <div class="image-frame-shop">
+                <img
+                        src="../../images/banner_product5.jpg"
+                        alt="Bestseller 4"
+                        class="category-image"
+                >
+            </div>
+            <p class="mt-2">Neklace 3</p>
+            <p class="text-muted">99.99 $</p>
+        </a>
+    </div>
+</div>
+</div>
 <!-- FOOTER -->
 <footer>
     <section class="container footer-custom">
@@ -252,5 +352,31 @@
         });
     });
 </script>
+<script>
+    const unitPrice = 35.99;
+
+    function updatePriceDisplay(qty) {
+        const total = (qty * unitPrice).toFixed(2);
+        document.getElementById('totalPrice').textContent = `${total} €`;
+    }
+
+    function decreaseQuantity() {
+        const qtyInput = document.getElementById('productQuantity');
+        let current = parseInt(qtyInput.value);
+        if (current > 1) {
+            qtyInput.value = current - 1;
+            updatePriceDisplay(current - 1);
+        }
+    }
+
+    function increaseQuantity() {
+        const qtyInput = document.getElementById('productQuantity');
+        let current = parseInt(qtyInput.value);
+        qtyInput.value = current + 1;
+        updatePriceDisplay(current + 1);
+    }
+</script>
+
+
 </body>
 </html>

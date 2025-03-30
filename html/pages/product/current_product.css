@@ -1,0 +1,48 @@
+/* Outer container without an outline */
+.quantity-box {
+    display: flex;
+    align-items: center;
+    /* Removed border, border-radius, and background-color */
+}
+
+/* Minus & Plus buttons */
+.quantity-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+}
+
+.quantity-btn:hover,
+.quantity-btn:focus {
+    color: #000;
+    outline: none;
+}
+
+/* Numeric value in the middle */
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Vertical separators */
+.separator {
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+    margin: 0 5px;
+}

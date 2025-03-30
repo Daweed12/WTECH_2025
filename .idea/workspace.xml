@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="nav bar update">
-      <change beforePath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/login_register/login_register_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/pages/product/current_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/product/current_product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +203,7 @@
     <MESSAGE value="updating pages" />
     <MESSAGE value="filter done" />
     <MESSAGE value="nav bar update" />
-    <option name="LAST_COMMIT_MESSAGE" value="nav bar update" />
+    <MESSAGE value="index update + sign in update" />
+    <option name="LAST_COMMIT_MESSAGE" value="index update + sign in update" />
   </component>
 </project>

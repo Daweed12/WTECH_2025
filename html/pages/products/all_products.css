@@ -96,46 +96,56 @@
     background-color: #fff;
 }
 
-/* Overlay stmavenie stránky */
-/* základný štýl (pre desktop/tablet) */
+/* Sidebar hidden by default with transform */
 #filterSidebar {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: 0;           /* anchored to right edge */
     width: 300px;
     height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-    transition: right 0.3s ease;
-    z-index: 2001; /* už upravené */
+    transform: translateX(100%); /* completely off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 2001;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Prekrytie stránky */
+/* When active, slide the sidebar into view */
+#filterSidebar.active {
+    transform: translateX(0);
+}
+
+/* Overlay hidden by default */
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 2000; /* už upravené */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
 }
 
-/* ========== MOBILNÉ ZOBRAZENIE ========== */
+/* When active, show the overlay */
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile adjustments, if needed */
 @media screen and (max-width: 768px) {
     #filterSidebar {
-        width: 100%;          /* Na mobile šírka 100% */
-        right: -100%;         /* defaultne skrytý napravo */
+        width: 100%;
     }
-
-    /* keď je aktívny, bude mať right: 0 nastavené JavaScriptom */
 }
 
 
-/* Hlavička sidebaru */
+/* Filter Sidebar Header */
 .filter-header {
     display: flex;
     justify-content: space-between;
@@ -143,7 +153,6 @@
     margin-bottom: 20px;
 }
 
-/* Zatváracie tlačidlo */
 .close-filter {
     font-size: 28px;
     cursor: pointer;
@@ -152,7 +161,7 @@
 
 .filter-content {
     overflow-y: auto;
-    max-height: calc(100vh - 60px); /* scrollovateľný obsah ak je príliš dlhý */
+    max-height: calc(100vh - 60px);
     padding-bottom: 40px;
 }
 
@@ -342,3 +351,25 @@ input[type="range"]::-moz-range-thumb{
 .order-by:focus {
     outline: none;                /* odstránenie obrysu (voliteľné) */
 }
+
+
+.sort-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Filter on left, Order on right */
+    margin: 20px;                  /* or your desired spacing */
+}
+
+@media (max-width: 768px) {
+    .sort-filter-container {
+        flex-direction: column;      /* stack vertically on mobile */
+        align-items: center;         /* center horizontally */
+        gap: 10px;                   /* small vertical gap between them */
+    }
+
+    .order-by {
+        width: auto;                 /* or 100% if you want full-width on mobile */
+        text-align: center;
+    }
+}
+

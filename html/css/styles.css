@@ -1,4 +1,4 @@
-/* Body base styling */
+/* Base body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* Search input styling */
+/* Search input field styling */
 .custom-search {
     width: 100%;
     padding: 5px 10px;
@@ -18,28 +18,28 @@ body {
     transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* Upravujeme výšku sliding obrázkov – budú vyššie (600px) */
+/* Slider image dimensions and fit */
 .sliding-image {
     width: 100%;
-    height: 600px; /* vyššia výška bannera */
-    object-fit: cover; /* obrázok vyplní priestor bez skreslenia */
+    height: 600px;
+    object-fit: cover;
 }
 
-/* Search input focus effect */
+/* Search input focus state styling */
 .custom-search:focus {
     outline: none;
     box-shadow: none;
     border-color: black;
 }
 
-/* Search form positioning */
+/* Search form container positioning */
 .search-form {
     max-width: 300px;
     margin-left: 0;
     margin-right: 20px;
 }
 
-/* Sign-in link styling */
+/* Sign-in link styling and hover effects */
 .sign-in-link {
     text-decoration: none;
     color: black;
@@ -50,14 +50,15 @@ body {
     color: gray;
 }
 
+/* Search bar container styling */
 .search-bar {
     position: fixed;
     z-index: 9999;
-    background-color: white; /* prípadne upravte podľa dizajnu */
+    background-color: white;
     width: 100%;
 }
 
-/* Fixed top bar */
+/* Top navigation bar styling */
 .top-bar {
     position: fixed;
     top: 0;
@@ -68,20 +69,16 @@ body {
     padding: 7px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.top-bar-image{
+
+/* Top bar image container styling */
+.top-bar-image {
     margin: 0 auto;
     display: flex;
     max-width: 100%;
     justify-content: center;
 }
 
-.sliding-image {
-    width: 100%;
-    height: 600px;  /* nastavená výška pre všetky bannery */
-    object-fit: cover;
-}
-
-/* Fixed navbar below the top bar */
+/* Main navigation bar styling */
 .navbar {
     position: fixed;
     top: 36px;
@@ -91,10 +88,13 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Navigation icon color */
 .nav-link i {
     color: #fff;
 }
 
+/* Brand logo styling */
 .navbar-brand {
     font-weight: bold;
     color: white;
@@ -103,6 +103,7 @@ body {
     color: white;
 }
 
+/* Hamburger menu icon styling */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     border: none;
@@ -110,7 +111,7 @@ body {
     box-shadow: none;
 }
 
-/* Odstráň orámovanie a tieň po kliknutí */
+/* Remove hamburger button focus styles */
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none;
@@ -118,45 +119,41 @@ body {
     border: none;
 }
 
+/* Navigation link styling */
 .navbar-nav .nav-link {
     position: relative;
-    /* inline-block zaistí, že šírka bude podľa dĺžky textu */
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    /* Nastavte si ľubovoľné odsadenie, aby sa text nelepšil úplne na okraj */
     padding: 4px 6px;
-    /* Voliteľne upravte line-height pre lepšie vertikálne zarovnanie */
     line-height: 1.2;
 }
 
-/* Pseudo-element, ktorý vytvorí "podčiarknutie" */
+/* Navigation link underline effect */
 .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
     left: 0;
-    /* bottom: 0 zobrazí čiaru priamo na spodku kontajnera textu */
     bottom: 0;
     width: 100%;
-    height: 1px; /* Hrúbka čiary */
+    height: 1px;
     background-color: #fff;
-    /* Začneme s nulovou šírkou (scaleX(0)) a pri hover ju roztiahneme */
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Pri hover roztiahneme čiarku na celú šírku textu */
+/* Navigation link hover effect */
 .navbar-nav .nav-link:hover::after {
     transform: scaleX(1);
 }
 
-/* Prevent content from hiding behind fixed elements */
+/* Body padding to prevent content overlap */
 body {
     padding-top: 90px;
 }
 
-/* Container to frame images */
+/* Product image container styling */
 .image-frame {
     position: relative;
     width: 100%;
@@ -168,6 +165,7 @@ body {
     background-color: #f5f5f5;
 }
 
+/* Shop image container styling */
 .image-frame-shop {
     position: relative;
     width: 100%;
@@ -180,7 +178,7 @@ body {
     border-radius: 10px;
 }
 
-/* Category images */
+/* Category image styling */
 .category-image {
     width: 100%;
     height: 100%;
@@ -188,7 +186,7 @@ body {
     transition: transform 0.5s ease;
 }
 
-/* The overlay text container */
+/* Category overlay text container */
 .category-overlay {
     position: absolute;
     bottom: 0;
@@ -210,7 +208,7 @@ body {
     overflow: hidden;
 }
 
-/* On hover, zoom the image and slide up the overlay text */
+/* Category hover effects */
 .category-button:hover .category-image {
     transform: scale(1.1);
 }
@@ -225,20 +223,24 @@ footer {
     padding: 2rem 0;
 }
 
+
+/* Footer logo styling */
 footer .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+/* Footer divider styling */
 footer hr {
     border: 1px solid #ced4da;
 }
 
+/* Main logo styling */
 .logo {
     font-size: 35px;
 }
 
-/* Sign-in container */
+/* Sign-in form container styling */
 .signin-container {
     max-width: 400px;
     margin: 50px auto;
@@ -248,21 +250,25 @@ footer hr {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Form heading styling */
 h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
+/* Form divider styling */
 hr {
     border: 1px solid #ddd;
     margin-bottom: 20px;
 }
 
+/* Form label styling */
 .form-label {
     font-weight: bold;
 }
 
+/* Sign-in button styling */
 .btn-signin {
     width: 100%;
     background-color: #868e96;
@@ -273,39 +279,46 @@ hr {
     font-size: 16px;
 }
 
+/* Sign-in button hover effect */
 .btn-signin:hover {
     background-color: #4b0830;
 }
 
-/* Account section styling */
+/* Account section container styling */
 .account-section {
     padding: 2rem 0;
 }
 
+/* Account section heading styling */
 .account-section h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
+/* Account section divider styling */
 .account-section hr {
     margin-bottom: 1.5rem;
 }
 
+/* Account section subheading styling */
 .account-section h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
+/* Form section divider styling */
 .form-divider {
     border-right: 1px solid #ccc;
 }
 
+/* Account form label styling */
 .account-section form label {
     font-weight: 500;
     margin-bottom: 0.3rem;
 }
 
+/* Account form input field styling */
 .account-section input[type=text],
 .account-section input[type=password],
 .account-section input[type=email] {
@@ -328,11 +341,12 @@ hr {
     margin-top: 0.5rem;
 }
 
+/* Custom button hover effect */
 .btn-custom:hover {
     background-color: #4b0830;
 }
 
-/* Avatar container */
+/* Avatar container styling */
 .avatar-container {
     width: 150px;
     height: 150px;
@@ -341,124 +355,39 @@ hr {
     margin: 0 auto;
 }
 
+/* Avatar image styling */
 .avatar-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Final image styling */
 .final-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Základné nastavenia pre body, atď. */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Top bar fix */
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #f8f9fa;
-    z-index: 1050;
-    padding: 7px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Navbar fix */
-.navbar {
-    position: fixed;
-    top: 36px; /* 36px je výška top-bar */
-    left: 0;
-    width: 100%;
-    background: #4b0830;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.navbar-brand, .nav-link {
-    color: #fff;
-}
-
-/* Zabráni obsahu, aby nebol prekrytý fixnými prvkami */
-body {
-    padding-top: 90px; /* top-bar + navbar */
-}
-
-/* account-section s horizontálnym paddingom (odsadením) */
-.account-section {
-    padding-left: 2rem;  /* ľavé odsadenie */
-    padding-right: 2rem; /* pravé odsadenie */
-    max-width: 1200px;   /* voliteľne, aby sa text nerozťahoval na veľkých monitoroch */
-    margin: 0 auto;      /* vycentruje, ak je max-width menší ako šírka okna */
-}
-
-/* Štýly pre formuláre v .account-section */
-.account-section form label {
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-    display: block;      /* aby label bol nad inputom */
-}
-.account-section input[type="email"],
-.account-section input[type="password"],
-.account-section input[type="text"] {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Tlačidlo .btn-custom */
-.btn-custom {
-    background-color: #4b0830;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-}
-.btn-custom:hover {
-    background-color: #7d8388;
-}
-
-/* Ostatné doplnkové štýly, atď. */
-footer {
-    background-color: #4b0830;
-    color: #fff;
-    padding: 2rem 0;
-}
-footer .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-
-banner-text-top {
+/* Banner text positioning - top */
+.banner-text-top {
     position: absolute;
     top: 20px;
     left: 20px;
-    right: 20px;  /* zabezpečí, že aj na malých displejoch bude medzera od pravého okraja */
+    right: 20px;
     color: #000;
     padding: 10px;
     text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/* Banner text positioning - bottom */
 .banner-text-bottom {
     position: absolute;
     bottom: 20px;
-    left: 20px;   /* nastavíme aj left, aby sa text neroztiahol až k okraju */
-    right: 20px;  /* zabezpečíme padding aj z pravej strany */
+    left: 20px;
+    right: 20px;
     color: #000;
     padding: 10px;
     text-align: right;

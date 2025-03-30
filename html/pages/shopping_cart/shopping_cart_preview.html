@@ -32,88 +32,89 @@
         }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<div class="flex-fill">
 
-<!-- SIGN IN TOP BAR -->
-<div class="container-fluid bg-light py-2 top-bar">
-    <div class="container d-flex justify-content-end align-items-center">
-        <a href="../login_register/login_register_user.html" class="small sign-in-link">
-            Welcome, Adriana Dobrovnik!
-        </a>
-    </div>
-</div>
-
-<!-- NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container d-flex w-100 justify-content-between align-items-center">
-
-        <!-- Hamburger toggler on the left for categories only -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
-                aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Logo -->
-        <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
-
-        <!-- Collapsible Category Links -->
-        <div class="collapse navbar-collapse" id="categoriesMenu">
-            <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item">
-                    <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">NECKLACES</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">RINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">EARINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">BRACELETS</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Ikonky (vrátane search ikonky) -->
-        <div class="d-flex align-items-center ms-auto">
-            <!-- Search ikonka s collapse atribútmi -->
-            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
-               aria-expanded="false" aria-controls="navbarSearch">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="nav-link me-2">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a href="../account/account_details.html" class="nav-link me-2">
-                <i class="fa-solid fa-user"></i>
-            </a>
-            <!-- Košík s badge -->
-            <a href="../../pages/shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                      style="font-size: 0.8rem;">
-                    2
-                    <span class="visually-hidden">items in cart</span>
-                </span>
+    <!-- SIGN IN TOP BAR -->
+    <div class="container-fluid bg-light py-2 top-bar">
+        <div class="container d-flex justify-content-end align-items-center">
+            <a href="../login_register/login_register_user.html" class="small sign-in-link">
+                Welcome, Adriana Dobrovnik!
             </a>
         </div>
     </div>
-</nav>
 
-<!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
-<div class="collapse search-bar" id="navbarSearch">
-    <div class="container">
-        <form class="d-flex my-2">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container d-flex w-100 justify-content-between align-items-center">
+
+            <!-- Hamburger toggler on the left for categories only -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
+                    aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
+
+            <!-- Collapsible Category Links -->
+            <div class="collapse navbar-collapse" id="categoriesMenu">
+                <ul class="navbar-nav d-flex justify-content-start">
+                    <li class="nav-item">
+                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">NECKLACES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">RINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">EARINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">BRACELETS</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ikonky (vrátane search ikonky) -->
+            <div class="d-flex align-items-center ms-auto">
+                <!-- Search ikonka s collapse atribútmi -->
+                <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+                   aria-expanded="false" aria-controls="navbarSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="nav-link me-2">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="../account/account_details.html" class="nav-link me-2">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <!-- Košík s badge -->
+                <a href="../../pages/shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                          style="font-size: 0.8rem;">
+                        2
+                        <span class="visually-hidden">items in cart</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <div class="collapse search-bar" id="navbarSearch">
+        <div class="container">
+            <form class="d-flex my-2">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- OBSAH STRÁNKY (SHOPPING CART) -->
-<main class="container my-5">
+    <!-- OBSAH STRÁNKY (SHOPPING CART) -->
+    <main class="container my-5">
 
     <div class="progress-steps">
         <!-- Sivá čiara + farebná výplň (gradient) -->
@@ -323,7 +324,7 @@
         </div>
     </div>
 </main>
-
+</div>
 <!-- FOOTER -->
 <footer>
     <section class="container footer-custom">

@@ -23,230 +23,227 @@
     <link rel="stylesheet" href="all_products.css">
 </head>
 
-<body>
-
-<div class="container-fluid bg-light py-2 top-bar">
-    <div class="container d-flex justify-content-end align-items-center">
-        <a href="../login_register/login_register_user.html" class="small sign-in-link">
-            Sign In / Sign Up
-        </a>
-    </div>
-</div>
-
-<!-- NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container d-flex w-100 justify-content-between align-items-center">
-        <!-- Hamburger toggler on the left for categories only -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
-                aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Logo -->
-        <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
-
-        <!-- Collapsible Category Links -->
-        <div class="collapse navbar-collapse" id="categoriesMenu">
-            <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item">
-                    <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">NECKLACES</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">RINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">EARINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">BRACELETS</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Ikonky (vrátane search ikonky) -->
-        <div class="d-flex align-items-center ms-auto">
-            <!-- Search ikonka s collapse atribútmi -->
-            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
-               aria-expanded="false" aria-controls="navbarSearch">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="nav-link me-2">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a href="../account/account_details.html" class="nav-link me-2">
-                <i class="fa-solid fa-user"></i>
-            </a>
-            <!-- Košík s badge -->
-            <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                      style="font-size: 0.8rem;">
-                    2
-                    <span class="visually-hidden">items in cart</span>
-                </span>
+<body class="d-flex flex-column min-vh-100">
+<div class="flex-fill">
+    <div class="container-fluid bg-light py-2 top-bar">
+        <div class="container d-flex justify-content-end align-items-center">
+            <a href="../login_register/login_register_user.html" class="small sign-in-link">
+                Sign In / Sign Up
             </a>
         </div>
     </div>
-</nav>
 
-<!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
-<div class="collapse search-bar" id="navbarSearch">
-    <div class="container">
-        <form class="d-flex my-2">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-    </div>
-</div>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container d-flex w-100 justify-content-between align-items-center">
+            <!-- Hamburger toggler on the left for categories only -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
+                    aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<br>
-<div class="container my-5">
-    <div class="sort-filter-container">
-        <select name="orderby" class="order-by" id="catalog-orderby-list">
-            <option value="popularity">ORDER BY POPULARITY</option>
-            <option value="date">ORDER BY DATE</option>
-            <option value="price">PRICE: LOW TO HIGH</option>
-            <option value="price-desc">PRICE: HIGH TO LOW</option>
-        </select>
-        <!-- Používame vlastné tlačidlo pre FILTER -->
-        <a href="#" class="btn-filter">
-            FILTER
-        </a>
-    </div>
-    <hr>
-    <div class="products-wrapper">
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
+            <!-- Logo -->
+            <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
+
+            <!-- Collapsible Category Links -->
+            <div class="collapse navbar-collapse" id="categoriesMenu">
+                <ul class="navbar-nav d-flex justify-content-start">
+                    <li class="nav-item">
+                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">NECKLACES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">RINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">EARINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">BRACELETS</a>
+                    </li>
+                </ul>
             </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
+
+            <!-- Ikonky (vrátane search ikonky) -->
+            <div class="d-flex align-items-center ms-auto">
+                <!-- Search ikonka s collapse atribútmi -->
+                <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+                   aria-expanded="false" aria-controls="navbarSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="nav-link me-2">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="../account/account_details.html" class="nav-link me-2">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <!-- Košík s badge -->
+                <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                          style="font-size: 0.8rem;">
+                        2
+                        <span class="visually-hidden">items in cart</span>
+                    </span>
+                </a>
             </div>
         </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <div class="product-container">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image" />
-                </a>
-            </div>
-            <h2 class="product-title">SPARK NECKLACE</h2>
-            <div class="product-price">
-                114.00 € <span class="tax">s DPH</span>
-            </div>
+    </nav>
+
+    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <div class="collapse search-bar" id="navbarSearch">
+        <div class="container">
+            <form class="d-flex my-2">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
         </div>
     </div>
 
-    <!-- NAMIENO PAGINATION, NIE "LOAD MORE" -->
-    <nav aria-label="Page navigation" class="mt-4">
-    <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-        </li>
-    </ul>
-</nav>
+    <br>
+    <div class="container my-5">
+        <div class="sort-filter-container">
+            <a href="#" class="btn-filter" onclick="toggleFilterSidebar()">FILTER</a>
+            <select name="orderby" class="order-by" id="catalog-orderby-list">
+                <option value="popularity">ORDER BY POPULARITY</option>
+                <option value="date">ORDER BY DATE</option>
+                <option value="price">PRICE: LOW TO HIGH</option>
+                <option value="price-desc">PRICE: HIGH TO LOW</option>
+            </select>
+        </div>
 
-</div>
-<!-- Overlay stmavenie -->
-<div id="overlay" onclick="closeFilter()"></div>
+        <hr>
+        <div class="products-wrapper">
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image" />
+                    </a>
+                </div>
+                <h2 class="product-title">SPARK NECKLACE</h2>
+                <div class="product-price">
+                    114.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+        </div>
 
-<!-- Sidebar filter -->
-<div id="filterSidebar">
-    <div class="filter-header">
-        <span class="close-filter" onclick="closeFilter()">&times;</span>
-        <h2>Filter</h2>
+        <!-- NAMIENO PAGINATION, NIE "LOAD MORE" -->
+        <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+
     </div>
-    <!-- sem pôjdu tvoje filtre -->
-    <div class="filter-content">
+    <!-- Overlay stmavenie -->
+    <div id="overlay" onclick="toggleFilterSidebar()"></div>
+
+    <!-- Sidebar filter -->
+    <div id="filterSidebar">
+        <div class="filter-header">
+            <span class="close-filter" onclick="toggleFilterSidebar()">&times;</span>
+            <h2>Filter</h2>
+        </div>
+        <div class="filter-content">
         <!-- Category filter -->
         <div class="filter-group">
             <h5>Category</h5>
@@ -302,7 +299,7 @@
         <button class="btn-apply-filter">Apply Filters</button>
     </div>
 </div>
-
+</div>
 <footer>
     <section class="container footer-custom">
         <p class="logo">NYX</p>
@@ -422,5 +419,14 @@
         });
     });
 </script>
+<script>
+    function toggleFilterSidebar() {
+        const sidebar = document.getElementById("filterSidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+</script>
+
 </body>
 </html>

@@ -60,285 +60,285 @@
         }
     </style>
 </head>
-<body>
-
-<!-- SIGN IN TOP BAR -->
-<div class="container-fluid bg-light py-2 top-bar">
-    <div class="container d-flex justify-content-end align-items-center">
-        <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
-    </div>
-</div>
-
-<!-- NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container d-flex w-100 justify-content-between align-items-center">
-
-        <!-- Hamburger toggler on the left for categories only -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
-                aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Logo -->
-        <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
-
-        <!-- Collapsible Category Links -->
-        <div class="collapse navbar-collapse" id="categoriesMenu">
-            <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item">
-                    <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">NECKLACES</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">RINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">EARINGS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">BRACELETS</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Ikonky (vrátane search ikonky) -->
-        <div class="d-flex align-items-center ms-auto">
-            <!-- Search ikonka s collapse atribútmi -->
-            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
-               aria-expanded="false" aria-controls="navbarSearch">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="nav-link me-2">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a href="../account/account_details.html" class="nav-link me-2">
-                <i class="fa-solid fa-user"></i>
-            </a>
-            <!-- Košík s badge -->
-            <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                      style="font-size: 0.8rem;">
-                    2
-                    <span class="visually-hidden">items in cart</span>
-                </span>
-            </a>
+<body class="d-flex flex-column min-vh-100">
+<div class="flex-fill">
+    <!-- SIGN IN TOP BAR -->
+    <div class="container-fluid bg-light py-2 top-bar">
+        <div class="container d-flex justify-content-end align-items-center">
+            <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
         </div>
     </div>
-</nav>
 
-<!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
-<div class="collapse search-bar" id="navbarSearch">
-    <div class="container">
-        <form class="d-flex my-2">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-    </div>
-</div>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container d-flex w-100 justify-content-between align-items-center">
 
-<!-- MAIN CONTENT: ADMIN MODE -->
-<main class="container my-5">
-    <!-- Hlavička s Add Product tlačidlom -->
-    <div class="row align-items-center mb-3">
-        <div class="col">
-            <h2 class="mb-0">Admin mode</h2>
-            <h4 class="text-muted">All Items</h4>
-        </div>
-        <div class="col-auto">
-            <a href="admin_edit_product.html" class="btn btn-success">
-                <i class="fa-solid fa-plus me-2"></i> Add Product
-            </a>
-        </div>
-    </div>
-    <hr>
+            <!-- Hamburger toggler on the left for categories only -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu"
+                    aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- GRID PRODUKTOV -->
-    <div class="products-wrapper row">
-        <!-- Produkt 1 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">BRACELET 1</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
+            <!-- Logo -->
+            <a href="../home/index.html" class="navbar-brand"><b>NYX</b></a>
+
+            <!-- Collapsible Category Links -->
+            <div class="collapse navbar-collapse" id="categoriesMenu">
+                <ul class="navbar-nav d-flex justify-content-start">
+                    <li class="nav-item">
+                        <a href="../products/all_products.html" class="nav-link">SHOP ALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">NECKLACES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">RINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">EARINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">BRACELETS</a>
+                    </li>
+                </ul>
             </div>
-            <div class="product-price">
-                99.99 € <span class="tax">s DPH</span>
+
+            <!-- Ikonky (vrátane search ikonky) -->
+            <div class="d-flex align-items-center ms-auto">
+                <!-- Search ikonka s collapse atribútmi -->
+                <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+                   aria-expanded="false" aria-controls="navbarSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="nav-link me-2">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="../account/account_details.html" class="nav-link me-2">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <!-- Košík s badge -->
+                <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                          style="font-size: 0.8rem;">
+                        2
+                        <span class="visually-hidden">items in cart</span>
+                    </span>
+                </a>
             </div>
         </div>
-        <!-- Produkt 2 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">RING 1</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                109.99 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 3 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">RING 2</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                123.45 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 4 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">BRACELET 2</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                543.21 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 5 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">RING 3</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                11.99 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 6 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">RING 4</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                44.99 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 7 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">NECKLACE 1</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                115.00 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 8 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">NECKLACE 2</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                119.29 € <span class="tax">s DPH</span>
-            </div>
-        </div>
-        <!-- Produkt 9 -->
-        <div class="product-container col-md-4 mb-4">
-            <div class="image-wrapper">
-                <a href="#" class="image-link">
-                    <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image img-fluid" />
-                </a>
-                <div class="admin-overlay">
-                    <span class="delete-icon">
-                        <i class="fa-solid fa-trash"></i>
-                    </span>
-                    <span class="product-name">NECKLACE 3</span>
-                    <a href="admin_edit_product.html" class="edit-link">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="product-price">
-                119.99 € <span class="tax">s DPH</span>
-            </div>
+    </nav>
+
+    <!-- Collapse element pre vyhľadávanie (vysunie sa pod navigačným panelom) -->
+    <div class="collapse search-bar" id="navbarSearch">
+        <div class="container">
+            <form class="d-flex my-2">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
         </div>
     </div>
-</main>
-<nav aria-label="Page navigation" class="mt-4">
+
+    <!-- MAIN CONTENT: ADMIN MODE -->
+    <main class="container my-5">
+        <!-- Hlavička s Add Product tlačidlom -->
+        <div class="row align-items-center mb-3">
+            <div class="col">
+                <h2 class="mb-0">Admin mode</h2>
+                <h4 class="text-muted">All Items</h4>
+            </div>
+            <div class="col-auto">
+                <a href="admin_edit_product.html" class="btn btn-success">
+                    <i class="fa-solid fa-plus me-2"></i> Add Product
+                </a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- GRID PRODUKTOV -->
+        <div class="products-wrapper row">
+            <!-- Produkt 1 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product1.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">BRACELET 1</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    99.99 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 2 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product2.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">RING 1</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    109.99 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 3 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product3.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">RING 2</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    123.45 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 4 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product4.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">BRACELET 2</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    543.21 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 5 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product5.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">RING 3</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    11.99 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 6 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product6.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">RING 4</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    44.99 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 7 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product7.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">NECKLACE 1</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    115.00 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 8 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product8.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">NECKLACE 2</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    119.29 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+            <!-- Produkt 9 -->
+            <div class="product-container col-md-4 mb-4">
+                <div class="image-wrapper">
+                    <a href="#" class="image-link">
+                        <img src="../../images/product9.jpg" alt="Spark Necklace" class="product-image img-fluid" />
+                    </a>
+                    <div class="admin-overlay">
+                        <span class="delete-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="product-name">NECKLACE 3</span>
+                        <a href="admin_edit_product.html" class="edit-link">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    119.99 € <span class="tax">s DPH</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav aria-label="Page navigation" class="mt-4">
     <ul class="pagination justify-content-center">
         <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -354,7 +354,8 @@
     </ul>
     <br>
 </nav>
-<!-- FOOTER -->
+</div>
+    <!-- FOOTER -->
 <footer>
     <section class="container footer-custom">
         <p class="logo">NYX</p>

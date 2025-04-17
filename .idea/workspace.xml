@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/database/database_wtech_vach_kmet_diagram_final.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/shopping_cart/shopping_cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/repo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,23 +51,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Data/VS/4.Semester/WTECH/WTECH_2025&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/david/OneDrive - Slovenská technická univerzita v Bratislave/Desktop/fiit_stu/4 semester/WTECH/laravel_pokus",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\david\OneDrive - Slovenská technická univerzita v Bratislave\Desktop\fiit_stu\4 semester\WTECH\PROJEKT_WTECH_2025\html\pages\shopping_cart" />
@@ -117,6 +115,25 @@
       <workItem from="1743252961776" duration="4388000" />
       <workItem from="1743277394112" duration="2300000" />
       <workItem from="1743353405700" duration="5143000" />
+      <workItem from="1743380940044" duration="10000" />
+      <workItem from="1743446538282" duration="3232000" />
+      <workItem from="1743508938686" duration="2961000" />
+      <workItem from="1743668524426" duration="609000" />
+      <workItem from="1743673401891" duration="64000" />
+      <workItem from="1743673483431" duration="27000" />
+      <workItem from="1743673519536" duration="21000" />
+      <workItem from="1743686865016" duration="186000" />
+      <workItem from="1743852261865" duration="3000" />
+      <workItem from="1743876157953" duration="1477000" />
+      <workItem from="1744050160069" duration="756000" />
+      <workItem from="1744104496075" duration="10000" />
+      <workItem from="1744123497710" duration="7000" />
+      <workItem from="1744197101596" duration="3363000" />
+      <workItem from="1744372576563" duration="4012000" />
+      <workItem from="1744638254885" duration="257000" />
+      <workItem from="1744720096960" duration="1367000" />
+      <workItem from="1744818242896" duration="1158000" />
+      <workItem from="1744827095659" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -221,8 +238,24 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="38ea6b70-6e97-4297-833f-c2b65fa2f82a" value="TOOL_WINDOW" />
+        <entry key="0e287643-e2e0-4c53-92bc-52d3c9570cbe" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="0e287643-e2e0-4c53-92bc-52d3c9570cbe">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="38ea6b70-6e97-4297-833f-c2b65fa2f82a">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>

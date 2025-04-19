@@ -5,17 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/admin/admin_edit_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/pages/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/pages/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/repo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/app/Models/-User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/bootstrap/providers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/migrations/0001_01_01_000001_create_cache_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/migrations/0001_01_01_000002_create_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/migrations/2025_04_16_184433_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/database/seeders/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/app/private/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WTECH25_NYX/vite.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/WTECH25_NYX/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -42,7 +98,121 @@
     &quot;accountId&quot;: &quot;e2ae87d5-06f7-4ecd-a6fa-4b23d99de095&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/config" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/composer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/pail" />
+      <path value="$PROJECT_DIR$/WTECH25_NYX/vendor/laravel/tinker" />
+    </include_path>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -51,24 +221,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/david/OneDrive - Slovenská technická univerzita v Bratislave/Desktop/fiit_stu/4 semester/WTECH/laravel_pokus",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/OneDrive - Slovenská technická univerzita v Bratislave/Desktop/fiit_stu/4 semester/WTECH/PROJEKT_WTECH_2025/WTECH25_NYX&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\david\OneDrive - Slovenská technická univerzita v Bratislave\Desktop\fiit_stu\4 semester\WTECH\PROJEKT_WTECH_2025\html\pages\shopping_cart" />
@@ -77,6 +247,12 @@
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\final" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\sc_address_details" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/WTECH25_NYX/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -134,6 +310,10 @@
       <workItem from="1744720096960" duration="1367000" />
       <workItem from="1744818242896" duration="1158000" />
       <workItem from="1744827095659" duration="74000" />
+      <workItem from="1744983255960" duration="831000" />
+      <workItem from="1744984433746" duration="15000" />
+      <workItem from="1744984450344" duration="1575000" />
+      <workItem from="1744996872830" duration="228000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

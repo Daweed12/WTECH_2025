@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('city', 128)->nullable();
             $table->string('country', 128)->nullable();
             $table->integer('role')->default(1);
+            $table->timestamp('registered_at')->nullable();
+            $table->timestamp('last_login')->nullable();
             $table->timestamps();
         });
     }

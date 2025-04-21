@@ -6,6 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/CartItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/CartItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Coupon.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Coupon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/OrderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/OrderItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/PaymentMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/PaymentMethod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/ProductImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/ProductImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/ShippingMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/ShippingMethod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/UserAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/UserAddress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Variant.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Variant.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +386,7 @@
       <workItem from="1744996872830" duration="228000" />
       <workItem from="1745061992424" duration="1529000" />
       <workItem from="1745101128935" duration="987000" />
-      <workItem from="1745260024422" duration="3515000" />
+      <workItem from="1745260024422" duration="5486000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

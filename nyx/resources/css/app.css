@@ -9,3 +9,62 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+/* úzky pásik */
+.top-ribbon {
+    height: 6px;                 /* zvoľ si hrúbku podľa vkusu */
+    background: #212529;         /* tmavo‑sivá / takmer čierna */
+}
+
+/* biela lišta */
+.top-bar-white {
+    background: #ffffff;         /* čistá biela */
+    border-bottom: 2px solid #5a0040; /* voliteľná dolná čiara vo farbe brandu */
+}
+
+/* odkaz vpravo (jemné vylepšenia) */
+.sign-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+.sign-link:hover {
+    text-decoration: underline;
+}
+
+
+/* --- NYX NAVBAR --------------------------------------- */
+.nyx-navbar {
+    background:#4a0032;           /* bordová – uprav podľa chuti */
+    padding: 0.75rem 0;           /* mierne vyšší navbar */
+}
+
+/* hamburger v 44×44 px zaoblenom rámiku s priehľadným pozadím */
+.nyx-toggler {
+    width:44px;height:44px;
+    border:2px solid rgba(255,255,255,.25);
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: rgba(255,255,255,.05);
+}
+.nyx-toggler:focus { box-shadow:none; }
+
+/* ikony vpravo */
+.nav-icon {
+    color:#fff;
+    font-size:1.25rem;
+    transition:opacity .2s;
+}
+.nav-icon:hover { opacity:.75; }
+
+/* skryj defaultnú ikonku bootstrap toggler‑lines */
+.navbar-toggler-icon { display:none; }
+
+.bg-nyx {
+    background-color: #4a0032 !important;   /* zmeň hex kód podľa chuti */
+}

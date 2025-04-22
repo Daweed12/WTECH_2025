@@ -5,14 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change afterPath="$PROJECT_DIR$/nyx/resources/css/navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/home/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/CartItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/CategoryProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Color.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/ColorProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Coupon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Order.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/OrderItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/PaymentMethod.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/ProductImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Review.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/ShippingMethod.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/UserAddress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Variant.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_19_110723_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_19_111745_create_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_19_111927_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_184701_create_sessions_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_220655_create_payment_methods_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_220734_create_shipping_methods_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_220919_create_coupons_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221144_create_addresses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221349_create_user_address_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221411_create_carts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221451_create_cart_items_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221518_create_orders_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221555_create_order_items_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221740_create_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221759_create_product_image_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221819_create_variants_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221842_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221851_create_category_product_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221926_create_colors_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_21_221938_create_color_product_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/home/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -299,6 +334,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -306,11 +346,11 @@
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\views" />
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\views\home" />
       <recent name="C:\Users\david\OneDrive - Slovenská technická univerzita v Bratislave\Desktop\fiit_stu\4 semester\WTECH\PROJEKT_WTECH_2025\html\pages\shopping_cart" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\preview" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\payment_method" />
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\final" />
     </key>
   </component>
   <component name="RunManager">
@@ -382,7 +422,8 @@
       <workItem from="1745061992424" duration="1529000" />
       <workItem from="1745101128935" duration="987000" />
       <workItem from="1745260024422" duration="8700000" />
-      <workItem from="1745310058706" duration="5376000" />
+      <workItem from="1745310058706" duration="6758000" />
+      <workItem from="1745324021198" duration="6595000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

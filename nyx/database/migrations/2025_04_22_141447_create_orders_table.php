@@ -11,23 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('coupons', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
-            $table->string('discount_type'); // e.g. 'percent' alebo 'fixed'
-            $table->decimal('amount',10,2);
-            $table->timestamp('valid_from');
-            $table->timestamp('valid_to');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('coupons');
+        Schema::dropIfExists('orders');
     }
 };

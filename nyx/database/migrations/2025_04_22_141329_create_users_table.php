@@ -11,23 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('variants', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
-            $table->string('sku')->unique();
-            $table->decimal('size',5,2)->nullable();
-            $table->integer('quantity');
-            $table->decimal('price_override',10,2)->nullable();
+            $table->string("first_name");
+            $table->string("last_name");
+            $table->string("email");
+            $table->string("password");
+            $table->string("phone");
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('variants');
+        Schema::dropIfExists('users');
     }
 };

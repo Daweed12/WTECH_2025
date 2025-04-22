@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,9 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('sku')->unique();
-            $table->string('slug')->unique();
-            $table->decimal('price',10,2);
-            $table->decimal('discount',10,2)->default(0);
-            $table->string('gender')->nullable();
-            $table->text('description')->nullable();
-            $table->text('summary')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -34,4 +24,4 @@ class CreateProductsTable extends Migration
     {
         Schema::dropIfExists('products');
     }
-}
+};

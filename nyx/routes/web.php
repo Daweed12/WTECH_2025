@@ -3,5 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $registered = true;
+    return view('index', ["registered" => $registered]);
 });

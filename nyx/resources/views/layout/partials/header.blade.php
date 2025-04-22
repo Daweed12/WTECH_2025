@@ -1,0 +1,57 @@
+<!-- Top bar with sign in / sign up -->
+<div class="container-fluid bg-light py-2 top-bar">
+    <div class="container d-flex justify-content-end align-items-center">
+        <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
+    </div>
+</div>
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container d-flex w-100 justify-content-between align-items-center">
+        <!-- Hamburger menu for categories -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand logo -->
+        <a href="index.html" class="navbar-brand"><b>NYX</b></a>
+
+        <!-- Category navigation links -->
+        <div class="collapse navbar-collapse" id="categoriesMenu">
+            <ul class="navbar-nav d-flex justify-content-start">
+                <li class="nav-item"><a href="../products/all_products.html" class="nav-link">SHOP ALL</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
+            </ul>
+        </div>
+
+        <!-- Header icons (search, wishlist, account, cart) -->
+        <div class="d-flex align-items-center ms-auto">
+            <!-- Search icon -->
+            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <!-- Wishlist icon -->
+            <a href="#" class="nav-link me-2">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <!-- Account icon -->
+            <a href="../account/account_details.html" class="nav-link me-2">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <!-- Cart icon -->
+            <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Collapsible search bar -->
+<div class="collapse search-bar" id="navbarSearch">
+    <div class="container">
+        <form class="d-flex my-2">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+</div>

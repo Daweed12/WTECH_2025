@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/views/home/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -305,11 +306,11 @@
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\views\home" />
       <recent name="C:\Users\david\OneDrive - Slovenská technická univerzita v Bratislave\Desktop\fiit_stu\4 semester\WTECH\PROJEKT_WTECH_2025\html\pages\shopping_cart" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\preview" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\payment_method" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\final" />
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\sc_address_details" />
     </key>
   </component>
   <component name="RunManager">
@@ -381,7 +382,7 @@
       <workItem from="1745061992424" duration="1529000" />
       <workItem from="1745101128935" duration="987000" />
       <workItem from="1745260024422" duration="8700000" />
-      <workItem from="1745310058706" duration="3358000" />
+      <workItem from="1745310058706" duration="5376000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

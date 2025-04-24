@@ -26,8 +26,7 @@ class Product extends Model
     /* ---------- príklady vzťahov ---------- */
     public function images()
     {
-        return $this->belongsToMany(Image::class, 'product_images')
-            ->withTimestamps();
+        return $this->belongsToMany(Image::class, 'product_images'); // bez ->withTimestamps()
     }
 
     public function reviews()

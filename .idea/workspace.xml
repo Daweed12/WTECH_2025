@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/banners/bracelet_category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/banners/earrings_category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/banners/necklace_category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/banners/ring_category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/ImageSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/seeders/ImageSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/ProductSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/seeders/ProductSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product10-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product10-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product10-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product6-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product6-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product6-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product6-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product7-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product7-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product7-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product8-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product8-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product8-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product8-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product9-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product9-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/assets/products/necklaces/product9-3.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

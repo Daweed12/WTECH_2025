@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change afterPath="$PROJECT_DIR$/nyx/resources/css/pages/account.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/css/pages/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/css/pages/login_register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/css/pages/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/layout/partials/script.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/layout/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,11 +311,11 @@
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\nyx" />
       <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\nyx\resources" />
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\views" />
       <recent name="C:\WTECH_PROJEKT\PROJEKT_WTECH_2025\nyx\resources\views\home" />
       <recent name="C:\Users\david\OneDrive - Slovenská technická univerzita v Bratislave\Desktop\fiit_stu\4 semester\WTECH\PROJEKT_WTECH_2025\html\pages\shopping_cart" />
+      <recent name="C:\Data\VS\4.Semester\WTECH\WTECH_2025\html\pages\shopping_cart\preview" />
     </key>
   </component>
   <component name="RunManager">

@@ -2,10 +2,6 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/app" isTestSource="false" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
-      <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/WTECH25_NYX/tests/Unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/nyx/app" isTestSource="false" packagePrefix="App\" />

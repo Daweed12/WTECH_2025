@@ -1,3 +1,8 @@
+@import "./pages/index.css";
+@import "./pages/product.css";
+@import "./pages/account.css";
+@import "./pages/login_register.css";
+
 /* Base body styling */
 body {
     font-family: Arial, sans-serif;

@@ -1,8 +1,4 @@
 @extends('layout.app')
-@section('css')
-    <link rel="stylesheet" href="{{asset('resources/css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('resources/css/index.css')}}">
-@endsection
 @section('contents')
     <!-- Main banner carousel with overlay -->
     <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">

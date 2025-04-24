@@ -13,8 +13,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('sku')->unique();
             $table->string('slug')->unique();
-            $table->integer('price');            // int podľa diagramu (centy)
-            $table->integer('discount')->nullable();
+            $table->decimal('price', 8, 2);
+            $table->decimal('discount', 8, 2)->default(0);
             $table->string('category')->nullable();
             $table->string('color')->nullable();
             $table->string('gender')->nullable();

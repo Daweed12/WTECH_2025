@@ -13,12 +13,12 @@
         </button>
 
         <!-- Brand logo -->
-        <a href="index.html" class="navbar-brand"><b>NYX</b></a>
+        <a href="" class="navbar-brand"><b>NYX</b></a>
 
         <!-- Category navigation links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item"><a href="../products/all_products.html" class="nav-link">SHOP ALL</a></li>
+                <li class="nav-item"><a href="../../all_products.blade.php" class="nav-link">SHOP ALL</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
@@ -37,11 +37,11 @@
                 <i class="fa-solid fa-heart"></i>
             </a>
             <!-- Account icon -->
-            <a href="../account/account_details.html" class="nav-link me-2">
+            <a href="../../account_details.blade.php" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
             <!-- Cart icon -->
-            <a href="../shopping_cart/shopping_cart_preview.html" class="nav-link position-relative">
+            <a href="../../shopping_cart/shopping_cart_preview.blade.php" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>

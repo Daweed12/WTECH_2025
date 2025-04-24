@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/footer.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/header.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/partials/navbar.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

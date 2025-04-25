@@ -11,7 +11,7 @@ class ProductController extends Controller
         // with('images') = žiadny N+1 problém
         $products = Product::with('images')
             ->latest()
-            ->paginate(12);
+            ->paginate(10);
 
         return view('all_products', compact('products'));
     }

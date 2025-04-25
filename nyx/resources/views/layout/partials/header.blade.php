@@ -13,12 +13,14 @@
         </button>
 
         <!-- Brand logo -->
-        <a href="" class="navbar-brand"><b>NYX</b></a>
+        <a href="{{ route('home') }}" class="navbar-brand"><b>NYX</b></a>
 
         <!-- Category navigation links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item"><a href="../../all_products.blade.php" class="nav-link">SHOP ALL</a></li>
+                <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">
+                        SHOP ALL
+                    </a></li>
                 <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>

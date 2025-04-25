@@ -21,11 +21,31 @@
         <!-- Category navigation links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">SHOP ALL</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">BRACELETS</a></li>
+                <li class="nav-item">
+                    <a href="{{ route('products.index') }}" class="nav-link">SHOP ALL</a>
+                </li>
+
+                {{-- jednotlivé kategórie --}}
+                <li class="nav-item">
+                    <a href="{{ route('products.index', ['category' => 'necklaces']) }}" class="nav-link">
+                        NECKLACES
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('products.index', ['category' => 'rings']) }}" class="nav-link">
+                        RINGS
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('products.index', ['category' => 'earings']) }}" class="nav-link">
+                        EARINGS
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('products.index', ['category' => 'bracelets']) }}" class="nav-link">
+                        BRACELETS
+                    </a>
+                </li>
             </ul>
         </div>
 

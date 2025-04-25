@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/css/product_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nyx/resources/views/current_product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/migrations/2025_04_22_141413_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/migrations/2025_04_22_141413_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/database/seeders/ProductSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/database/seeders/ProductSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,7 +397,7 @@
       <workItem from="1745324021198" duration="6595000" />
       <workItem from="1745335245541" duration="169000" />
       <workItem from="1745335430262" duration="648000" />
-      <workItem from="1745602470632" duration="2675000" />
+      <workItem from="1745602470632" duration="7153000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />

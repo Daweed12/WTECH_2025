@@ -3,31 +3,59 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Image;   // vzťah na obrázky
 
 class Product extends Model
 {
-    // Ak používaš guarded/fillable, doplň sem...
+    use HasFactory, SoftDeletes;
 
-    /** Vzťah N:M – produkt ↔ obrázky */
+    /**
+     * Hromadné priraďovanie
+     */
+    protected $fillable = [
+        'title',
+        'sku',
+        'slug',
+        'price',
+        'discount',
+        'category',
+        'color',
+        'gender',
+        'description',
+        'summary',
+        'details',      //  ⬅ nový stĺpec
+    ];
+
+    /**
+     * Casty – ak budeš „details“ ukladať ako JSON pole,
+     * odkomentuj nasledujúci riadok
+     */
+    // protected $casts = [
+    //     'details' => 'array',
+    // ];
+
+    /**
+     * N:M vzťah – produkt ↔ obrázky
+     */
     public function images()
     {
-
         return $this->belongsToMany(
-            Image::class,        // model Image
-            'product_images',    // názov pivot tabuľky  <-- dôležité!
-            'product_id',        // foreignPivotKey
-            'image_id'           // relatedPivotKey
+            Image::class,
+            'product_images',   // ← ak je táto tabuľka skutočne product_image
+            'product_id',
+            'image_id'
         );
     }
 
-    /** Accessor na prvý obrázok (alebo fallback) */
+    /**
+     * Accessor: url prvého obrázka alebo fallback
+     */
     public function getFirstImageUrlAttribute(): string
     {
-        // eager-loadom budeme mať $this->images už načítané
         $rawUrl = $this->images->first()->url ?? null;
 
-        // keď je uložená relatívna cesta,
-        //   → pripojíme public/storage (ak súbory sú v storage/app/public)
         return $rawUrl
             ? asset('storage/' . ltrim($rawUrl, '/'))
             : asset('storage/defaults/no-image.png');

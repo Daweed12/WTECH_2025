@@ -260,8 +260,25 @@ class ProductSeeder extends Seeder
             ],
         ];
 
+        // ======== ULOŽENIE: doplníme “details” a vytvoríme =========
         foreach ($products as $data) {
+            $data['details'] = $this->makeDetails($data);   // <– nový kľúč
             Product::create($data);
         }
+    }
+
+    /**
+     * Dynamicky vygeneruje DETAIL z údajov produktu.
+     * Vracia text s odradkovanými bodmi.
+     */
+    private function makeDetails(array $p): string
+    {
+        return implode("\n", [
+            'Category: '  . ucfirst($p['category']   ?? '—'),
+            'Color: '     . ucfirst($p['color']      ?? '—'),
+            'Gender: '    . ucfirst($p['gender']     ?? '—'),
+            'Price: €'    . number_format($p['price'], 2, ',', ' '),
+            'Summary: '   . ($p['summary'] ?? $p['description']),
+        ]);
     }
 }

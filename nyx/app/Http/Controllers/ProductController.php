@@ -42,4 +42,12 @@ class ProductController extends Controller
             'query'    => $q,
         ]);
     }
+
+    public function show(Product $product)
+    {
+        // Dovliekni obrázky, aby nebol N+1
+        $product->load('images');
+
+        return view('current_product', compact('product'));
+    }
 }

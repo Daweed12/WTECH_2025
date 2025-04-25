@@ -3,25 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-/*
-|--------------------------------------------------------------------------
-| Hlavná stránka
-|--------------------------------------------------------------------------
-*/
+/* Home */
 Route::view('/', 'index')->name('home');
 
-/*
-|--------------------------------------------------------------------------
-| Všetky produkty
-|--------------------------------------------------------------------------
-*/
+/* Zoznam produktov */
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products.index');
 
-/*
-|--------------------------------------------------------------------------
-| Vyhľadávanie
-|--------------------------------------------------------------------------
-*/
+/* Full-text search */
 Route::get('/search', [ProductController::class, 'search'])
     ->name('products.search');
+
+/* Detail produktu  ─ musí ísť až PO /products, inak by ho pohltilo {product} */
+Route::get('/products/{product}', [ProductController::class, 'show'])
+    ->name('products.show');
+

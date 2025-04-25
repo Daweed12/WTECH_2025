@@ -240,6 +240,8 @@
       <path value="$PROJECT_DIR$/nyx/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/nyx/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/nyx/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/nyx/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/nyx/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2">

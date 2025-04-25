@@ -4,11 +4,14 @@
         <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
     </div>
 </div>
+
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container d-flex w-100 justify-content-between align-items-center">
         <!-- Hamburger menu for categories -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesMenu" aria-controls="categoriesMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#categoriesMenu" aria-controls="categoriesMenu"
+                aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -18,9 +21,7 @@
         <!-- Category navigation links -->
         <div class="collapse navbar-collapse" id="categoriesMenu">
             <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">
-                        SHOP ALL
-                    </a></li>
+                <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">SHOP ALL</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">NECKLACES</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">RINGS</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">EARINGS</a></li>
@@ -31,7 +32,8 @@
         <!-- Header icons (search, wishlist, account, cart) -->
         <div class="d-flex align-items-center ms-auto">
             <!-- Search icon -->
-            <a href="#" class="nav-link me-2" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
+            <a href="#" class="nav-link me-2" data-bs-toggle="collapse"
+               data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </a>
             <!-- Wishlist icon -->
@@ -49,11 +51,17 @@
         </div>
     </div>
 </nav>
+
 <!-- Collapsible search bar -->
 <div class="collapse search-bar" id="navbarSearch">
     <div class="container">
-        <form class="d-flex my-2">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <form action="{{ route('products.search') }}" method="GET" class="d-flex my-2" role="search">
+            <input name="q"
+                   class="form-control"
+                   type="search"
+                   placeholder="Search products..."
+                   value="{{ request('q') }}"
+                   aria-label="Search">
         </form>
     </div>
 </div>

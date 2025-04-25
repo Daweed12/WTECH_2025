@@ -17,3 +17,11 @@ Route::view('/', 'index')->name('home');
 */
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products.index');
+
+/*
+|--------------------------------------------------------------------------
+| Vyhľadávanie
+|--------------------------------------------------------------------------
+*/
+Route::get('/search', [ProductController::class, 'search'])
+    ->name('products.search');

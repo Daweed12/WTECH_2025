@@ -53,7 +53,7 @@
         <h2 class="text-center text-dark mb-4">CATEGORIES</h2>
         <div class="row text-center">
             <div class="col-6 col-md-3 mb-4">
-                <a href="#" class="category-button">
+                <a href="{{ route('products.index', ['category' => 'necklaces']) }}"  class="category-button">
                     <div class="image-frame">
                         <img src="{{ asset('storage/banners/necklace_category.jpg') }}"
                              alt="Necklaces"
@@ -65,7 +65,7 @@
                 </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <a href="#" class="category-button">
+                <a href="{{ route('products.index', ['category' => 'earrings']) }}" class="category-button">
                     <div class="image-frame">
                         <img src="{{ asset('storage/banners/earrings_category.jpg') }}"
                              alt="Earrings"
@@ -77,7 +77,7 @@
                 </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <a href="#" class="category-button">
+                <a href="{{ route('products.index', ['category' => 'bracelets']) }}" class="category-button">
                     <div class="image-frame">
                         <img src="{{ asset('storage/banners/bracelet_category.jpg') }}"
                              alt="Bracelets"
@@ -89,7 +89,7 @@
                 </a>
             </div>
             <div class="col-6 col-md-3 mb-4">
-                <a href="#" class="category-button">
+                <a href="{{ route('products.index', ['category' => 'rings']) }}" class="category-button">
                     <div class="image-frame">
                         <img src="{{ asset('storage/banners/ring_category.jpg') }}"
                              alt="Rings"

@@ -8,19 +8,26 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /**
-     * Všetky produkty ( /​products )
+     * Zoznam všetkých – alebo filtrovaných – produktov  ( /products )
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with('images')
-            ->latest()
-            ->paginate(10);
+        // ?category=necklaces | rings | earings | bracelets …
+        $category = $request->input('category');      // null → zobraz všetko
 
-        return view('all_products', compact('products'));
+        $products = Product::with('images')
+            ->when($category, function ($query) use ($category) {
+                $query->where('category', $category);
+            })
+            ->latest()
+            ->paginate(10)
+            ->withQueryString();                      // zachová ?category= pri stránkovaní
+
+        return view('all_products', compact('products', 'category'));
     }
 
     /**
-     * Full-text vyhľadávanie ( /​search )
+     * Full-text vyhľadávanie  ( /search )
      */
     public function search(Request $request)
     {
@@ -35,7 +42,7 @@ class ProductController extends Controller
             })
             ->latest()
             ->paginate(10)
-            ->withQueryString();   // zachová ?q= pri stránkovaní
+            ->withQueryString();                      // zachová ?q= pri stránkovaní
 
         return view('all_products', [
             'products' => $products,
@@ -43,11 +50,12 @@ class ProductController extends Controller
         ]);
     }
 
+    /**
+     * Detail konkrétneho produktu
+     */
     public function show(Product $product)
     {
-        // Dovliekni obrázky, aby nebol N+1
-        $product->load('images');
-
+        $product->load('images');                     // N+1 fix
         return view('current_product', compact('product'));
     }
 }

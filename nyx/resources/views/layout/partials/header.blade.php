@@ -37,8 +37,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('products.index', ['category' => 'earings']) }}" class="nav-link">
-                        EARINGS
+                    <a href="{{ route('products.index', ['category' => 'earrings']) }}" class="nav-link">
+                        EARRINGS
                     </a>
                 </li>
                 <li class="nav-item">

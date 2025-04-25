@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        // napr. načítaj všetky produkty
-        $products = Product::paginate(12);
-        return view('products.index', compact('products'));
-    }
+        // with('images') = žiadny N+1 problém
+        $products = Product::with('images')
+            ->latest()
+            ->paginate(12);
 
-    // ... ostatné metódy create, store, edit, update, destroy
+        return view('all_products', compact('products'));
+    }
 }

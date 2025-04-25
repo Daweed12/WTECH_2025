@@ -5,7 +5,10 @@
     <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
         <div class="carousel-overlay-left">
             <h2 class="text-white fw-bold">SPRING COLLECTION</h2>
-            <a href="../products/all_products.html" class="btn btn-outline-light fw-bold mt-3">SHOP ALL</a>
+            <a href="{{ route('products.index') }}"
+               class="btn btn-outline-light fw-bold mt-3">
+                SHOP ALL
+            </a>
         </div>
 
         <div class="carousel-inner">

@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             AddressSeeder::class,
             ProductSeeder::class,
             ImageSeeder::class,
-            ProductImageSeeder::class
+            ProductImageSeeder::class,
+             CopyImagesSeeder::class,
 
             // ďalšie seedery sem…
         ]);

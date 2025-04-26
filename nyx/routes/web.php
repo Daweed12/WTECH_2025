@@ -6,7 +6,7 @@ use App\Http\Controllers\ProductController;
 /* Home */
 Route::view('/', 'index')->name('home');
 
-/* Zoznam produktov */
+/* Zoznam produktov + filter params via GET */
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products.index');
 
@@ -14,7 +14,6 @@ Route::get('/products', [ProductController::class, 'index'])
 Route::get('/search', [ProductController::class, 'search'])
     ->name('products.search');
 
-/* Detail produktu  ─ musí ísť až PO /products, inak by ho pohltilo {product} */
+/* Detail produktu – musí ísť až po /products */
 Route::get('/products/{product}', [ProductController::class, 'show'])
     ->name('products.show');
-

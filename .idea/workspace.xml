@@ -7,7 +7,9 @@
     <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

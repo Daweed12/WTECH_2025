@@ -17,3 +17,9 @@ Route::get('/search', [ProductController::class, 'search'])
 /* Detail produktu – musí ísť až po /products */
 Route::get('/products/{product}', [ProductController::class, 'show'])
     ->name('products.show');
+
+Route::view('/account', 'login_register_user')
+    ->middleware('guest')
+    ->name('account');
+
+require __DIR__.'/auth.php';

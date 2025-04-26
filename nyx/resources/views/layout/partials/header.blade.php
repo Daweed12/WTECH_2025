@@ -1,7 +1,9 @@
 <!-- Top bar with sign in / sign up -->
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
-        <a href="../login_register/login_register_user.html" class="small sign-in-link">Sign In / Sign Up</a>
+        @guest
+            <a href="{{ route('account') }}" class="small sign-in-link">Sign In / Sign Up</a>
+        @endguest
     </div>
 </div>
 
@@ -24,27 +26,17 @@
                 <li class="nav-item">
                     <a href="{{ route('products.index') }}" class="nav-link">SHOP ALL</a>
                 </li>
-
-                {{-- jednotlivé kategórie --}}
                 <li class="nav-item">
-                    <a href="{{ route('products.index', ['category' => 'necklaces']) }}" class="nav-link">
-                        NECKLACES
-                    </a>
+                    <a href="{{ route('products.index', ['category' => 'necklaces']) }}" class="nav-link">NECKLACES</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('products.index', ['category' => 'rings']) }}" class="nav-link">
-                        RINGS
-                    </a>
+                    <a href="{{ route('products.index', ['category' => 'rings']) }}" class="nav-link">RINGS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('products.index', ['category' => 'earrings']) }}" class="nav-link">
-                        EARRINGS
-                    </a>
+                    <a href="{{ route('products.index', ['category' => 'earrings']) }}" class="nav-link">EARRINGS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('products.index', ['category' => 'bracelets']) }}" class="nav-link">
-                        BRACELETS
-                    </a>
+                    <a href="{{ route('products.index', ['category' => 'bracelets']) }}" class="nav-link">BRACELETS</a>
                 </li>
             </ul>
         </div>
@@ -61,11 +53,11 @@
                 <i class="fa-solid fa-heart"></i>
             </a>
             <!-- Account icon -->
-            <a href="../../account_details.blade.php" class="nav-link me-2">
+            <a href="{{ route('account') }}" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
             <!-- Cart icon -->
-            <a href="../../shopping_cart/shopping_cart_preview.blade.php" class="nav-link position-relative">
+            <a href="#" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>

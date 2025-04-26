@@ -52,7 +52,7 @@ class ProductController extends Controller
                 };
             }, fn($q) => $q->latest())
             // Paginate + preserve filters in query string
-            ->paginate(10)
+            ->paginate(12)
             ->withQueryString();
 
         return view('all_products', [

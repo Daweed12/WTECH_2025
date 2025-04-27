@@ -1,15 +1,17 @@
-import { defineConfig } from 'vite';           // ⬅️ späť!
-import laravel from 'laravel-vite-plugin';
+// vite.config.mjs
+import { defineConfig } from 'vite'
+import laravel from 'laravel-vite-plugin'
 
 export default defineConfig({
     plugins: [
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/css/products.css',   // náš nový súbor
+                'resources/css/products.css',
                 'resources/js/app.js',
+                'resources/js/slider.js',
             ],
             refresh: true,
         }),
     ],
-});
+})

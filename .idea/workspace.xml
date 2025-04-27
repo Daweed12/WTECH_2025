@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="register is kinda working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/css/products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/js/slider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/vite.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/vite.config.mjs" afterDir="false" />
+>>>>>>> origin/main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,6 +279,10 @@
       <path value="$PROJECT_DIR$/nyx/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/nyx/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/nyx/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -393,6 +403,8 @@
       <workItem from="1745335245541" duration="169000" />
       <workItem from="1745335430262" duration="648000" />
       <workItem from="1745602470632" duration="8516000" />
+      <workItem from="1745704018954" duration="679000" />
+      <workItem from="1745706186562" duration="7279000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -490,7 +502,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743347257570</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="login_register blade update">
+      <option name="closed" value="true" />
+      <created>1745707441134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745707441135</updated>
+    </task>
+    <task id="LOCAL-00014" summary="register is kinda working">
+      <option name="closed" value="true" />
+      <created>1745712640259</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745712640259</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,6 +577,8 @@
     <MESSAGE value="admin page changing layout + some updates" />
     <MESSAGE value="filter repair + footer now sticks to bottom" />
     <MESSAGE value="banner text finally aligned" />
-    <option name="LAST_COMMIT_MESSAGE" value="banner text finally aligned" />
+    <MESSAGE value="login_register blade update" />
+    <MESSAGE value="register is kinda working" />
+    <option name="LAST_COMMIT_MESSAGE" value="register is kinda working" />
   </component>
 </project>

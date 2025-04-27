@@ -3,43 +3,56 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
 {
-    /**
-     * Display the login view.
-     */
-    public function create(): View
+    public function __construct()
     {
-        return view('auth.login');
+        $this->middleware('guest')->only(['create','store']);
+        $this->middleware('auth')->only('destroy');
     }
 
     /**
-     * Handle an incoming authentication request.
+     * Show the login form.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function create()
     {
-        $request->authenticate();
+        return view('login_register_user');  // or login_register, if you merged login & register into one
+    }
 
+    /**
+     * Handle an incoming login request.
+     */
+    public function store(Request $request)
+    {
+        // validate the credentials
+        $credentials = $request->validate([
+            'email'    => ['required','email'],
+            'password' => ['required','string'],
+        ]);
+
+        // attempt login
+        if (! Auth::attempt($credentials, $request->boolean('remember'))) {
+            return back()
+                ->withErrors(['email' => 'These credentials do not match our records.'])
+                ->onlyInput('email');
+        }
+
+        // regenerate session to prevent fixation
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended('/home');
     }
 
     /**
-     * Destroy an authenticated session.
+     * Log the user out.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(Request $request)
     {
-        Auth::guard('web')->logout();
-
+        Auth::logout();
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
         return redirect('/');

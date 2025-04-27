@@ -43,9 +43,15 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
-                    <label for="name">Name*</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" value="{{ old('name') }}" required>
-                    @error('name')
+                    <label for="first_name">First Name*</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" value="{{ old('first_name') }}" required>
+                    @error('first_name')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
+
+                    <label for="last_name">Last Name*</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" value="{{ old('last_name') }}" required>
+                    @error('last_name')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
 

@@ -3,36 +3,58 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 class AuthenticatedSessionController extends Controller
 {
-    /**
-     * Handle an incoming authentication request.
-     */
-    public function store(LoginRequest $request): Response
+    public function __construct()
     {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return response()->noContent();
+        $this->middleware('guest')->only(['create','store']);
+        $this->middleware('auth')->only('destroy');
     }
 
     /**
-     * Destroy an authenticated session.
+     * Show the login form.
      */
-    public function destroy(Request $request): Response
+    public function create()
     {
-        Auth::guard('web')->logout();
+        return view('login_register_user');  // or login_register, if you merged login & register into one
+    }
 
+    /**
+     * Handle an incoming login request.
+     */
+    public function store(Request $request)
+    {
+        // validate the credentials
+        $credentials = $request->validate([
+            'email'    => ['required','email'],
+            'password' => ['required','string'],
+        ]);
+
+        // attempt login
+        if (! Auth::attempt($credentials, $request->boolean('remember'))) {
+            return back()
+                ->withErrors(['email' => 'These credentials do not match our records.'])
+                ->onlyInput('email');
+        }
+
+        // regenerate session to prevent fixation
+        $request->session()->regenerate();
+
+        return redirect()->intended('/home');
+    }
+
+    /**
+     * Log the user out.
+     */
+    public function destroy(Request $request)
+    {
+        Auth::logout();
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
-        return response()->noContent();
+        return redirect('/');
     }
 }

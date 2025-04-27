@@ -243,6 +243,9 @@
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/nyx/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2">

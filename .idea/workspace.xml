@@ -4,45 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="banner text finally aligned">
-      <change afterPath="$PROJECT_DIR$/nyx/resources/views/cart.blade.php" afterDir="false" />
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="login_register blade update">
       <change beforePath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/NewPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/NewPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/PasswordResetLinkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/PasswordResetLinkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/VerifyEmailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/VerifyEmailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Requests/Auth/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/pages/account.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/pages/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/pages/login_register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/pages/product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/product_detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/css/products.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/js/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/views/login_register_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/login_register_user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/tests/Feature/Auth/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/tests/Feature/Auth/RegistrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/vite.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,6 +281,9 @@
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/nyx/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/nyx/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/nyx/vendor/doctrine/deprecations" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -428,7 +405,7 @@
       <workItem from="1745335430262" duration="648000" />
       <workItem from="1745602470632" duration="8516000" />
       <workItem from="1745704018954" duration="679000" />
-      <workItem from="1745706186562" duration="1037000" />
+      <workItem from="1745706186562" duration="6320000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -526,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743347257570</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="login_register blade update">
+      <option name="closed" value="true" />
+      <created>1745707441134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745707441135</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,6 +570,7 @@
     <MESSAGE value="admin page changing layout + some updates" />
     <MESSAGE value="filter repair + footer now sticks to bottom" />
     <MESSAGE value="banner text finally aligned" />
-    <option name="LAST_COMMIT_MESSAGE" value="banner text finally aligned" />
+    <MESSAGE value="login_register blade update" />
+    <option name="LAST_COMMIT_MESSAGE" value="login_register blade update" />
   </component>
 </project>

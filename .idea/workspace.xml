@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="login_register blade update">
-      <change beforePath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PROJEKT_WTECH_2025.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="register is kinda working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/account_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyx/resources/views/login_register_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/login_register_user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyx/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/vite.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/vite.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,7 +397,7 @@
       <workItem from="1745335430262" duration="648000" />
       <workItem from="1745602470632" duration="8516000" />
       <workItem from="1745704018954" duration="679000" />
-      <workItem from="1745706186562" duration="6320000" />
+      <workItem from="1745706186562" duration="7279000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -511,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745707441135</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="register is kinda working">
+      <option name="closed" value="true" />
+      <created>1745712640259</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745712640259</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,6 +571,7 @@
     <MESSAGE value="filter repair + footer now sticks to bottom" />
     <MESSAGE value="banner text finally aligned" />
     <MESSAGE value="login_register blade update" />
-    <option name="LAST_COMMIT_MESSAGE" value="login_register blade update" />
+    <MESSAGE value="register is kinda working" />
+    <option name="LAST_COMMIT_MESSAGE" value="register is kinda working" />
   </component>
 </project>

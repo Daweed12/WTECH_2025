@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
@@ -36,7 +37,9 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 // pre prihlásených
 Route::middleware('auth')->group(function(){
-    Route::view('/account', 'user.dashboard')->name('account');
+    Route::view('/account', 'account_details')->name('account');
+    Route::put('/account', [AccountController::class, 'update'])
+        ->name('account.update');
     Route::post('/logout', [AuthenticatedSessionController::class,'destroy'])->name('logout');
 });
 

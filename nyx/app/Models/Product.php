@@ -25,7 +25,8 @@ class Product extends Model
         'gender',
         'description',
         'summary',
-        'details',      //  ⬅ nový stĺpec
+        'details',
+        'popularity',
     ];
 
     /**

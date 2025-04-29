@@ -16,8 +16,10 @@ class UserFactory extends Factory
             // heslo „password“ – hashované!
             'password'   => Hash::make('password'),
             'phone'      => $this->faker->phoneNumber,
+            'role'       => 0,
             'created_at' => now(),
-            'updated_at' => now(),
+            'updated_at' => now()
+
         ];
     }
 }

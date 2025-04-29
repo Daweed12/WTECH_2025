@@ -400,3 +400,31 @@ hr {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+
+/* ——— ADMIN cards ——— */
+.product-card        { position: relative; overflow: hidden; }
+.product-card img    { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* tmavé „sklo“ + animácia */
+.product-card-overlay{
+    position:absolute; inset:0;
+    background:rgba(0,0,0,.45);
+    color:#fff; opacity:0;             /* skryté */
+    transition:opacity .25s ease;
+}
+.product-card:hover .product-card-overlay{ opacity:1; }
+
+/* ikony vpravo hore */
+.product-card .action-icons{
+    position:absolute; top:.5rem; right:.5rem;
+    display:flex; gap:.5rem; font-size:1.25rem;
+}
+.product-card .action-icons a{ color:#fff; }
+
+.product-card .title-overlay{
+    position:absolute; left:0; right:0; bottom:.75rem;
+    text-align:center; text-transform:uppercase;
+    font-weight:600; letter-spacing:.02em;
+}
+

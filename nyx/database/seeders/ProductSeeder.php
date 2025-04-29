@@ -23,6 +23,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Timeless 14-karat gold band with a mirror-polished finish – perfect for stacking or wearing solo.',
                 'summary'     => 'Timeless polished gold band',
+                'popularity'     => 10,
             ],
             [
                 'title'       => 'Textured Gold Band',
@@ -35,6 +36,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Lightweight gold band featuring a subtle hammered texture that catches the light beautifully.',
                 'summary'     => 'Hammered-texture gold ring',
+                'popularity'     => 3,
             ],
             [
                 'title'       => 'Twisted Rope Gold Ring',
@@ -47,6 +49,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Eye-catching rope-twist design crafted in polished gold plating for a bold yet refined look.',
                 'summary'     => 'Polished rope-twist gold ring',
+                'popularity'     => 0,
             ],
             [
                 'title'       => 'Diamond Bow Statement Ring',
@@ -59,6 +62,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Delicate bow silhouette paved with brilliant-cut simulated diamonds set on a slim gold band.',
                 'summary'     => 'Bow ring with sparkling diamonds',
+                'popularity'     => 19,
             ],
             [
                 'title'       => 'Minimalist Silver Signet Ring',
@@ -71,6 +75,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Sleek sterling-silver signet ring with a smooth oval face ready for personal engraving.',
                 'summary'     => 'Sleek sterling-silver signet',
+                'popularity'     => 1,
             ],
 
             // Bracelets  (produkty 6 – 10)
@@ -85,6 +90,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Delicate gold cable-chain bracelet featuring a pavé-diamond arrow motif and adjustable spring-ring clasp.',
                 'summary'     => 'Gold chain bracelet with pavé arrow',
+                'popularity'     => 0,
             ],
             [
                 'title'       => 'Gold Diamond Tennis Bracelet',
@@ -97,6 +103,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Classic bezel-set diamond tennis bracelet crafted in yellow-gold plating for continuous sparkle.',
                 'summary'     => 'Bezel-set diamond tennis bracelet',
+                'popularity'     => 12,
             ],
             [
                 'title'       => 'Paperclip Link Gold Bracelet',
@@ -109,6 +116,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'On-trend elongated paperclip links in high-polish gold with an oversized toggle clasp.',
                 'summary'     => 'Trendy paperclip-link gold bracelet',
+                'popularity'     => 13,
             ],
             [
                 'title'       => 'Slim Diamond Bar Bracelet',
@@ -121,6 +129,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Minimalist bracelet showcasing a slender diamond-pavé bar on a barely-there chain.',
                 'summary'     => 'Minimalist pavé-diamond bar bracelet',
+                'popularity'     => 4,
             ],
             [
                 'title'       => 'Polished Silver Cuff Bracelet',
@@ -133,6 +142,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Sleek open-ended cuff forged from sterling silver, finished with a mirror-like polish.',
                 'summary'     => 'Sleek sterling-silver cuff',
+                'popularity'     => 12,
             ],
 
             // Necklaces  (produkty 11 – 15)
@@ -147,6 +157,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Bold paperclip-style links in high-polish gold, finished with a statement circle-toggle clasp.',
                 'summary'     => 'Gold paperclip-link statement necklace',
+                'popularity'     => 1,
             ],
             [
                 'title'       => 'Minimal Gold Bar Pendant Necklace',
@@ -159,6 +170,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Sleek gold bar pendant suspended from a fine cable chain – perfect for everyday layers.',
                 'summary'     => 'Sleek gold bar pendant on fine chain',
+                'popularity'     => 1,
             ],
             [
                 'title'       => 'Polished Silver Tag Necklace',
@@ -171,6 +183,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'High-shine sterling-silver tag on a sturdy yet refined curb chain – a modern unisex essential.',
                 'summary'     => 'Sterling-silver tag curb-chain necklace',
+                'popularity'     => 1,
             ],
             [
                 'title'       => 'Diamond Disc Station Necklace',
@@ -183,6 +196,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Five pavé-diamond discs spaced evenly along a delicate gold chain for subtle sparkle.',
                 'summary'     => 'Gold chain with pavé-diamond discs',
+                'popularity'     => 4,
             ],
             [
                 'title'       => 'Layered Gold Chain Necklace',
@@ -195,6 +209,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Pre-layered double-strand necklace combining a fine curb chain with a slender snake chain in rich gold.',
                 'summary'     => 'Pre-layered double gold chain necklace',
+                'popularity'     => 4,
             ],
 
             // Earrings  (produkty 16 – 20)
@@ -209,6 +224,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Every-day huggie hoops crafted in high-polish gold plating with a discreet hinge closure.',
                 'summary'     => 'Mini gold huggie earrings',
+                'popularity'     => 5,
             ],
             [
                 'title'       => 'Turquoise Huggie Hoops',
@@ -221,6 +237,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Gold huggie earrings lined with vivid turquoise cabochons for a pop of colour.',
                 'summary'     => 'Gold huggies with turquoise stones',
+                'popularity'     => 5,
             ],
             [
                 'title'       => 'Chunky Silver Hoops',
@@ -233,6 +250,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Bold, smooth sterling-silver hoops with a modern chunky profile and secure latch fastening.',
                 'summary'     => 'Bold sterling-silver hoop earrings',
+                'popularity'     => 5,
             ],
             [
                 'title'       => 'Slim Silver Sleeper Hoops',
@@ -245,6 +263,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Lightweight sleeper-style hoops in polished silver, designed for comfortable all-night wear.',
                 'summary'     => 'Lightweight silver sleeper hoops',
+                'popularity'     => 50,
             ],
             [
                 'title'       => 'Diamond Pavé Studs',
@@ -257,6 +276,7 @@ class ProductSeeder extends Seeder
                 'gender'      => 'unisex',
                 'description' => 'Round gold studs fully pavéd with brilliant-cut simulated diamonds for maximum sparkle.',
                 'summary'     => 'Gold studs with pavé diamonds',
+                'popularity'     => 12,
             ],
         ];
 

@@ -2,7 +2,9 @@
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
         @auth
-            <span class="small">Welcome, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}!</span>
+            <span class="small">
+                Welcome, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}!
+            </span>
         @else
             <a href="{{ route('account') }}" class="small sign-in-link">
                 Sign In / Sign Up
@@ -11,10 +13,10 @@
     </div>
 </div>
 
-
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container d-flex w-100 justify-content-between align-items-center">
+
         <!-- Hamburger menu for categories -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#categoriesMenu" aria-controls="categoriesMenu"
@@ -48,19 +50,34 @@
 
         <!-- Header icons (search, wishlist, account, cart) -->
         <div class="d-flex align-items-center ms-auto">
+
+            {{-- ADMIN icon – visible only to users with role = 1 --}}
+            @auth
+                @if(Auth::user()->role === 1)
+                    <a href="{{ route('admin.dashboard') }}"
+                       class="nav-link me-2"
+                       title="Admin Panel">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </a>
+                @endif
+            @endauth
+
             <!-- Search icon -->
             <a href="#" class="nav-link me-2" data-bs-toggle="collapse"
                data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </a>
+
             <!-- Wishlist icon -->
             <a href="#" class="nav-link me-2">
                 <i class="fa-solid fa-heart"></i>
             </a>
+
             <!-- Account icon -->
             <a href="{{ route('account') }}" class="nav-link me-2">
                 <i class="fa-solid fa-user"></i>
             </a>
+
             <!-- Cart icon -->
             <a href="#" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -72,7 +89,8 @@
 <!-- Collapsible search bar -->
 <div class="collapse search-bar" id="navbarSearch">
     <div class="container">
-        <form action="{{ route('products.search') }}" method="GET" class="d-flex my-2" role="search">
+        <form action="{{ route('products.search') }}" method="GET"
+              class="d-flex my-2" role="search">
             <input name="q"
                    class="form-control"
                    type="search"

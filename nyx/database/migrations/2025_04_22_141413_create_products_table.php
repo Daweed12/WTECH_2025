@@ -25,9 +25,10 @@ return new class extends Migration
             $table->string('description');
             $table->text('summary')->nullable();
 
-           
+
             // text – ak chceš JSON, zmeň na $table->json('details')
             $table->text('details')->nullable();
+            $table->unsignedInteger('popularity')->default(0);
 
             $table->timestamps();   // created_at, updated_at
             $table->softDeletes();  // deleted_at

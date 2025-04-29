@@ -14,19 +14,17 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $category  = $request->input('category');
-        $colors    = $request->input('color', []);
-        $genders   = $request->input('gender', []);    // ← new
-        $minPrice  = $request->input('min_price', 0);
-        $maxPrice  = $request->input('max_price', 500);
-        $sort      = $request->input('sort', '');
-        $queryText = $request->input('q', '');
+        $colors    = array_filter(explode(',', $request->input('color', '')));
+        $genders   = array_filter(explode(',', $request->input('gender', '')));
+        $minPrice  = $request->input('min', 0);
+        $maxPrice  = $request->input('max', 0);
 
         $products = Product::with('images')
             // Category
             ->when($category, function ($q) use ($category) {
                 $q->whereRaw('LOWER(category) = ?', [Str::lower($category)]);
             })
-            // Color (material)
+            // Color
             ->when(count($colors), function ($q) use ($colors) {
                 $q->whereIn('color', $colors);
             })
@@ -34,53 +32,47 @@ class ProductController extends Controller
             ->when(count($genders), function ($q) use ($genders) {
                 $q->whereIn('gender', $genders);
             })
-            // Search
-            ->when($queryText, function ($q) use ($queryText) {
-                $q->where(function ($sub) use ($queryText) {
-                    $sub->where('title', 'LIKE', "%{$queryText}%")
-                        ->orWhere('description', 'LIKE', "%{$queryText}%");
-                });
-            })
             // Price range
-            ->whereBetween('price', [(float)$minPrice, (float)$maxPrice])
-            // Sorting
-            ->when($sort, function ($q) use ($sort) {
-                return match($sort) {
-                    'price-asc'  => $q->orderBy('price', 'asc'),
-                    'price-desc' => $q->orderBy('price', 'desc'),
-                    default      => $q->orderBy('choice', 'desc'),
-                };
-            }, fn($q) => $q->latest())
-            // Paginate + preserve filters in query string
-            ->paginate(12)
-            ->withQueryString();
+            ->when($minPrice > 0, function ($q) use ($minPrice) {
+                $q->where('price', '>=', $minPrice);
+            })
+            ->when($maxPrice > 0, function ($q) use ($maxPrice) {
+                $q->where('price', '<=', $maxPrice);
+            })
+            ->paginate(20);
 
-        return view('all_products', [
-            'products'   => $products,
-            'category'   => $category,
-            'color'      => $colors,
-            'gender'     => $genders,     // ← pass to view
-            'min_price'  => $minPrice,
-            'max_price'  => $maxPrice,
-            'sort'       => $sort,
-            'query'      => $queryText,
-        ]);
+        return view('products.index', compact('products'));
     }
 
     /**
-     * Full‐text vyhľadávanie (/search) — reuses index()
+     * Full-textové vyhľadávanie ( /products/search?q=… )
      */
     public function search(Request $request)
     {
-        return $this->index($request);
+        $queryText = $request->input('q', '');
+
+        $products = Product::with('images')
+            ->where(function ($q) use ($queryText) {
+                $q->where('title',       'ILIKE', "%{$queryText}%")
+                    ->orWhere('description','ILIKE', "%{$queryText}%")
+                    ->orWhere('summary',    'ILIKE', "%{$queryText}%")
+                    ->orWhere('category',   'ILIKE', "%{$queryText}%");
+            })
+            ->paginate(20);
+
+        return view('products.search', compact('products', 'queryText'));
     }
 
     /**
-     * Detail konkrétneho produktu
+     * Detail jedného produktu
      */
     public function show(Product $product)
     {
         $product->load('images');
-        return view('current_product', compact('product'));
+
+        // pridať do popularity jeden klik
+        $product->increment('popularity');
+
+        return view('products.show', compact('product'));
     }
 }

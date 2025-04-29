@@ -11,22 +11,11 @@
 @section('contents')
     <div class="container py-4"><!-- Content starts right under NYX header -->
 
-<<<<<<< HEAD
-        {{-- SEARCH HEADING --}}
-        @if (!empty($query))
-            <h4 class="text-center mb-4">
-                Results for “{{ $query }}” ({{ $products->total() }})
-            </h4>
-        @endif
-=======
-    <main class="container my-5">
-    {{-- Search heading --}}
-    @if (!empty($query))
-        <h4 class="text-center my-4">
-            Results for “{{ $query }}” ({{ $products->total() }})
-        </h4>
-    @endif
->>>>>>> origin/main
+
+
+
+
+
 
         {{-- SORT + FILTER TOGGLE BAR --}}
         <div class="sort-filter-container">

@@ -1,11 +1,16 @@
-<!-- Top bar with sign in / sign up -->
+<!-- Top bar with sign in / sign up or welcome message -->
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
-        @guest
-            <a href="{{ route('account') }}" class="small sign-in-link">Sign In / Sign Up</a>
-        @endguest
+        @auth
+            <span class="small">Welcome, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}!</span>
+        @else
+            <a href="{{ route('account') }}" class="small sign-in-link">
+                Sign In / Sign Up
+            </a>
+        @endauth
     </div>
 </div>
+
 
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light">

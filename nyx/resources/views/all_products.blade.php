@@ -10,6 +10,7 @@
 
 @section('contents')
 
+    <main class="container my-5">
     {{-- Search heading --}}
     @if (!empty($query))
         <h4 class="text-center my-4">
@@ -231,4 +232,5 @@
     <div class="d-flex justify-content-center mt-4">
         {{ $products->links('vendor.pagination.bootstrap-5') }}
     </div>
+    </main>
 @endsection

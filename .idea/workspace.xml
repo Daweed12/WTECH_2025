@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="register + login almost working, account page almost done" />
+    <list default="true" id="99b67ed8-abe3-4b71-862d-d08cc87182da" name="Changes" comment="some debuging migrations">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/all_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nyx/resources/views/layout/partials/header.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -393,6 +398,9 @@
       <workItem from="1745602470632" duration="8516000" />
       <workItem from="1745704018954" duration="679000" />
       <workItem from="1745706186562" duration="7352000" />
+      <workItem from="1745743724805" duration="3748000" />
+      <workItem from="1745772226829" duration="626000" />
+      <workItem from="1745919841552" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="index_working">
       <option name="closed" value="true" />
@@ -514,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745713599431</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="some debuging migrations">
+      <option name="closed" value="true" />
+      <created>1745743809488</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1745743809489</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,6 +592,7 @@
     <MESSAGE value="login_register blade update" />
     <MESSAGE value="register is kinda working" />
     <MESSAGE value="register + login almost working, account page almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="register + login almost working, account page almost done" />
+    <MESSAGE value="some debuging migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="some debuging migrations" />
   </component>
 </project>

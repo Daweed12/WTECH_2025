@@ -61,4 +61,11 @@ class Product extends Model
             ? asset('storage/' . ltrim($rawUrl, '/'))
             : asset('storage/defaults/no-image.png');
     }
+
+    public function scopeBestSellers($query, int $limit = 4)
+    {
+        return $query->orderByDesc('popularity')
+            ->take($limit);
+    }
+
 }

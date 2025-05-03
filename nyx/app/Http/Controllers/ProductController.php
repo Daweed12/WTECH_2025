@@ -4,75 +4,99 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
     /**
-     * Zoznam všetkých – alebo filtrovaných – produktov ( /products )
+     * Zoznam / katalóg produktov.
      */
     public function index(Request $request)
     {
-        $category  = $request->input('category');
-        $colors    = array_filter(explode(',', $request->input('color', '')));
-        $genders   = array_filter(explode(',', $request->input('gender', '')));
-        $minPrice  = $request->input('min', 0);
-        $maxPrice  = $request->input('max', 0);
+        /*
+        |--------------------------------------------------------------------------
+        | 1) Všetky vstupné parametre z URL
+        |--------------------------------------------------------------------------
+        */
+        $category   = $request->input('category');          // string|null
+        $colors     = $request->input('color', []);         // array
+        $genders    = $request->input('gender', []);        // array
+        $min_price  = $request->input('min_price');         // int|float|null
+        $max_price  = $request->input('max_price');         // int|float|null
+        $sort       = $request->input('sort', 'popularity'); // default
+        $query      = $request->input('q');                 // full-text hľadanie
 
-        $products = Product::with('images')
-            // Category
-            ->when($category, function ($q) use ($category) {
-                $q->whereRaw('LOWER(category) = ?', [Str::lower($category)]);
-            })
-            // Color
-            ->when(count($colors), function ($q) use ($colors) {
-                $q->whereIn('color', $colors);
-            })
-            // Gender
-            ->when(count($genders), function ($q) use ($genders) {
-                $q->whereIn('gender', $genders);
-            })
-            // Price range
-            ->when($minPrice > 0, function ($q) use ($minPrice) {
-                $q->where('price', '>=', $minPrice);
-            })
-            ->when($maxPrice > 0, function ($q) use ($maxPrice) {
-                $q->where('price', '<=', $maxPrice);
-            })
-            ->paginate(20);
+        /*
+        |--------------------------------------------------------------------------
+        | 2) Zostavenie Eloquent dotazu
+        |--------------------------------------------------------------------------
+        */
+        $products = Product::query()
 
-        return view('products.index', compact('products'));
+            // full-text / LIKE vyhľadávanie
+            ->when($query, fn ($q) =>
+            $q->where('title', 'like', "%{$query}%")
+            )
+
+            // kategória
+            ->when($category, fn ($q) =>
+            $q->where('category', $category)
+            )
+
+            // materiál / farba
+            ->when($colors, fn ($q) =>
+            $q->whereIn('material', $colors)
+            )
+
+            // gender
+            ->when($genders, fn ($q) =>
+            $q->whereIn('gender', $genders)
+            )
+
+            // min / max price
+            ->when($min_price, fn ($q) =>
+            $q->where('price', '>=', $min_price)
+            )
+            ->when($max_price, fn ($q) =>
+            $q->where('price', '<=', $max_price)
+            )
+
+            // triedenie
+            ->when(true, function ($q) use ($sort) {
+                return match ($sort) {
+                    'price-asc'  => $q->orderBy('price', 'asc'),
+                    'price-desc' => $q->orderBy('price', 'desc'),
+                    default      => $q->orderBy('popularity', 'desc'),
+                };
+            })
+
+            // stránkovanie
+            ->paginate(12)
+            ->withQueryString();   // zachová všetky GET parametre na ďalších stránkach
+
+        /*
+        |--------------------------------------------------------------------------
+        | 3) Odovzdanie dát do view
+        |--------------------------------------------------------------------------
+        |  — VŠETKY premenné, ktoré používa Blade, posielame explicitne —
+        */
+        return view('all_products', [
+            'products'   => $products,
+            'category'   => $category,
+            'color'      => $colors,
+            'gender'     => $genders,
+            'min_price'  => $min_price,
+            'max_price'  => $max_price,
+            'sort'       => $sort,
+            'query'      => $query,
+        ]);
     }
 
     /**
-     * Full-textové vyhľadávanie ( /products/search?q=… )
-     */
-    public function search(Request $request)
-    {
-        $queryText = $request->input('q', '');
-
-        $products = Product::with('images')
-            ->where(function ($q) use ($queryText) {
-                $q->where('title',       'ILIKE', "%{$queryText}%")
-                    ->orWhere('description','ILIKE', "%{$queryText}%")
-                    ->orWhere('summary',    'ILIKE', "%{$queryText}%")
-                    ->orWhere('category',   'ILIKE', "%{$queryText}%");
-            })
-            ->paginate(20);
-
-        return view('products.search', compact('products', 'queryText'));
-    }
-
-    /**
-     * Detail jedného produktu
+     * Detail produktu.
+     * (Ak ho používaš; ak nie, môžeš tento handler vymazať.)
      */
     public function show(Product $product)
     {
-        $product->load('images');
-
-        // pridať do popularity jeden klik
-        $product->increment('popularity');
-
-        return view('products.show', compact('product'));
+        return view('current_product', compact('product'));
     }
 }

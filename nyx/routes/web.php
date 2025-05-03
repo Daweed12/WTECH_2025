@@ -13,7 +13,6 @@ Route::view('/', 'index')->name('home');
 /* Zoznam produktov + filter params via GET */
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products.index');
-
 /* Vyhľadávanie */
 Route::get('/products/search', [ProductController::class, 'search'])
     ->name('products.search');

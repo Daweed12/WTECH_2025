@@ -1,4 +1,14 @@
-<!-- Top bar with sign in / sign up or welcome message -->
+{{-- resources/views/header.blade.php --}}
+
+@inject('cartCtrl', 'App\Http\Controllers\CartController')
+@php
+    // Načítame aktuálny košík (guest alebo user)
+    $cart = $cartCtrl->getCart();
+    // Spočítame celkové množstvo položiek
+    $cartCount = $cart->items->sum('quantity');
+@endphp
+
+    <!-- Top bar with sign in / sign up or welcome message -->
 <div class="container-fluid bg-light py-2 top-bar">
     <div class="container d-flex justify-content-end align-items-center">
         @auth
@@ -78,9 +88,16 @@
                 <i class="fa-solid fa-user"></i>
             </a>
 
-            <!-- Cart icon -->
-            <a href="{{route('cart.preview')}}" class="nav-link position-relative">
+            <!-- Cart icon with item count badge -->
+            <a href="{{ route('cart.preview') }}" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
+                @if($cartCount > 0)
+                    <span
+                        class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle p-1"
+                        style="font-size: .6rem; line-height: 1;">
+                        {{ $cartCount }}
+                    </span>
+                @endif
             </a>
         </div>
     </div>

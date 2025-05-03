@@ -18,33 +18,60 @@ class CartController extends Controller
     /**
      * Retrieve the current cart for session or authenticated user.
      */
-    protected function getCart(): Cart
+    public function getCart(): Cart
     {
-        // 1) Skúsim podľa session('cart_id')
-        if ($id = session('cart_id')) {
-            if ($cart = Cart::find($id)) {
-                return $cart;
-            }
-        }
-
-        // 2) Ak som prihlásený, hľadám (alebo vytvorím) košík pre usera
+        // 1) Ak som prihlásený, najprv hľadaj existujúci cart pre usera
         if (Auth::check()) {
-            $cart = Cart::firstOrCreate(
-                ['user_id' => Auth::id(), 'status' => 'active'],
-                ['session_id' => null, 'token' => Str::uuid()]
-            );
-        } else {
-            // 3) Inak guest – podľa session_id
-            $sessionId = session()->getId();
-            $cart = Cart::firstOrCreate(
-                ['session_id' => $sessionId, 'status' => 'active'],
-                ['user_id' => null, 'token' => Str::uuid()]
-            );
+            $cart = Cart::where('user_id', Auth::id())
+                ->where('status', 'active')
+                ->first();
+
+            // 1a) Ak žiadny neexistuje, pozri sa či v session nemáš
+            //     guest-cart a priraď ho k userovi
+            if (! $cart && session('cart_id')) {
+                $possible = Cart::where('id', session('cart_id'))
+                    ->where('status', 'active')
+                    ->first();
+                if ($possible) {
+                    $possible->update([
+                        'user_id'    => Auth::id(),
+                        'session_id' => null,
+                    ]);
+                    $cart = $possible;
+                }
+            }
+
+            // 1b) Ak stále nič, vytvor nový
+            if (! $cart) {
+                $cart = Cart::create([
+                    'user_id'    => Auth::id(),
+                    'session_id' => null,
+                    'token'      => Str::uuid(),
+                    'status'     => 'active',
+                ]);
+            }
+
+            // ulož do session, nech si ho getCart pamätá
+            session(['cart_id' => $cart->id]);
+            return $cart;
         }
 
-        // 4) Uložím ID do session
-        session(['cart_id' => $cart->id]);
+        // 2) Nie som prihlásený → klasický “guest” podľa session_id
+        $sessionId = session()->getId();
+        $cart = Cart::where('session_id', $sessionId)
+            ->where('status', 'active')
+            ->first();
 
+        if (! $cart) {
+            $cart = Cart::create([
+                'user_id'    => null,
+                'session_id' => $sessionId,
+                'token'      => Str::uuid(),
+                'status'     => 'active',
+            ]);
+        }
+
+        session(['cart_id' => $cart->id]);
         return $cart;
     }
 

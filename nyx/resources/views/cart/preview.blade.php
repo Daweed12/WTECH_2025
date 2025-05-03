@@ -21,11 +21,11 @@
             </div>
             <div class="step">
                 <span class="icon"><i class="fas fa-truck"></i></span>
-                <span class="label">Address & Shipping</span>
+                <span class="label">Address</span>
             </div>
             <div class="step">
                 <span class="icon"><i class="fas fa-credit-card"></i></span>
-                <span class="label">Payment</span>
+                <span class="label">Payment & Shipping</span>
             </div>
             <div class="step">
                 <span class="icon"><i class="fas fa-check"></i></span>

@@ -6,8 +6,11 @@
     use Illuminate\Support\Str;
 @endphp
 
-{{-- Pridáme vlastné CSS pre detail produktu --}}
-@vite(['resources/css/product_detail.css'])
+{{-- CSS pre detail produktu + Best-Sellers widget --}}
+@vite([
+    'resources/css/product_detail.css',
+    'resources/css/best-sellers.css'
+])
 
 @section('contents')
     <div class="container product-detail my-5">
@@ -124,7 +127,14 @@
             </div>
         </div>
     </div>
+
+    {{-- ================= BEST SELLERS ================= --}}
+    <div class="container">
+        <x-best-sellers :limit="4" />
+    </div>
 @endsection
+
+
 
 @section('another_scripts')
     <script>

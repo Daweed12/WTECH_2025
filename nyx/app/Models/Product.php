@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Image;   // vzťah na obrázky
+use Illuminate\Support\Facades\Storage;   //  ←  doplniť
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -66,6 +68,18 @@ class Product extends Model
     {
         return $query->orderByDesc('popularity')
             ->take($limit);
+    }
+
+    public function getThumbnailUrlAttribute(): string
+    {
+        // vezmeme prvý záznam z images vzťahu
+        $path = $this->images()->value('url');   // NULL ak žiadny
+
+        if ($path) {
+            return Storage::url($path);          // → /storage/products/…
+        }
+
+        return asset('storage/defaults/no-image.png');
     }
 
 }

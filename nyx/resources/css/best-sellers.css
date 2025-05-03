@@ -1,0 +1,26 @@
+/* -- kartu zjednodušíme na jeden link (.bs-item) ---------------------- */
+.bs-item { transition: opacity .25s; }
+
+/* -- štvorcový obrázok ------------------------------------------------ */
+.bs-img { position:relative; padding-top:100%; overflow:hidden; }
+.bs-img img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform .35s;
+}
+.bs-item:hover .bs-img img { transform:scale(1.05); }
+
+/* -- text ------------------------------------------------------------- */
+.bs-name{
+    font-size:1rem;
+    font-weight:500;
+    letter-spacing:.02em;     /* trošku „luxusnejší“ rozstup */
+}
+.bs-price{
+    font-size:1rem;
+    font-weight:500;
+}
+
+/* -- voliteľne jemné zosvetlenie pri hoveri -------------------------- */
+.bs-item:hover { opacity:.9; }

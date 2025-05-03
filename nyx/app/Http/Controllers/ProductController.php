@@ -8,59 +8,34 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /**
-     * Zoznam / katalóg produktov.
+     * Katalóg + vyhľadávanie + filtre.
      */
     public function index(Request $request)
     {
-        /*
-        |--------------------------------------------------------------------------
-        | 1) Všetky vstupné parametre z URL
-        |--------------------------------------------------------------------------
-        */
-        $category   = $request->input('category');          // string|null
-        $colors     = $request->input('color', []);         // array
-        $genders    = $request->input('gender', []);        // array
-        $min_price  = $request->input('min_price');         // int|float|null
-        $max_price  = $request->input('max_price');         // int|float|null
-        $sort       = $request->input('sort', 'popularity'); // default
-        $query      = $request->input('q');                 // full-text hľadanie
+        /* 1) parametre z URL ------------------------------------------------- */
+        $category   = $request->input('category');
+        $colors     = $request->input('color', []);
+        $genders    = $request->input('gender', []);
+        $min_price  = $request->input('min_price');
+        $max_price  = $request->input('max_price');
+        $sort       = $request->input('sort', 'popularity');
+        $query      = $request->input('q');          // výraz na hľadanie
 
-        /*
-        |--------------------------------------------------------------------------
-        | 2) Zostavenie Eloquent dotazu
-        |--------------------------------------------------------------------------
-        */
+        /* 2) Eloquent dotaz -------------------------------------------------- */
         $products = Product::query()
 
-            // full-text / LIKE vyhľadávanie
-            ->when($query, fn ($q) =>
-            $q->where('title', 'like', "%{$query}%")
-            )
+            // full-text v title + slug  (ILIKE funguje v PostgreSQL)
+            ->when($query, function ($q) use ($query) {
+                $q->where('title', 'ilike', "%{$query}%")
+                    ->orWhere('slug',  'ilike', "%{$query}%");
+            })
 
-            // kategória
-            ->when($category, fn ($q) =>
-            $q->where('category', $category)
-            )
+            ->when($category, fn ($q) => $q->where('category', $category))
+            ->when($colors,   fn ($q) => $q->whereIn('material', $colors))
+            ->when($genders,  fn ($q) => $q->whereIn('gender', $genders))
+            ->when($min_price,fn ($q) => $q->where('price', '>=', $min_price))
+            ->when($max_price,fn ($q) => $q->where('price', '<=', $max_price))
 
-            // materiál / farba
-            ->when($colors, fn ($q) =>
-            $q->whereIn('material', $colors)
-            )
-
-            // gender
-            ->when($genders, fn ($q) =>
-            $q->whereIn('gender', $genders)
-            )
-
-            // min / max price
-            ->when($min_price, fn ($q) =>
-            $q->where('price', '>=', $min_price)
-            )
-            ->when($max_price, fn ($q) =>
-            $q->where('price', '<=', $max_price)
-            )
-
-            // triedenie
             ->when(true, function ($q) use ($sort) {
                 return match ($sort) {
                     'price-asc'  => $q->orderBy('price', 'asc'),
@@ -69,16 +44,10 @@ class ProductController extends Controller
                 };
             })
 
-            // stránkovanie
             ->paginate(12)
-            ->withQueryString();   // zachová všetky GET parametre na ďalších stránkach
+            ->withQueryString();
 
-        /*
-        |--------------------------------------------------------------------------
-        | 3) Odovzdanie dát do view
-        |--------------------------------------------------------------------------
-        |  — VŠETKY premenné, ktoré používa Blade, posielame explicitne —
-        */
+        /* 3) View ------------------------------------------------------------ */
         return view('all_products', [
             'products'   => $products,
             'category'   => $category,
@@ -91,12 +60,15 @@ class ProductController extends Controller
         ]);
     }
 
-    /**
-     * Detail produktu.
-     * (Ak ho používaš; ak nie, môžeš tento handler vymazať.)
-     */
+    /** Detail produktu */
     public function show(Product $product)
     {
         return view('current_product', compact('product'));
+    }
+
+    /** alias /search → index() (zachovaná kompatibilita) */
+    public function search(Request $request)
+    {
+        return $this->index($request);
     }
 }

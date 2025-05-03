@@ -3,3 +3,8 @@ https://github.com/Daweed12/WTECH_2025
 last_commint: 90bf8719bad51b09340f7e50a4aeaa14cb5a523a -> Create README.md
 
 Cleni timu: Daweed12, xkmetk
+
+
+
+zdroje:
+https://eu.cernucci.com

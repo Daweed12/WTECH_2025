@@ -10,33 +10,38 @@ use App\Models\Product;
 /* Home */
 Route::view('/', 'index')->name('home');
 
-/* Zoznam produktov + filter params via GET */
-Route::get('/products', [ProductController::class, 'index'])
-    ->name('products.index');
-/* Vyhľadávanie */
-Route::get('/products/search', [ProductController::class, 'search'])
+/* ───────────────────────────────── PRODUCTS ────────────────────────── */
+
+/* Vyhľadávanie – / products/search  (musí byť pred resource) */
+Route::get('/products/search', [ProductController::class, 'index'])
     ->name('products.search');
 
-/* Detail produktu – musí ísť až po /products */
+/* Vyhľadávanie – /search  (alias, ak formuláre smerujú sem) */
+Route::get('/search', [ProductController::class, 'index']);
+
+/* Katalóg (filtre cez GET) */
+Route::get('/products', [ProductController::class, 'index'])
+    ->name('products.index');
+
+/* Detail produktu – len číselné ID → zabráni “search” → 22P02 */
 Route::get('/products/{product}', [ProductController::class, 'show'])
+    ->whereNumber('product')
     ->name('products.show');
 
-/* Prihlasovacia / registračná obrazovka */
+/* ────────────────────────── AUTH / ACCOUNT ─────────────────────────── */
+
 Route::view('/account', 'login_register_user')
     ->middleware('guest')
     ->name('account');
 
 Route::view('/auth', 'auth.login_register');
 
-/* Login */
 Route::get( '/login',  [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
-/* Register (form + submit) */
 Route::get( '/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
-/* Pre prihlásených */
 Route::middleware('auth')->group(function () {
 
     Route::view('/account', 'account_details')->name('account');
@@ -48,9 +53,8 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
-/* ——— ADMIN sekcia ——— */
+/* ───────────────────────────── ADMIN ───────────────────────────────── */
 
-/* Dashboard: zoznam všetkých produktov */
 Route::middleware(['auth'])
     ->get('/admin', function () {
         $products = Product::all();
@@ -58,14 +62,12 @@ Route::middleware(['auth'])
     })
     ->name('admin.dashboard');
 
-/* Edit jedného produktu (view) */
 Route::get('/admin/products/{product}/edit', function (Product $product) {
     return view('admin.admin_edit', compact('product'));
 })
     ->middleware(['auth'])
     ->name('admin.products.edit');
 
-/* Delete produktu */
 Route::delete('/admin/products/{product}', function (Product $product) {
     $product->delete();
     return back()->with('success','Product deleted');
@@ -73,11 +75,8 @@ Route::delete('/admin/products/{product}', function (Product $product) {
     ->middleware(['auth'])
     ->name('admin.products.destroy');
 
+Route::patch('/admin/products/{product}', function (\Illuminate\Http\Request $request, Product $product) {
 
-/* Update (PATCH) produktu */
-Route::patch('/admin/products/{product}', function (\Illuminate\Http\Request $request, \App\Models\Product $product) {
-
-    // minimálna validácia – prispôsob si
     $validated = $request->validate([
         'title'       => 'required|string|max:255',
         'price'       => 'required|numeric|min:0',
@@ -93,7 +92,6 @@ Route::patch('/admin/products/{product}', function (\Illuminate\Http\Request $re
         'popularity'  => 'nullable|integer|min:0',
     ]);
 
-    // ak „details“ prichádza ako JSON string
     if (is_string($validated['details'] ?? null)) {
         $validated['details'] = json_decode($validated['details'], true);
     }
@@ -105,13 +103,9 @@ Route::patch('/admin/products/{product}', function (\Illuminate\Http\Request $re
     ->middleware(['auth'])
     ->name('admin.products.update');
 
-
-/* ----- Správa galérie obrázkov k produktu ----- */
-Route::get('/admin/products/{product}/images', function (\App\Models\Product $product) {
-
-    // zobrazí jednoduchý view s náhľadmi a možnosťou pridať / zmazať
+/* Galéria obrázkov */
+Route::get('/admin/products/{product}/images', function (Product $product) {
     return view('admin.product_images', compact('product'));
-
 })
     ->middleware(['auth'])
     ->name('admin.products.images.edit');

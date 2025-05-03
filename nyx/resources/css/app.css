@@ -2,7 +2,7 @@
 @import "./pages/product.css";
 @import "./pages/account.css";
 @import "./pages/login_register.css";
-
+@import "./pages/cart.css";
 /* Base body styling */
 body {
     font-family: Arial, sans-serif;

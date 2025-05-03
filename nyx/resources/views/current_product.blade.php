@@ -91,19 +91,30 @@
                     {{ $product->description }}
                 </p>
 
-                {{-- ======= Množstvo + tlačidlo ======= --}}
-                <div class="add-to-cart-form d-flex align-items-center gap-3 mb-5">
-                    <div class="quantity-wrapper d-flex align-items-center">
-                        <button type="button" class="qty-btn minus">−</button>
-                        <input type="number" value="1" min="1"
-                               class="qty-input form-control text-center">
-                        <button type="button" class="qty-btn plus">+</button>
-                    </div>
+                {{-- ADD TO CART FORM --}}
+                <form
+                    method="POST"
+                    action="{{ route('cart.add', $product->id) }}"
+                    class="add-to-cart-form d-flex align-items-center gap-3 mb-5"
+                >
+                    @csrf
 
-                    <button type="button" class="btn btn-primary btn-lg">
-                        ADD TO CART&nbsp;{{ number_format($product->price, 2, ',', ' ') }} €
+                    <button type="button" class="qty-btn minus">−</button>
+
+                    <input
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        value="1"
+                        class="form-control quantity-input text-center"
+                    />
+
+                    <button type="button" class="qty-btn plus">+</button>
+
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        ADD TO CART {{ number_format($product->price, 2, ',', ' ') }} €
                     </button>
-                </div>
+                </form>
 
                 {{-- ======= DETAIL z databázy ======= --}}
                 <h5 class="detail-heading fw-bold mb-2">DETAIL:</h5>

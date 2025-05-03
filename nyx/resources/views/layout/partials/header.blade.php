@@ -79,7 +79,7 @@
             </a>
 
             <!-- Cart icon -->
-            <a href="#" class="nav-link position-relative">
+            <a href="{{route('cart.preview')}}" class="nav-link position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>

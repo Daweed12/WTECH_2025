@@ -20,17 +20,43 @@ class Cart extends Model
         return $this->belongsTo(User::class);
     }
 
-    // 1:N – radšej explicitný model CartProduct (obsahuje množstvo, cenu…)
+    /**
+     * One-to-many relationship: CartProduct holds quantity, price, etc.
+     */
     public function items()
     {
         return $this->hasMany(CartProduct::class);
     }
 
-    // praktická skratka – ktoré produkty sú v košíku (cez CartProduct)
+    /**
+     * Shortcut to products in the cart via pivot table
+     */
     public function products()
     {
         return $this->belongsToMany(Product::class, 'cart_products')
             ->withPivot(['sku', 'price', 'discount', 'quantity', 'active'])
             ->withTimestamps();
+    }
+
+    /**
+     * Calculate subtotal: sum of (quantity * unit price) for each item
+     *
+     * @return float
+     */
+    public function subtotal(): float
+    {
+        return $this->items
+            ->reduce(fn($sum, CartProduct $item) => $sum + ($item->price * $item->quantity), 0.0);
+    }
+
+    /**
+     * Total amount for the cart; currently same as subtotal
+     * Can include additional fees or discounts later
+     *
+     * @return float
+     */
+    public function total(): float
+    {
+        return $this->subtotal();
     }
 }

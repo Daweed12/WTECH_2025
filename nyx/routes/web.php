@@ -6,11 +6,41 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Models\Product;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 /* Home */
 Route::view('/', 'index')->name('home');
 
-/* ───────────────────────────────── PRODUCTS ────────────────────────── */
+/* ───────────────────────────────── CART ────────────────────────── */
+
+// Cart Preview
+Route::get('/cart', [CartController::class, 'preview'])->name('cart.preview');
+
+Route::delete('/cart/remove/{item}', [CartController::class, 'remove'])
+    ->name('cart.remove');
+
+// Address Details (GET & POST)
+Route::get('/cart/address', [CartController::class, 'showAddress'])->name('cart.address.form');
+Route::post('/cart/address', [CartController::class, 'saveAddress'])->name('cart.address');
+
+// Payment & Delivery (GET & POST)
+Route::get('/cart/payment', [CartController::class, 'showPayment'])->name('cart.payment.form');
+Route::post('/cart/payment', [CartController::class, 'savePayment'])->name('cart.payment');
+
+// Final review
+Route::get('/cart/final', [CartController::class, 'final'])->name('cart.final');
+
+// Place order
+Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+
+// Order success page
+Route::get('/order/success/{order}', [OrderController::class, 'success'])->name('order.success');
+
+Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+
+Route::patch('/cart/update/{item}', [CartController::class, 'update'])
+    ->name('cart.update');
 
 /* Vyhľadávanie – / products/search  (musí byť pred resource) */
 Route::get('/products/search', [ProductController::class, 'index'])
@@ -27,6 +57,7 @@ Route::get('/products', [ProductController::class, 'index'])
 Route::get('/products/{product}', [ProductController::class, 'show'])
     ->whereNumber('product')
     ->name('products.show');
+
 
 /* ────────────────────────── AUTH / ACCOUNT ─────────────────────────── */
 

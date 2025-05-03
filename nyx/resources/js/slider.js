@@ -87,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMin.addEventListener('input', updateUI);
     inputMax.addEventListener('input', updateUI);
 
-    // Initial draw
+    // Initial defaults if inputs are empty
+    if (!inputMin.value) inputMin.value = 0;
+    if (!inputMax.value) inputMax.value = maxRange;   // 500
+
+// Initial draw
     updateUI();
 });

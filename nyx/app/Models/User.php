@@ -63,4 +63,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Review::class);
     }
+
+    // 1 : 1  – aktuálna adresa používateľa
+    public function address()
+    {
+        // hasOneThrough => priamo vráti Address, pivot sa postará o prepojenie
+        return $this->hasOneThrough(
+            Address::class,      // finálny model
+            UserAddress::class,  // pivot
+            'user_id',           // FK v pivote -> users.id
+            'id',                // PK v addresses
+            'id',                // PK v users
+            'address_id'         // FK v pivote -> addresses.id
+        );
+    }
+
 }

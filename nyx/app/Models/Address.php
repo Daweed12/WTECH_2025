@@ -18,10 +18,16 @@ class Address extends Model
     /* ---------- relationships ---------- */
 
     // M:N s pivotom user_address
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class, 'user_address')
-            ->withTimestamps();
+        return $this->hasOneThrough(
+            User::class,
+            UserAddress::class,
+            'address_id',
+            'id',
+            'id',
+            'user_id'
+        );
     }
 
     // 1:N – objednávky, ktoré sa posielajú na túto adresu

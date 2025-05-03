@@ -428,3 +428,17 @@ hr {
     font-weight:600; letter-spacing:.02em;
 }
 
+/* odstráni spin-buttons */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity-input {
+    -moz-appearance: textfield;
+}
+
+/* voliteľne, ak potrebuješ kaderovanie a veľkosť wrapperu */
+.quantity-wrapper {
+    /* napr. gap, veľkosť tlačidiel, zarovnanie atď. */
+}

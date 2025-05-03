@@ -112,7 +112,7 @@
                     <button type="button" class="qty-btn plus">+</button>
 
                     <button type="submit" class="btn btn-primary btn-lg">
-                        ADD TO CART {{ number_format($product->price, 2, ',', ' ') }} €
+                        ADD TO CART
                     </button>
                 </form>
 

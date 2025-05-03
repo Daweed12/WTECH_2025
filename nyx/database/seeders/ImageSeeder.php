@@ -11,10 +11,10 @@ class ImageSeeder extends Seeder
     {
         // presná mapa kategória => zoznam produkt ID
         $map = [
-            'rings'      => range(1, 5),
-            'bracelets'  => range(6, 10),
-            'necklaces'  => range(11, 15),
-            'earrings'   => range(16, 20),
+            'rings'     => array_merge(range(1, 5), range(31, 35)),
+            'bracelets'  => range(26, 30), //array_merge(range(41, 45),range(26, 30)),
+            'necklaces'  => array_merge(range(6, 15),range(21, 25)),
+            'earrings'   => array_merge(range(16, 20),range(36, 40)),
         ];
 
         foreach ($map as $category => $productIds) {

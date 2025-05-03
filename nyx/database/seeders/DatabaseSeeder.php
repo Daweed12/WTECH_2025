@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             AddressSeeder::class,
-            ProductSeeder::class,
             ImageSeeder::class,
+            ProductSeeder::class,
             ProductImageSeeder::class,
-             CopyImagesSeeder::class,
+            CopyImagesSeeder::class,
 
             // ďalšie seedery sem…
         ]);

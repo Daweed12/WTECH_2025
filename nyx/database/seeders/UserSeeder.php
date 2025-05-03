@@ -10,7 +10,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // vytvor 50 fake používateľov
-        User::factory(50)->create();
+        User::factory(10)->create();
 
         // ak chceš aj jedného administrátora:
         User::factory()->create([

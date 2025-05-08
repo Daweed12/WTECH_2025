@@ -40,10 +40,14 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Images* (min 2)</label>
-                                <input type="file" name="images[]" accept="image/*" multiple
-                                       class="form-control" required>
-                                <div class="form-text">Select at least two images (max 5, 2 MB each).</div>
+                                <label class="form-label">Images* (1 – 5)</label>
+                                <input  type="file"
+                                        name="images[]"
+                                        accept="image/*"
+                                        multiple
+                                        class="form-control"
+                                        required>
+                                <div class="form-text">Nahraj 1 – 5 obrázkov (každý max 5 MB).</div>
                             </div>
                         </div>
 

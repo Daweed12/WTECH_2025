@@ -3,10 +3,60 @@
 @section('title', 'Admin Dashboard')
 
 @section('contents')
+
     <div class="container py-4">
 
         <h1 class="mb-4 fw-bold">Admin mode</h1>
         <h4 class="mb-3">All items</h4>
+
+        <button type="button"
+                class="btn btn-primary mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#addProductModal">
+            ➕ Add Product
+        </button>
+
+        {{-- ═════════════  MODAL: Add Product  ═════════════ --}}
+        <div class="modal fade" id="addProductModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="{{ route('admin.products.store') }}"
+                          method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="modal-header">
+                            <h5 class="modal-title">New product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Title*</label>
+                                <input name="title" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Description*</label>
+                                <textarea name="description" rows="4" class="form-control" required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Images* (min 2)</label>
+                                <input type="file" name="images[]" accept="image/*" multiple
+                                       class="form-control" required>
+                                <div class="form-text">Select at least two images (max 5, 2 MB each).</div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary">Save product</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 
         {{-- Mriežka produktov --}}
         <div class="row row-cols-2 row-cols-md-4 g-4">

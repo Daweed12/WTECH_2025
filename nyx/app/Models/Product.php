@@ -82,4 +82,5 @@ class Product extends Model
         return asset('storage/defaults/no-image.png');
     }
 
+
 }

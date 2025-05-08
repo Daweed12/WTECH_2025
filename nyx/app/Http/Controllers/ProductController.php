@@ -31,10 +31,23 @@ class ProductController extends Controller
             })
 
             ->when($category, fn ($q) => $q->where('category', $category))
-            ->when($colors,   fn ($q) => $q->whereIn('material', $colors))
+            ->when($colors,   fn ($q) => $q->whereIn('color', $colors))
             ->when($genders,  fn ($q) => $q->whereIn('gender', $genders))
             ->when($min_price,fn ($q) => $q->where('price', '>=', $min_price))
             ->when($max_price,fn ($q) => $q->where('price', '<=', $max_price))
+
+            ->when(true, function ($q) use ($sort) {
+                return match ($sort) {
+                    'price-asc'  => $q->orderBy('price', 'asc'),
+                    'price-desc' => $q->orderBy('price', 'desc'),
+
+                    /* ✨  D O P L N I  ✨ */
+                    'title-asc'  => $q->orderByRaw('LOWER(title) ASC'),   // A → Z
+                    'title-desc' => $q->orderByRaw('LOWER(title) DESC'),  // Z → A
+
+                    default      => $q->orderBy('popularity', 'desc'),
+                };
+            })
 
             ->when(true, function ($q) use ($sort) {
                 return match ($sort) {

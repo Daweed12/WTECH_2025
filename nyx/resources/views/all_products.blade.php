@@ -11,12 +11,6 @@
 @section('contents')
     <div class="container py-4"><!-- Content starts right under NYX header -->
 
-
-
-
-
-
-
         {{-- SORT + FILTER TOGGLE BAR --}}
         <div class="sort-filter-container">
             <a href="javascript:void(0)" id="openFilter" class="btn-filter">FILTER</a>
@@ -48,13 +42,19 @@
 
                 <select name="sort" class="order-by" onchange="this.form.submit()">
                     <option value="popularity" {{ $sort=='popularity' ? 'selected':'' }}>
-                        ORDER BY POPULARITY
+                        POPULARITY
                     </option>
                     <option value="price-asc" {{ $sort=='price-asc' ? 'selected':'' }}>
                         PRICE ↑
                     </option>
                     <option value="price-desc" {{ $sort=='price-desc' ? 'selected':'' }}>
                         PRICE ↓
+                    </option>
+                    <option value="title-asc" {{ $sort=='title-asc' ? 'selected':'' }}>
+                        A → Z
+                    </option>
+                    <option value="title-desc" {{ $sort=='title-desc' ? 'selected':'' }}>
+                        Z → A
                     </option>
                 </select>
             </form>
@@ -222,5 +222,5 @@
         </div>
 
     </div>
-    </main>
+
 @endsection

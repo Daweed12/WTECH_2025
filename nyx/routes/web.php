@@ -15,6 +15,7 @@ use App\Http\Controllers\Auth\{
 };
 use App\Http\Middleware\IsAdmin;
 use App\Models\Product;
+use App\Http\Controllers\AdminProductImageController;
 
 /* ───────────────────────────── HOME ───────────────────────────── */
 
@@ -130,4 +131,20 @@ Route::middleware(['auth', IsAdmin::class])
         Route::get('/products/{product}/images', function (Product $product) {
             return view('admin.product_images', compact('product'));
         })->name('products.images.edit');
+
+        /* ---------- obrázky produktu ---------- */
+        Route::get   ('/products/{product}/images',
+            [AdminProductImageController::class, 'edit'])
+            ->name('products.images.edit');
+
+        Route::post  ('/products/{product}/images',
+            [AdminProductImageController::class, 'store'])
+            ->name('products.images.store');
+
+        Route::delete('/products/{product}/images/{image}',
+            [AdminProductImageController::class, 'destroy'])
+            ->name('products.images.destroy');
     });
+
+
+

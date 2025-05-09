@@ -5,56 +5,38 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Models\Image;   // vzťah na obrázky
-use Illuminate\Support\Facades\Storage;   //  ←  doplniť
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class Product extends Model
 {
     use HasFactory, SoftDeletes;
 
-    /**
-     * Hromadné priraďovanie
-     */
+    /* ---------- hromadné priraďovanie ---------- */
     protected $fillable = [
-        'title',
-        'sku',
-        'slug',
-        'price',
-        'discount',
-        'category',
-        'color',
-        'gender',
-        'description',
-        'summary',
-        'details',
-        'popularity',
+        'title', 'sku', 'slug', 'price', 'discount',
+        'category', 'color', 'gender', 'details',
+        'description', 'summary', 'popularity', // „images“ netreba, idú pivotom
     ];
 
-    /**
-     * Casty – ak budeš „details“ ukladať ako JSON pole,
-     * odkomentuj nasledujúci riadok
-     */
-    // protected $casts = [
-    //     'details' => 'array',
-    // ];
+    /* ---------- pretypovanie stĺpcov ---------- */
+    protected $casts = [
+        // ak by si niekedy chcel obrázky aj ako JSON stĺpec
+        // 'images' => 'array',
+    ];
 
-    /**
-     * N:M vzťah – produkt ↔ obrázky
-     */
+    /* ---------- N:M vzťah – produkt ↔ obrázky ---------- */
     public function images()
     {
         return $this->belongsToMany(
             Image::class,
-            'product_images',   // ← ak je táto tabuľka skutočne product_image
+            'product_images',       // pivot tabuľka
             'product_id',
             'image_id'
         );
     }
 
-    /**
-     * Accessor: url prvého obrázka alebo fallback
-     */
+    /* ---------- accessor: prvá fotka alebo fallback ---------- */
     public function getFirstImageUrlAttribute(): string
     {
         $rawUrl = $this->images->first()->url ?? null;
@@ -64,23 +46,36 @@ class Product extends Model
             : asset('storage/defaults/no-image.png');
     }
 
-    public function scopeBestSellers($query, int $limit = 4)
-    {
-        return $query->orderByDesc('popularity')
-            ->take($limit);
-    }
-
+    /* ---------- alias na náhľad (ak ho niekde voláš) ---------- */
     public function getThumbnailUrlAttribute(): string
     {
-        // vezmeme prvý záznam z images vzťahu
-        $path = $this->images()->value('url');   // NULL ak žiadny
-
-        if ($path) {
-            return Storage::url($path);          // → /storage/products/…
-        }
-
-        return asset('storage/defaults/no-image.png');
+        return $this->getFirstImageUrlAttribute();
     }
 
+    /* ---------- scope: best-sellers ---------- */
+    public function scopeBestSellers($query, int $limit = 4)
+    {
+        return $query->orderByDesc('popularity')->take($limit);
+    }
 
+    /* ---------- auto-slug a auto-SKU ---------- */
+    protected static function booted(): void
+    {
+        static::creating(function (self $product) {
+            if (!$product->sku) {
+                $product->sku = strtoupper(Str::random(8));
+            }
+
+            if (!$product->slug) {
+                $base   = Str::slug($product->title);
+                $slug   = $base;
+                $count  = 1;
+
+                while (self::where('slug', $slug)->exists()) {
+                    $slug = $base . '-' . $count++;
+                }
+                $product->slug = $slug;
+            }
+        });
+    }
 }

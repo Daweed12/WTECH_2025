@@ -117,10 +117,6 @@
                         <span>Subtotal:</span>
                         <span class="fw-bold">€{{ number_format($cart->subtotal(), 2, ',', '') }}</span>
                     </div>
-                    <div class="d-flex justify-content-between mb-4">
-                        <span>Total:</span>
-                        <span class="fw-bold">€{{ number_format($cart->total(), 2, ',', '') }}</span>
-                    </div>
                     <a href="{{ route('cart.address.form') }}" class="btn btn-primary w-100">
                         Proceed to Checkout
                     </a>

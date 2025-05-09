@@ -3,41 +3,60 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
-    use HasFactory, SoftDeletes;
-
+    // Ak používaš guarded miesto fillable, uprav podľa svojho štýlu
     protected $fillable = [
-        'user_id', 'session_token', 'status',
-        'total_price', 'discount',
-        'payment_method_id', 'shipping_method_id', 'discount_code',
-        'shipping_address_id',
+        'user_id',
+        'address_id',
+        'delivery_method_id',
+        'payment_method_id',
+        'subtotal',
+        'delivery_fee',
+        'payment_fee',
+        'total',
+        // sem pridaj ďalšie stĺpce, ktoré máš v orders tabuľke
     ];
 
-    /* ---------- relationships ---------- */
-
+    /**
+     * Používateľ, ktorý zadal objednávku.
+     */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(\App\Models\User::class);
     }
 
-    public function shippingAddress()
+    /**
+     * Adresa pre túto objednávku.
+     */
+    public function address()
     {
-        return $this->belongsTo(Address::class, 'shipping_address_id');
+        return $this->belongsTo(\App\Models\Address::class);
     }
 
+    /**
+     * Zvolená metóda dopravy.
+     */
+    public function deliveryMethod()
+    {
+        return $this->belongsTo(\App\Models\DeliveryMethod::class);
+    }
+
+    /**
+     * Zvolená metóda platby.
+     */
+    public function paymentMethod()
+    {
+        return $this->belongsTo(\App\Models\PaymentMethod::class);
+    }
+
+    /**
+     * Položky/riadky objednávky.
+     * Predpokladá sa, že máte model OrderItem, ktorý ukladá product_id, quantity, price a order_id.
+     */
     public function items()
     {
-        return $this->hasMany(OrderProduct::class);
-    }
-
-    public function products()
-    {
-        return $this->belongsToMany(Product::class, 'order_products')
-            ->withPivot(['sku', 'price', 'discount', 'quantity'])
-            ->withTimestamps();
+        return $this->hasMany(OrderProduct::class, 'order_id');
     }
 }

@@ -12,11 +12,14 @@ class AddressFactory extends Factory
     public function definition(): array
     {
         return [
+            'first_name'      => $this->faker->firstName(),
+            'last_name'       => $this->faker->lastName(),
             'country'         => $this->faker->country(),
             'city'            => $this->faker->city(),
             'address_line_1'  => $this->faker->streetAddress(),
             'address_line_2'  => $this->faker->boolean(60) ? $this->faker->secondaryAddress() : null,
             'zip'             => $this->faker->postcode(),
+            'phone'           => $this->faker->phoneNumber(),
         ];
     }
 }

@@ -10,25 +10,17 @@ class Address extends Model
     use HasFactory;
 
     protected $fillable = [
-        'country', 'city',
-        'address_line_1', 'address_line_2',
-        'zip',
+        'first_name', 'last_name',
+        'address_line_1','city',
+        'zip','country','phone',
     ];
 
-    /* ---------- relationships ---------- */
-
-    // M:N s pivotom user_address
-    public function user()
+    public function users()
     {
-        return $this->hasOneThrough(
-            User::class,
-            UserAddress::class,
-            'address_id',
-            'id',
-            'id',
-            'user_id'
-        );
+        return $this->belongsToMany(User::class, 'user_address')
+            ->withTimestamps();
     }
+
 
     // 1:N – objednávky, ktoré sa posielajú na túto adresu
     public function orders()

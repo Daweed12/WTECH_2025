@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
             ProductImageSeeder::class,
             CopyImagesSeeder::class,
             UserAddressSeeder::class,
-
-            // ďalšie seedery sem…
+            PaymentMethodsTableSeeder::class,
+            DeliveryMethodsTableSeeder::class,
         ]);
     }
 }

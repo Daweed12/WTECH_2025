@@ -8,9 +8,10 @@ use App\Models\Cart;
 use App\Models\CartProduct;
 use App\Models\Product;
 use App\Models\Address;
+use Illuminate\Support\Str;
 use App\Models\PaymentMethod;
 use App\Models\DeliveryMethod;
-use Illuminate\Support\Str;
+use App\Models\Order;
 
 
 class CartController extends Controller
@@ -148,45 +149,65 @@ class CartController extends Controller
     /**
      * Save shipping address and optionally persist it to user.
      */
+    public function showAddress()
+    {
+        $address = auth()->check() && session('address_id')
+            ? Address::find(session('address_id'))
+            : session('guest_address', []);
+
+        $cart = $this->getCart();
+        return view('cart.address', compact('address','cart'));
+    }
+
+    /**
+     * Spracuje POST z Address Details (POST /cart/address).
+     */
     public function saveAddress(Request $request)
     {
         $data = $request->validate([
-            'first_name'    => 'required|string|max:255',
-            'last_name'     => 'required|string|max:255',
-            'email'         => 'required|email|max:255',
-            'phone'         => 'nullable|string|max:50',
-            'address_line1' => 'required|string|max:255',
-            'address_line2' => 'nullable|string|max:255',
-            'city'          => 'required|string|max:100',
-            'postal_code'   => 'required|string|max:20',
-            'country'       => 'required|string|max:100',
-            'save_address'  => 'sometimes|boolean',
+            'first_name'     => 'required|string|max:255',
+            'last_name'      => 'required|string|max:255',
+            'address_line_1' => 'required|string|max:255',
+            'city'           => 'required|string|max:255',
+            'zip'            => 'required|string|max:20',
+            'country'        => 'required|string|max:255',
+            'phone'          => 'required|string|max:50',
         ]);
 
-        // Store or update address
-        $address = Address::create([
-            'user_id'       => Auth::id(),
-            'first_name'    => $data['first_name'],
-            'last_name'     => $data['last_name'],
-            'email'         => $data['email'],
-            'phone'         => $data['phone'] ?? null,
-            'address_line1' => $data['address_line1'],
-            'address_line2' => $data['address_line2'] ?? null,
-            'city'          => $data['city'],
-            'postal_code'   => $data['postal_code'],
-            'country'       => $data['country'],
-        ]);
-
-        // Optionally save to user profile
-        if ($request->boolean('save_address') && Auth::check()) {
-            Auth::user()->addresses()->save($address);
+        if (auth()->check()) {
+            $address = Address::create($data);
+            auth()->user()->addresses()->syncWithoutDetaching($address->id);
+            session(['address_id' => $address->id]);
+        } else {
+            session(['guest_address' => $data]);
         }
 
-        // Save to session for order
-        session([ 'cart.address_id' => $address->id ]);
-
-        return redirect()->route('cart.payment');
+        return redirect()->route('cart.payment.form');
     }
+
+    public function showPayment()
+    {
+        $cart             = $this->getCart();
+        $paymentMethods   = PaymentMethod::all();
+        $deliveryMethods  = DeliveryMethod::all();
+
+        $address = auth()->check() && session('address_id')
+            ? Address::find(session('address_id'))
+            : session('guest_address', null);
+
+        return view('cart.pay_ship', compact(
+            'cart','paymentMethods','deliveryMethods','address'
+        ));
+    }
+
+    public function showThanks()
+    {
+        // Môžeš sem vkladať čokoľvek, napr. order_id zo session
+        $orderId = session('order_id');
+
+        return view('cart.thanks', compact('orderId'));
+    }
+
 
     /**
      * Save chosen payment and delivery methods.
@@ -194,31 +215,96 @@ class CartController extends Controller
     public function savePayment(Request $request)
     {
         $data = $request->validate([
-            'payment_method'  => 'required|exists:payment_methods,id',
             'delivery_method' => 'required|exists:delivery_methods,id',
+            'payment_method'  => 'required|exists:payment_methods,id',
         ]);
 
-        session([
-            'cart.payment_method_id'  => $data['payment_method'],
-            'cart.delivery_method_id' => $data['delivery_method'],
+        // 1) Načítame košík
+        $cart = $this->getCart();
+
+        // 2) Vypočítame subtotal (produkty × množstvo)
+        $subtotal = $cart->items->sum(function($item) {
+            return $item->price * $item->quantity;
+        });
+
+        // 3) Načítame poplatky
+        $deliveryMethod = DeliveryMethod::findOrFail($data['delivery_method']);
+        $paymentMethod  = PaymentMethod::findOrFail($data['payment_method']);
+        $deliveryFee    = $deliveryMethod->fee;
+        $paymentFee     = $paymentMethod->fee;
+
+        // 4) Spočítame CELKOVÚ sumu (subtotal + poplatky)
+        $totalPrice = $subtotal + $deliveryFee + $paymentFee;
+
+        // 5) Uložíme objednávku vrátane total_price
+        $order = Order::create([
+            'user_id'             => auth()->id(),
+            'address_id'          => session('address_id'),
+            'delivery_method_id'  => $deliveryMethod->id,
+            'payment_method_id'   => $paymentMethod->id,
+            'total_price'         => $totalPrice,   // <— tu uložíme finálnu sumu
+            'delivery_fee'        => $deliveryFee,
+            'payment_fee'         => $paymentFee,
+            'discount'            => 0,
+            'status'              => 'pending',
         ]);
 
-        return redirect()->route('cart.final');
+        // 6) Uložíme položky objednávky
+        foreach ($cart->items as $item) {
+            $order->items()->create([
+                'product_id' => $item->product_id,
+                'sku'        => $item->sku,
+                'price'      => $item->price,
+                'discount'   => $item->discount,
+                'quantity'   => $item->quantity,
+            ]);
+        }
+
+        // 7) Uložíme order_id do session a ideme na confirm
+        session(['order_id' => $order->id]);
+
+        return redirect()->route('cart.confirm');
     }
+
+
 
     /**
      * Show final order review before confirmation.
      */
-    public function final()
+    public function showConfirm()
     {
-        $cart = $this->getCart();
+        $cart  = $this->getCart();
+        $order = Order::with([
+            'address',
+            'deliveryMethod',
+            'paymentMethod',
+            'items.product'
+        ])->findOrFail(session('order_id'));
 
-        $address = Address::find(session('cart.address_id'));
-        $paymentMethod = PaymentMethod::find(session('cart.payment_method_id'));
-        $deliveryMethod = DeliveryMethod::find(session('cart.delivery_method_id'));
-
-        return view('cart.final', compact(
-            'cart', 'address', 'paymentMethod', 'deliveryMethod'
-        ));
+        return view('cart.confirm', compact('cart', 'order'));
     }
+
+    public function finalizeOrder(Request $request)
+    {
+        // 1) Načítať order a zmeniť status
+        $order = Order::findOrFail(session('order_id'));
+        $order->status = 'done';
+        $order->save();
+
+        // 2) Načítať a uzavrieť aktuálny košík
+        $cart = $this->getCart();
+        $cart->status = 'completed';    // alebo 'closed', 'ordered'…
+        $cart->save();
+
+        // 3) Odstrániť všetky položky z tohto košíka (alebo ich presunúť)
+        //    Tu ideme zmazať všetko, čo je v košíku
+        $cart->items()->delete();
+
+        // 4) Odstrániť ID košíka zo session, aby bol “empthy”
+        session()->forget('cart_id');
+
+        // 5) Presmerovať na ďakovnú stránku
+        return redirect()->route('order.thanks');
+    }
+
 }

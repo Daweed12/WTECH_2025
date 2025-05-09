@@ -29,13 +29,16 @@ Route::get   ('/cart/address',      [CartController::class, 'showAddress'])->nam
 Route::post  ('/cart/address',      [CartController::class, 'saveAddress'])->name('cart.address');
 Route::get   ('/cart/payment',      [CartController::class, 'showPayment'])->name('cart.payment.form');
 Route::post  ('/cart/payment',      [CartController::class, 'savePayment'])->name('cart.payment');
-Route::get   ('/cart/final',        [CartController::class, 'final'])->name('cart.final');
+Route::get('/cart/confirm',   [CartController::class, 'showConfirm'])->name('cart.confirm');
+Route::post('/cart/confirm',  [CartController::class, 'finalizeOrder'])->name('cart.finalize');
+Route::get('/cart/thanks', [CartController::class, 'showThanks'])->name('order.thanks');
 
 Route::post  ('/cart/add/{product}',[CartController::class, 'add'   ])->name('cart.add');
 Route::patch ('/cart/update/{item}',[CartController::class, 'update'])->name('cart.update');
 
 Route::post  ('/order',             [OrderController::class, 'store'  ])->name('order.store');
 Route::get   ('/order/success/{order}', [OrderController::class, 'success'])->name('order.success');
+
 
 /* ──────────────────────────── PRODUCTS ────────────────────────── */
 

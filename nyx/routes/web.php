@@ -123,7 +123,7 @@ Route::middleware(['auth', IsAdmin::class])
 
         /* ─── DELETE ─── */
         Route::delete('/products/{product}', function (Product $product) {
-            $product->delete();
+            $product->forceDelete();
             return back()->with('success', 'Product deleted');
         })->name('products.destroy');
 

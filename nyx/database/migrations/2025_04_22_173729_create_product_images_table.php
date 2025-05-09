@@ -19,6 +19,8 @@ return new class extends Migration
             // composite primary key to prevent duplicates
             $table->primary(['product_id','image_id']);
 
+            //$table->dropForeign(['product_id']);
+            //$table->dropForeign(['image_id']);
             // foreign keys
             $table->foreign('product_id')
                 ->references('id')->on('products')

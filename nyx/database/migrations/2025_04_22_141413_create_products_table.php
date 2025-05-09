@@ -31,7 +31,7 @@ return new class extends Migration
             $table->unsignedInteger('popularity')->default(0);
 
             $table->timestamps();   // created_at, updated_at
-            $table->softDeletes();  // deleted_at
+
         });
     }
 

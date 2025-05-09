@@ -100,6 +100,28 @@ body {
     color: #fff;
 }
 
+/* hover */
+.pagination .page-link:hover {
+    background:#fff;             /* nechaj biele */
+    border-color:#d4af37;        /* zlatý border */
+    color:#d4af37;               /* zlatý text */
+}
+
+/* focus (po kliknutí / TAB) – zlatý „ring“ namiesto modrého */
+.pagination .page-link:focus {
+    background:#fff;
+    border-color:#d4af37;
+    color:#d4af37;
+    box-shadow:0 0 0 .25rem rgba(212,175,55,.4);
+}
+
+/* aktívna stránka – nechaj fialovú, aby bola zreteľná */
+.pagination .page-item.active .page-link {
+    background:#3d0c2f;
+    border-color:#3d0c2f;
+    color:#fff;
+}
+
 /* ===================== OVERLAY + FILTER SIDEBAR =================== */
 #overlay {
     position: fixed;

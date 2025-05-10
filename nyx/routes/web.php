@@ -7,7 +7,8 @@ use App\Http\Controllers\{
     CartController,
     OrderController,
     AccountController,
-    AdminProductController
+    AdminProductController,
+    AdminProductImageController
 };
 use App\Http\Controllers\Auth\{
     RegisterController,
@@ -15,7 +16,6 @@ use App\Http\Controllers\Auth\{
 };
 use App\Http\Middleware\IsAdmin;
 use App\Models\Product;
-use App\Http\Controllers\AdminProductImageController;
 
 /* ───────────────────────────── HOME ───────────────────────────── */
 
@@ -29,23 +29,23 @@ Route::get   ('/cart/address',      [CartController::class, 'showAddress'])->nam
 Route::post  ('/cart/address',      [CartController::class, 'saveAddress'])->name('cart.address');
 Route::get   ('/cart/payment',      [CartController::class, 'showPayment'])->name('cart.payment.form');
 Route::post  ('/cart/payment',      [CartController::class, 'savePayment'])->name('cart.payment');
-Route::get('/cart/confirm',   [CartController::class, 'showConfirm'])->name('cart.confirm');
-Route::post('/cart/confirm',  [CartController::class, 'finalizeOrder'])->name('cart.finalize');
-Route::get('/cart/thanks', [CartController::class, 'showThanks'])->name('order.thanks');
+Route::get   ('/cart/confirm',      [CartController::class, 'showConfirm'])->name('cart.confirm');
+Route::post  ('/cart/confirm',      [CartController::class, 'finalizeOrder'])->name('cart.finalize');
+Route::get   ('/cart/thanks',       [CartController::class, 'showThanks'])->name('order.thanks');
 
 Route::post  ('/cart/add/{product}',[CartController::class, 'add'   ])->name('cart.add');
 Route::patch ('/cart/update/{item}',[CartController::class, 'update'])->name('cart.update');
 
+// Note: keeping both /order and cart-confirm for backwards compatibility
 Route::post  ('/order',             [OrderController::class, 'store'  ])->name('order.store');
 Route::get   ('/order/success/{order}', [OrderController::class, 'success'])->name('order.success');
-
 
 /* ──────────────────────────── PRODUCTS ────────────────────────── */
 
 Route::get('/products/search', [ProductController::class, 'index'])->name('products.search');
 Route::get('/search',           [ProductController::class, 'index']);                 // alias
 Route::get('/products',         [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/{product}',[ProductController::class, 'show'])
+Route::get('/products/{product}', [ProductController::class, 'show'])
     ->whereNumber('product')
     ->name('products.show');
 
@@ -67,47 +67,67 @@ Route::middleware('auth')->group(function () {
 
 /* ───────────────────────────── ADMIN ──────────────────────────── */
 
-/* Dashboard (GET /admin) – stačí prihlásenie, rolu nekontrolujeme */
+/* Dashboard (GET /admin) – auth only, no role check here */
 Route::middleware('auth')
-    ->get('/admin', function () {
-        /* eager-load obrázky, aby accessor nepýtal DB pri každom riadku */
-        $products = Product::with('images')->latest()->get();
-        return view('admin.dashboard', compact('products'));
+    ->get('/admin', function (Request $request) {
+        $search = $request->input('q');
+        $products = Product::with('images')
+            ->when($search, function($query, $search) {
+                $query->where(function($q) use ($search) {
+                    $q->where('title',    'like', "%{$search}%")
+                        ->orWhere('category', 'like', "%{$search}%")
+                        ->orWhere('color',    'like', "%{$search}%")
+                        ->orWhere('sku',      'like', "%{$search}%");
+                });
+            })
+            ->latest()
+            ->get();
+        return view('admin.dashboard', compact('products', 'search'));
     })
     ->name('admin.dashboard');
 
-/* Všetky „CRUD“ routy len pre používateľov s rolou admin (middleware IsAdmin) */
+/* All CRUD + image routes for admin-role users */
 Route::middleware(['auth', IsAdmin::class])
     ->prefix('admin')
     ->as('admin.')
     ->group(function () {
 
-        /* ─── PRODUCTS GRID (GET /admin/products) ─── */
-        Route::get('/products', function () {
-            $products = Product::with('images')->latest()->get();
-            return view('admin.dashboard', compact('products'));
+        // ─── Grid / List (GET /admin/products) ───
+        Route::get('/products', function (Request $request) {
+            $search = $request->input('q');
+            $products = Product::with('images')
+                ->when($search, function($query, $search) {
+                    $query->where(function($q) use ($search) {
+                        $q->where('title',    'like', "%{$search}%")
+                            ->orWhere('category', 'like', "%{$search}%")
+                            ->orWhere('color',    'like', "%{$search}%")
+                            ->orWhere('sku',      'like', "%{$search}%");
+                    });
+                })
+                ->latest()
+                ->get();
+            return view('admin.dashboard', compact('products', 'search'));
         })->name('products.index');
 
-        /* ─── CREATE (POST z modal-u) ─── */
+        // ─── Create (POST) ───
         Route::post('/products', [AdminProductController::class, 'store'])
             ->name('products.store');
 
-        /* ─── EDIT FORM ─── */
+        // ─── Edit Form (GET) ───
         Route::get('/products/{product}/edit', function (Product $product) {
             return view('admin.admin_edit', compact('product'));
         })->name('products.edit');
 
-        /* ─── UPDATE ─── */
+        // ─── Update (PATCH) ───
         Route::patch('/products/{product}', function (Request $request, Product $product) {
-
             $validated = $request->validate([
                 'title'       => 'required|string|max:255',
                 'price'       => 'required|numeric|min:0',
-                'discount'    => 'nullable|integer|min:0',
+                'discount'    => 'nullable|numeric|min:0',
                 'category'    => 'nullable|string|max:255',
                 'color'       => 'nullable|string|max:100',
                 'gender'      => 'nullable|in:male,female,unisex',
-                'description' => 'nullable|string',
+                'description' => 'required|string',
                 'summary'     => 'nullable|string|max:500',
                 'details'     => 'nullable',
                 'sku'         => 'nullable|string|max:100',
@@ -120,34 +140,24 @@ Route::middleware(['auth', IsAdmin::class])
             }
 
             $product->update($validated);
-
             return back()->with('success', 'Product updated');
         })->name('products.update');
 
-        /* ─── DELETE ─── */
+        // ─── Delete (DELETE) ───
         Route::delete('/products/{product}', function (Product $product) {
             $product->forceDelete();
             return back()->with('success', 'Product deleted');
         })->name('products.destroy');
 
-
-        Route::get('/products/{product}/images', function (Product $product) {
-            return view('admin.product_images', compact('product'));
-        })->name('products.images.edit');
-
-        /* ---------- obrázky produktu ---------- */
-        Route::get   ('/products/{product}/images',
-            [AdminProductImageController::class, 'edit'])
+        // ─── Edit Images (GET) ───
+        Route::get('/products/{product}/images', [AdminProductImageController::class, 'edit'])
             ->name('products.images.edit');
 
-        Route::post  ('/products/{product}/images',
-            [AdminProductImageController::class, 'store'])
+        // ─── Add Images (POST) ───
+        Route::post('/products/{product}/images', [AdminProductImageController::class, 'store'])
             ->name('products.images.store');
 
-        Route::delete('/products/{product}/images/{image}',
-            [AdminProductImageController::class, 'destroy'])
+        // ─── Delete Image (DELETE) ───
+        Route::delete('/products/{product}/images/{image}', [AdminProductImageController::class, 'destroy'])
             ->name('products.images.destroy');
     });
-
-
-

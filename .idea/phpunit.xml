@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/WTECH25_NYX/tests/Unit" />
         <option value="$PROJECT_DIR$/WTECH25_NYX/tests/Feature" />
+        <option value="$PROJECT_DIR$/phase2_nyx/tests/Unit" />
+        <option value="$PROJECT_DIR$/phase2_nyx/tests/Feature" />
         <option value="$PROJECT_DIR$/nyx/tests/Unit" />
         <option value="$PROJECT_DIR$/nyx/tests/Feature" />
       </list>

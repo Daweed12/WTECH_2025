@@ -1,10 +1,11 @@
+{{-- resources/views/admin/dashboard.blade.php --}}
 @extends('layout.app')
 
 @section('title', 'Admin Dashboard')
 
 @section('contents')
     <div class="container py-4">
-        {{-- flash správy --}}
+        {{-- Flash messages --}}
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
@@ -21,6 +22,7 @@
         <h1 class="mb-4 fw-bold">Admin mode</h1>
         <h4 class="mb-3">All items</h4>
 
+        {{-- Add Product button --}}
         <button type="button"
                 class="btn btn-primary mb-4"
                 data-bs-toggle="modal"
@@ -28,7 +30,23 @@
             ➕ Add Product
         </button>
 
-        {{-- ═════════════  MODAL: Add Product  ═════════════ --}}
+        {{-- Search form --}}
+        <form method="GET"
+              action="{{ route('admin.dashboard') }}"
+              class="mb-4">
+            <div class="input-group">
+                <input type="text"
+                       name="q"
+                       class="form-control"
+                       placeholder="Search products…"
+                       value="{{ $search ?? '' }}">
+                <button class="btn btn-outline-secondary" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+
+        {{-- ═════════════ MODAL: Add Product ═════════════ --}}
         <div class="modal fade" id="addProductModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -97,7 +115,7 @@
                             {{-- --- detail & popisy --- --}}
                             <div class="mt-3">
                                 <label class="form-label">Detail (short label)</label>
-                                <input name="detail" class="form-control">
+                                <input name="details" class="form-control">
                             </div>
 
                             <div class="mt-3">
@@ -132,9 +150,9 @@
                 </div>
             </div>
         </div>
-        {{-- ═════════════  /MODAL  ═════════════ --}}
+        {{-- ═════════════ /MODAL ═════════════ --}}
 
-        {{-- ═════════════  GRID  ═════════════ --}}
+        {{-- ═════════════ GRID ═════════════ --}}
         <div class="row row-cols-2 row-cols-md-4 g-4">
             @forelse ($products as $product)
                 <div class="col">
@@ -149,9 +167,7 @@
 
                                 <a href="#"
                                    title="Delete"
-                                   onclick="event.preventDefault();
-                                            if(confirm('Delete?'))
-                                                document.getElementById('del-{{ $product->id }}').submit();">
+                                   onclick="event.preventDefault(); if(confirm('Delete?')) document.getElementById('del-{{ $product->id }}').submit();">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </a>
                             </div>
@@ -172,9 +188,9 @@
                     </form>
                 </div>
             @empty
-                <p>No products yet.</p>
+                <p>No products found.</p>
             @endforelse
         </div>
-        {{-- ═════════════  /GRID  ═════════════ --}}
+        {{-- ═════════════ /GRID ═════════════ --}}
     </div>
 @endsection

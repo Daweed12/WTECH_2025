@@ -2,9 +2,9 @@
 
 @section('contents')
     <div class="container my-5">
-        <h2>Platba a doprava</h2>
+        <h2>Payment & Shipping</h2>
 
-        <form action="{{ route('cart.payment') }}" method="POST">
+        <form action="{{ route('cart.payment') }}" method="POST" id="payment-form">
             @csrf
             <div class="row">
                 {{-- Ľavý stĺpec: doprava & platba --}}
@@ -13,11 +13,12 @@
                     @foreach($deliveryMethods as $method)
                         <div class="form-check mb-2">
                             <input
-                                class="form-check-input"
+                                class="form-check-input delivery-radio"
                                 type="radio"
                                 name="delivery_method"
                                 id="delivery_{{ $method->id }}"
                                 value="{{ $method->id }}"
+                                data-fee="{{ $method->fee }}"
                                 {{ old('delivery_method', $deliveryMethods->first()->id) == $method->id ? 'checked' : '' }}
                                 required
                             >
@@ -31,11 +32,12 @@
                     @foreach($paymentMethods as $method)
                         <div class="form-check mb-2">
                             <input
-                                class="form-check-input"
+                                class="form-check-input payment-radio"
                                 type="radio"
                                 name="payment_method"
                                 id="payment_{{ $method->id }}"
                                 value="{{ $method->id }}"
+                                data-fee="{{ $method->fee }}"
                                 {{ old('payment_method',$paymentMethods->first()->id) == $method->id ? 'checked' : '' }}
                                 required
                             >
@@ -55,14 +57,12 @@
                             @if($address)
                                 <p><strong>Shipping to:</strong><br>
                                     @if(is_array($address))
-                                        {{-- guest_address zo session --}}
                                         {{ $address['first_name'] }} {{ $address['last_name'] }}<br>
                                         {{ $address['address_line_1'] }}<br>
                                         {{ $address['city'] }}, {{ $address['zip'] }}<br>
                                         {{ $address['country'] }}<br>
                                         Tel: {{ $address['phone'] }}
                                     @else
-                                        {{-- authenticated --}}
                                         {{ $address->first_name }} {{ $address->last_name }}<br>
                                         {{ $address->address_line_1 }}<br>
                                         {{ $address->city }}, {{ $address->zip }}<br>
@@ -87,16 +87,28 @@
                                 @php
                                     $subtotal     = $cart->subtotal();
                                     $delMethod    = $deliveryMethods->firstWhere('id', old('delivery_method',$deliveryMethods->first()->id));
-                                    $payMethod    = $paymentMethods->firstWhere('id', old('payment_method',   $paymentMethods->first()->id));
+                                    $payMethod    = $paymentMethods->firstWhere('id', old('payment_method',$paymentMethods->first()->id));
                                     $deliveryFee  = $delMethod->fee;
                                     $paymentFee   = $payMethod->fee;
                                     $total        = $subtotal + $deliveryFee + $paymentFee;
                                 @endphp
 
-                                <div class="d-flex justify-content-between"><strong>Subtotal:</strong><span>€{{ number_format($subtotal,2,',',' ') }}</span></div>
-                                <div class="d-flex justify-content-between"><strong>Shipping:</strong><span>€{{ number_format($deliveryFee,2,',',' ') }}</span></div>
-                                <div class="d-flex justify-content-between mb-3"><strong>Payment fee:</strong><span>€{{ number_format($paymentFee,2,',',' ') }}</span></div>
-                                <div class="d-flex justify-content-between"><strong>Total:</strong><strong>€{{ number_format($total,2,',',' ') }}</strong></div>
+                                <div class="d-flex justify-content-between">
+                                    <strong>Subtotal:</strong>
+                                    <span id="subtotal-amount">€{{ number_format($subtotal,2,',',' ') }}</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <strong>Shipping:</strong>
+                                    <span id="shipping-fee">€{{ number_format($deliveryFee,2,',',' ') }}</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <strong>Payment fee:</strong>
+                                    <span id="payment-fee">€{{ number_format($paymentFee,2,',',' ') }}</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <strong>Total:</strong>
+                                    <strong id="total-amount">€{{ number_format($total,2,',',' ') }}</strong>
+                                </div>
                             @else
                                 <p>Empty cart.</p>
                             @endif
@@ -116,4 +128,31 @@
             </div>
         </form>
     </div>
+@endsection
+
+@section('another_scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const subtotal = parseFloat("{{ $subtotal }}".replace(',', '.')) || 0;
+
+            function formatPrice(value) {
+                const parts = value.toFixed(2).split('.');
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+                return '€' + parts[0] + ',' + parts[1];
+            }
+
+            function updateSummary() {
+                const deliveryFee = parseFloat(document.querySelector('input[name="delivery_method"]:checked').dataset.fee) || 0;
+                const paymentFee  = parseFloat(document.querySelector('input[name="payment_method"]:checked').dataset.fee)  || 0;
+                const total       = subtotal + deliveryFee + paymentFee;
+
+                document.getElementById('shipping-fee').textContent = formatPrice(deliveryFee);
+                document.getElementById('payment-fee').textContent  = formatPrice(paymentFee);
+                document.getElementById('total-amount').textContent = formatPrice(total);
+            }
+
+            document.querySelectorAll('.delivery-radio, .payment-radio')
+                .forEach(radio => radio.addEventListener('change', updateSummary));
+        });
+    </script>
 @endsection

@@ -65,8 +65,8 @@
         <form action="{{ route('cart.finalize') }}" method="POST">
             @csrf
             <div class="d-flex justify-content-between">
-                <a href="{{ route('cart.payment.form') }}" class="btn btn-secondary">Späť</a>
-                <button type="submit" class="btn btn-success">Potvrdiť objednávku</button>
+                <a href="{{ route('cart.payment.form') }}" class="btn btn-secondary">Back</a>
+                <button type="submit" class="btn btn-success">Confirm order</button>
             </div>
         </form>
     </div>

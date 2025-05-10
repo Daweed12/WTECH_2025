@@ -8,7 +8,7 @@
             @csrf
 
             <div class="row">
-                {{-- Ľavý stĺpec: údaje o adrese --}}
+                {{-- Left column: address details --}}
                 <div class="col-md-6">
                     {{-- First Name --}}
                     <div class="mb-3">
@@ -20,6 +20,9 @@
                             class="form-control"
                             value="{{ old('first_name', optional($address)->first_name) }}"
                             required
+                            pattern="[A-Za-zÀ-ž\s\-]{1,50}"
+                            title="Only letters, spaces or hyphens; up to 50 characters."
+                            maxlength="50"
                         >
                         @error('first_name')
                         <div class="text-danger">{{ $message }}</div>
@@ -36,6 +39,9 @@
                             class="form-control"
                             value="{{ old('last_name', optional($address)->last_name) }}"
                             required
+                            pattern="[A-Za-zÀ-ž\s\-]{1,50}"
+                            title="Only letters, spaces or hyphens; up to 50 characters."
+                            maxlength="50"
                         >
                         @error('last_name')
                         <div class="text-danger">{{ $message }}</div>
@@ -52,6 +58,7 @@
                             class="form-control"
                             value="{{ old('address_line_1', optional($address)->address_line_1) }}"
                             required
+                            maxlength="255"
                         >
                         @error('address_line_1')
                         <div class="text-danger">{{ $message }}</div>
@@ -68,6 +75,9 @@
                             class="form-control"
                             value="{{ old('city', optional($address)->city) }}"
                             required
+                            pattern="[A-Za-zÀ-ž\s\-]{1,100}"
+                            title="Only letters, spaces or hyphens; up to 100 characters."
+                            maxlength="100"
                         >
                         @error('city')
                         <div class="text-danger">{{ $message }}</div>
@@ -84,6 +94,9 @@
                             class="form-control"
                             value="{{ old('zip', optional($address)->zip) }}"
                             required
+                            pattern="\d{3}\s?\d{2}"
+                            title="Format: 12345 or 123 45"
+                            maxlength="6"
                         >
                         @error('zip')
                         <div class="text-danger">{{ $message }}</div>
@@ -100,6 +113,9 @@
                             class="form-control"
                             value="{{ old('country', optional($address)->country) }}"
                             required
+                            pattern="[A-Za-z\s\-]{1,100}"
+                            title="Only letters, spaces or hyphens; up to 100 characters."
+                            maxlength="100"
                         >
                         @error('country')
                         <div class="text-danger">{{ $message }}</div>
@@ -116,6 +132,9 @@
                             class="form-control"
                             value="{{ old('phone', optional($address)->phone) }}"
                             required
+                            pattern="\+?[0-9\-\s]{7,20}"
+                            title="7–20 digits, may start with +, spaces or dashes allowed."
+                            maxlength="20"
                         >
                         @error('phone')
                         <div class="text-danger">{{ $message }}</div>
@@ -123,7 +142,7 @@
                     </div>
                 </div>
 
-                {{-- Pravý stĺpec: zhrnutie košíka --}}
+                {{-- Right column: order summary --}}
                 <div class="col-md-6">
                     <h3>Order Summary</h3>
                     <div class="card">
@@ -149,7 +168,7 @@
                 </div>
             </div>
 
-            {{-- Tlačidlá pod formulárom --}}
+            {{-- Buttons under the form --}}
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-between">

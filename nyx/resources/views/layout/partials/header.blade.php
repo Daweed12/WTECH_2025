@@ -1,10 +1,11 @@
 {{-- resources/views/header.blade.php --}}
 
-@inject('cartCtrl', 'App\Http\Controllers\CartController')
 @php
-    // Načítame aktuálny košík (guest alebo user)
-    $cart = $cartCtrl->getCart();
-    // Spočítame celkové množstvo položiek
+    use App\Http\Controllers\CartController;
+    // Resolve the CartController and get current cart (guest or user)
+    $cartCtrl  = app(CartController::class);
+    $cart      = $cartCtrl->getCart();
+    // Sum up all item quantities
     $cartCount = $cart->items->sum('quantity');
 @endphp
 
@@ -94,7 +95,7 @@
                 @if($cartCount > 0)
                     <span
                         class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle p-1"
-                        style="font-size: .6rem; line-height: 1;">
+                        style="font-size:.6rem; line-height:1;">
                         {{ $cartCount }}
                     </span>
                 @endif

@@ -2,14 +2,14 @@
 
 @section('contents')
     <div class="container my-5">
-        <h2>Potvrdenie objednávky</h2>
+        <h2>Order confirmation</h2>
 
         {{-- Adresa, doprava, platba atď. ako doteraz --}}
 
         {{-- Položky v objednávke --}}
         <div class="card mb-4">
             <div class="card-body">
-                <h4>Položky v objednávke</h4>
+                <h4>Items in your order</h4>
                 <ul class="list-group mb-3">
                     @foreach($order->items as $item)
                         @php
@@ -47,15 +47,15 @@
                     <span>€{{ number_format($subtotal, 2, ',', ' ') }}</span>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <strong>Doprava:</strong>
+                    <strong>Shipping:</strong>
                     <span>€{{ number_format($deliveryFee, 2, ',', ' ') }}</span>
                 </div>
                 <div class="d-flex justify-content-between mb-3">
-                    <strong>Platba:</strong>
+                    <strong>Payment fee:</strong>
                     <span>€{{ number_format($paymentFee, 2, ',', ' ') }}</span>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <strong>Celkovo:</strong>
+                    <strong>Total:</strong>
                     <strong>€{{ number_format($total, 2, ',', ' ') }}</strong>
                 </div>
             </div>

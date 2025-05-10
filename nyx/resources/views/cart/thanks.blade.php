@@ -4,27 +4,27 @@
 
 @section('contents')
     <div class="container my-5">
-        <h2 class="mb-4">Ďakujeme za vašu objednávku!</h2>
+        <h2 class="mb-4">Thank you for your order!</h2>
 
         <p class="lead">
-            Vaša objednávka bola úspešne prijatá a práve ju spracovávame.
-            Čoskoro vám pošleme potvrdenie e-mailom s detailmi vašej objednávky.
+            Your order has been successfully received and is now being processed.
+            We will send you an email confirmation with the details of your order shortly.
         </p>
 
         {{-- Voliteľne: ak máte číslo objednávky v session --}}
         @if(session('order_id'))
             <p>
-                <strong>Číslo objednávky:</strong>
+                <strong>Order Number:</strong>
                 {{ session('order_id') }}
             </p>
         @endif
 
         <div class="mt-5 d-flex justify-content-center">
             <a href="{{ route('home') }}" class="btn btn-primary me-3">
-                Späť na úvod
+                Back to Home
             </a>
             <a href="{{ route('cart.preview') }}" class="btn btn-secondary">
-                Zobraziť košík
+                View Cart
             </a>
         </div>
     </div>

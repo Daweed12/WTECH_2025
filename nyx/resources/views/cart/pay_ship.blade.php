@@ -9,7 +9,7 @@
             <div class="row">
                 {{-- Ľavý stĺpec: doprava & platba --}}
                 <div class="col-md-6">
-                    <h4>Doprava</h4>
+                    <h4>Shipping</h4>
                     @foreach($deliveryMethods as $method)
                         <div class="form-check mb-2">
                             <input
@@ -27,7 +27,7 @@
                         </div>
                     @endforeach
 
-                    <h4 class="mt-4">Platba</h4>
+                    <h4 class="mt-4">Payment fee</h4>
                     @foreach($paymentMethods as $method)
                         <div class="form-check mb-2">
                             <input
@@ -94,11 +94,11 @@
                                 @endphp
 
                                 <div class="d-flex justify-content-between"><strong>Subtotal:</strong><span>€{{ number_format($subtotal,2,',',' ') }}</span></div>
-                                <div class="d-flex justify-content-between"><strong>Doprava:</strong><span>€{{ number_format($deliveryFee,2,',',' ') }}</span></div>
-                                <div class="d-flex justify-content-between mb-3"><strong>Platba:</strong><span>€{{ number_format($paymentFee,2,',',' ') }}</span></div>
+                                <div class="d-flex justify-content-between"><strong>Shipping:</strong><span>€{{ number_format($deliveryFee,2,',',' ') }}</span></div>
+                                <div class="d-flex justify-content-between mb-3"><strong>Payment fee:</strong><span>€{{ number_format($paymentFee,2,',',' ') }}</span></div>
                                 <div class="d-flex justify-content-between"><strong>Total:</strong><strong>€{{ number_format($total,2,',',' ') }}</strong></div>
                             @else
-                                <p>Košík je prázdny.</p>
+                                <p>Empty cart.</p>
                             @endif
                         </div>
                     </div>
@@ -109,8 +109,8 @@
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
-                        <a href="{{ route('cart.preview') }}" class="btn btn-secondary">Späť do košíka</a>
-                        <button type="submit" class="btn btn-primary">Dokončiť objednávku</button>
+                        <a href="{{ route('cart.preview') }}" class="btn btn-secondary">Back to cart</a>
+                        <button type="submit" class="btn btn-primary">Continue</button>
                     </div>
                 </div>
             </div>

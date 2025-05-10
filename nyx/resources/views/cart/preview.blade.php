@@ -117,7 +117,13 @@
                         <span>Subtotal:</span>
                         <span class="fw-bold">€{{ number_format($cart->subtotal(), 2, ',', '') }}</span>
                     </div>
-                    <a href="{{ route('cart.address.form') }}" class="btn btn-primary w-100">
+                    @php $hasItems = $cart->items->count() > 0; @endphp
+
+                    <a
+                        href="{{ $hasItems ? route('cart.address.form') : '#' }}"
+                        class="btn btn-primary w-100 {{ $hasItems ? '' : 'disabled' }}"
+                        @if(! $hasItems) aria-disabled="true" @endif
+                    >
                         Proceed to Checkout
                     </a>
                 </div>

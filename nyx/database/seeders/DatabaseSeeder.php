@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             UserAddressSeeder::class,
             PaymentMethodsTableSeeder::class,
             DeliveryMethodsTableSeeder::class,
+            AssetSeeder::class,
         ]);
     }
 }

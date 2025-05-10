@@ -9,13 +9,14 @@ class Order extends Model
     // Ak používaš guarded miesto fillable, uprav podľa svojho štýlu
     protected $fillable = [
         'user_id',
+        'session_id',
         'address_id',
         'delivery_method_id',
         'payment_method_id',
         'subtotal',
         'delivery_fee',
         'payment_fee',
-        'total',
+        'total_price',
         // sem pridaj ďalšie stĺpce, ktoré máš v orders tabuľke
     ];
 

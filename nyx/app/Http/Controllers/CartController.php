@@ -239,6 +239,7 @@ class CartController extends Controller
         // 5) Uložíme objednávku vrátane total_price
         $order = Order::create([
             'user_id'             => auth()->id(),
+            'session_id'          => $cart->session_id,
             'address_id'          => session('address_id'),
             'delivery_method_id'  => $deliveryMethod->id,
             'payment_method_id'   => $paymentMethod->id,

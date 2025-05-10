@@ -18,7 +18,7 @@ return new class extends Migration
                 ->nullOnDelete();
 
             // Session token (pre guest checkout)
-            $table->string('session_token')
+            $table->string('session_id')
                 ->nullable();
 
             // Stav objednávky

@@ -114,7 +114,7 @@
                      alt="Product Image">
                 <div class="banner-register text-center">
                     <h2 class="text-white fw-bold">REGISTER AND GET DISCOUNT 10% FOR YOUR FIRST PURCHASE!</h2>
-                    <a href="../login_register/login_register_user.html" class="btn btn-outline-light fw-bold mt-3">REGISTER</a>
+                    <a href="{{ route('account') }}" class="btn btn-outline-light fw-bold mt-3">REGISTER</a>
                 </div>
             </div>
         </div>

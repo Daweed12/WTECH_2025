@@ -93,13 +93,22 @@
 
                                 <div class="col-md-4">
                                     <label class="form-label">Category*</label>
-                                    <input name="category" class="form-control"
-                                           placeholder="e.g. ring" required>
+                                    <select name="category" class="form-select" required>
+                                        <option value="" disabled selected>– choose –</option>
+                                        <option value="rings">Rings</option>
+                                        <option value="necklaces">Necklaces</option>
+                                        <option value="bracelets">Bracelets</option>
+                                        <option value="earrings">Earrings</option>
+                                    </select>
                                 </div>
                                 <div class="col-md-4">
-                                    <label class="form-label">Color / material</label>
-                                    <input name="color" class="form-control"
-                                           placeholder="e.g. gold">
+                                    <label class="form-label">Color / Material*</label>
+                                    <select name="color" class="form-select" required>
+                                        <option value="" disabled selected>– choose –</option>
+                                        <option value="silver">Silver</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="diamond">Diamond</option>
+                                    </select>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Gender</label>

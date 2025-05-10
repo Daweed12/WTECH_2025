@@ -24,8 +24,11 @@
                 <div class="row mb-4 align-items-center">
                     <div class="col-md-3 text-center mb-3 mb-md-0">
                         <div class="avatar-container">
-                            <img src="{{ Auth::user()->profile_photo_url ?? asset('images/default-avatar.png') }}"
-                                 alt="Avatar" class="avatar-img rounded-circle">
+                            <img
+                                src="{{ Auth::user()->profile_photo_url ?? asset('storage/icons/avatar.jpg') }}"
+                                alt="Avatar"
+                                class="avatar-img rounded-circle"
+                            >
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -48,24 +51,28 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName" class="form-label">First Name</label>
-                            <input type="text"
-                                   class="form-control @error('first_name') is-invalid @enderror"
-                                   id="firstName"
-                                   name="first_name"
-                                   value="{{ old('first_name', Auth::user()->first_name) }}"
-                                   required>
+                            <input
+                                type="text"
+                                class="form-control @error('first_name') is-invalid @enderror"
+                                id="firstName"
+                                name="first_name"
+                                value="{{ old('first_name', Auth::user()->first_name) }}"
+                                required
+                            >
                             @error('first_name')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text"
-                                   class="form-control @error('last_name') is-invalid @enderror"
-                                   id="lastName"
-                                   name="last_name"
-                                   value="{{ old('last_name', Auth::user()->last_name) }}"
-                                   required>
+                            <input
+                                type="text"
+                                class="form-control @error('last_name') is-invalid @enderror"
+                                id="lastName"
+                                name="last_name"
+                                value="{{ old('last_name', Auth::user()->last_name) }}"
+                                required
+                            >
                             @error('last_name')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -76,11 +83,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="phoneNumber" class="form-label">Phone Number</label>
-                            <input type="tel"
-                                   class="form-control @error('phone') is-invalid @enderror"
-                                   id="phoneNumber"
-                                   name="phone"
-                                   value="{{ old('phone', Auth::user()->phone) }}">
+                            <input
+                                type="tel"
+                                class="form-control @error('phone') is-invalid @enderror"
+                                id="phoneNumber"
+                                name="phone"
+                                value="{{ old('phone', Auth::user()->phone) }}"
+                            >
                             @error('phone')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -91,20 +100,24 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="password" class="form-label">New Password</label>
-                            <input type="password"
-                                   class="form-control @error('password') is-invalid @enderror"
-                                   id="password"
-                                   name="password">
+                            <input
+                                type="password"
+                                class="form-control @error('password') is-invalid @enderror"
+                                id="password"
+                                name="password"
+                            >
                             @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="confirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password"
-                                   class="form-control"
-                                   id="confirmPassword"
-                                   name="password_confirmation">
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="confirmPassword"
+                                name="password_confirmation"
+                            >
                         </div>
                     </div>
 
@@ -119,7 +132,7 @@
                     </div>
                 </form>
 
-                {{-- Logout button outside of the update form --}}
+                {{-- Logout button --}}
                 <form method="POST" action="{{ route('logout') }}" class="mt-3">
                     @csrf
                     <button type="submit" class="btn btn-danger">
@@ -138,6 +151,7 @@
                     </div>
                     <div class="mb-2 d-flex justify-content-between">
                         <span>Wishlist Items</span>
+                        <span>{{ Auth::user()->wishlist_items_count ?? 0 }}</span>
                     </div>
                     <div class="mb-2 d-flex justify-content-between">
                         <span>Membership Level</span>
@@ -150,8 +164,8 @@
                             <li>
                                 Order #{{ $order->id }} –
                                 <span class="text-{{ $order->status_class }}">
-                                {{ ucfirst($order->status) }}
-                            </span>
+                                    {{ ucfirst($order->status) }}
+                                </span>
                             </li>
                         @endforeach
                     </ul>

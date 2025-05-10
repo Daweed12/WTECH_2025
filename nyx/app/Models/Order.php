@@ -13,11 +13,11 @@ class Order extends Model
         'address_id',
         'delivery_method_id',
         'payment_method_id',
-        'subtotal',
+        'total_price',
         'delivery_fee',
         'payment_fee',
-        'total_price',
-        // sem pridaj ďalšie stĺpce, ktoré máš v orders tabuľke
+        'discount',
+        'status',
     ];
 
     /**

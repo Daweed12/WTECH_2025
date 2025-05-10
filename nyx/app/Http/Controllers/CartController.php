@@ -219,6 +219,21 @@ class CartController extends Controller
             'payment_method'  => 'required|exists:payment_methods,id',
         ]);
 
+        // Ak sme guest a máme uložené guest_address, vytvorím z neho Address v DB
+        if (! auth()->check() && session()->has('guest_address')) {
+            $guest = session('guest_address');
+
+            // Vytvorím nový záznam v addresses (user_id zostane NULL)
+            $address = Address::create($guest);
+
+            // Uložím ID do session tak, aby sa použilo pri Order::create()
+            session(['address_id' => $address->id]);
+
+            // (Voliteľne) môžeme zmazať staré guest_address:
+            session()->forget('guest_address');
+        }
+
+
         // 1) Načítame košík
         $cart = $this->getCart();
 

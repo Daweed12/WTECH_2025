@@ -1,4 +1,3 @@
-{{-- resources/views/cart/thanks.blade.php --}}
 
 @extends('layout.app')
 
@@ -11,7 +10,6 @@
             We will send you an email confirmation with the details of your order shortly.
         </p>
 
-        {{-- Voliteľne: ak máte číslo objednávky v session --}}
         @if(session('order_id'))
             <p>
                 <strong>Order Number:</strong>
@@ -29,3 +27,4 @@
         </div>
     </div>
 @endsection
+

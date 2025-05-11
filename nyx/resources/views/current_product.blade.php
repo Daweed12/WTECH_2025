@@ -1,4 +1,3 @@
-{{-- resources/views/current_product.blade.php --}}
 
 @extends('layout.app')
 
@@ -6,7 +5,6 @@
     use Illuminate\Support\Str;
 @endphp
 
-{{-- CSS pre detail produktu + Best-Sellers widget --}}
 @vite([
     'resources/css/product_detail.css',
     'resources/css/best-sellers.css'
@@ -16,7 +14,6 @@
     <div class="container product-detail my-5">
         <div class="row g-5 align-items-start">
 
-            {{-- ================= Obrázkový slider ================= --}}
             <div class="col-lg-6">
                 @if($product->images->isNotEmpty())
                     <div id="productCarousel"
@@ -33,7 +30,6 @@
                             @endforeach
                         </div>
 
-                        {{-- Šípka ← --}}
                         <button class="carousel-control-prev" type="button"
                                 data-bs-target="#productCarousel"
                                 data-bs-slide="prev">
@@ -41,7 +37,6 @@
                             <span class="visually-hidden">Previous</span>
                         </button>
 
-                        {{-- Šípka → --}}
                         <button class="carousel-control-next" type="button"
                                 data-bs-target="#productCarousel"
                                 data-bs-slide="next">
@@ -49,7 +44,6 @@
                             <span class="visually-hidden">Next</span>
                         </button>
 
-                        {{-- Thumbnaily pod carouselom --}}
                         <div class="carousel-indicators custom-indicators">
                             @foreach($product->images as $i => $img)
                                 <button type="button"
@@ -71,7 +65,6 @@
                 @endif
             </div>
 
-            {{-- ================= Informácie o produkte ================= --}}
             <div class="col-lg-6">
                 <h1 class="product-title">{{ Str::title($product->title) }}</h1>
 
@@ -91,7 +84,6 @@
                     {{ $product->description }}
                 </p>
 
-                {{-- ADD TO CART FORM --}}
                 <form
                     method="POST"
                     action="{{ route('cart.add', $product->id) }}"
@@ -116,7 +108,6 @@
                     </button>
                 </form>
 
-                {{-- ======= DETAIL z databázy ======= --}}
                 <h5 class="detail-heading fw-bold mb-2">DETAIL:</h5>
                 @php
                     $details = is_array($product->details)
@@ -139,13 +130,10 @@
         </div>
     </div>
 
-    {{-- ================= BEST SELLERS ================= --}}
     <div class="container">
         <x-best-sellers :limit="4" />
     </div>
 @endsection
-
-
 
 @section('another_scripts')
     <script>
@@ -167,3 +155,4 @@
         });
     </script>
 @endsection
+

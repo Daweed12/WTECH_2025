@@ -3,7 +3,7 @@
 @import "./pages/account.css";
 @import "./pages/login_register.css";
 @import "./pages/cart.css";
-/* Base body styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
@@ -12,7 +12,6 @@ body {
     padding: 0;
 }
 
-/* Search input field styling */
 .custom-search {
     width: 100%;
     padding: 5px 10px;
@@ -23,28 +22,24 @@ body {
     transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* Slider image dimensions and fit */
 .sliding-image {
     width: 100%;
     height: 600px;
     object-fit: cover;
 }
 
-/* Search input focus state styling */
 .custom-search:focus {
     outline: none;
     box-shadow: none;
     border-color: black;
 }
 
-/* Search form container positioning */
 .search-form {
     max-width: 300px;
     margin-left: 0;
     margin-right: 20px;
 }
 
-/* Sign-in link styling and hover effects */
 .sign-in-link {
     text-decoration: none;
     color: black;
@@ -55,7 +50,6 @@ body {
     color: gray;
 }
 
-/* Search bar container styling */
 .search-bar {
     position: fixed;
     z-index: 9999;
@@ -63,7 +57,6 @@ body {
     width: 100%;
 }
 
-/* Top navigation bar styling */
 .top-bar {
     position: fixed;
     top: 0;
@@ -75,7 +68,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Top bar image container styling */
 .top-bar-image {
     margin: 0 auto;
     display: flex;
@@ -83,7 +75,6 @@ body {
     justify-content: center;
 }
 
-/* Main navigation bar styling */
 .navbar {
     position: fixed;
     top: 36px;
@@ -94,12 +85,10 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation icon color */
 .nav-link i {
     color: #fff;
 }
 
-/* Brand logo styling */
 .navbar-brand {
     font-weight: bold;
     color: white;
@@ -108,7 +97,6 @@ body {
     color: white;
 }
 
-/* Hamburger menu icon styling */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     border: none;
@@ -116,7 +104,6 @@ body {
     box-shadow: none;
 }
 
-/* Remove hamburger button focus styles */
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none;
@@ -124,7 +111,6 @@ body {
     border: none;
 }
 
-/* Navigation link styling */
 .navbar-nav .nav-link {
     position: relative;
     display: inline-block;
@@ -134,7 +120,6 @@ body {
     line-height: 1.2;
 }
 
-/* Navigation link underline effect */
 .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
@@ -148,17 +133,14 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Navigation link hover effect */
 .navbar-nav .nav-link:hover::after {
     transform: scaleX(1);
 }
 
-/* Body padding to prevent content overlap */
 body {
     padding-top: 90px;
 }
 
-/* Product image container styling */
 .image-frame {
     position: relative;
     width: 100%;
@@ -170,7 +152,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Shop image container styling */
 .image-frame-shop {
     position: relative;
     width: 100%;
@@ -183,7 +164,6 @@ body {
     border-radius: 10px;
 }
 
-/* Category image styling */
 .category-image {
     width: 100%;
     height: 100%;
@@ -191,7 +171,6 @@ body {
     transition: transform 0.5s ease;
 }
 
-/* Category overlay text container */
 .category-overlay {
     position: absolute;
     bottom: 0;
@@ -204,7 +183,6 @@ body {
     transition: transform 0.5s ease;
 }
 
-/* Category button styling */
 .category-button {
     display: block;
     text-decoration: none;
@@ -213,7 +191,6 @@ body {
     overflow: hidden;
 }
 
-/* Category hover effects */
 .category-button:hover .category-image {
     transform: scale(1.1);
 }
@@ -221,32 +198,25 @@ body {
     transform: translateY(0);
 }
 
-/* Footer styling */
 footer {
     background-color: #4b0830;
     color: #ffffff;
     padding: 2rem 0;
 }
 
-
-/* Footer logo styling */
 footer .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Footer divider styling */
 footer hr {
     border: 1px solid #ced4da;
 }
 
-/* Main logo styling */
 .logo {
     font-size: 35px;
 }
 
-
-/* Sign-in form container styling */
 .signin-container {
     max-width: 400px;
     margin: 50px auto;
@@ -256,25 +226,21 @@ footer hr {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form heading styling */
 h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-/* Form divider styling */
 hr {
     border: 1px solid #ddd;
     margin-bottom: 20px;
 }
 
-/* Form label styling */
 .form-label {
     font-weight: bold;
 }
 
-/* Sign-in button styling */
 .btn-signin {
     width: 100%;
     background-color: #868e96;
@@ -285,46 +251,38 @@ hr {
     font-size: 16px;
 }
 
-/* Sign-in button hover effect */
 .btn-signin:hover {
     background-color: #4b0830;
 }
 
-/* Account section container styling */
 .account-section {
     padding: 2rem 0;
 }
 
-/* Account section heading styling */
 .account-section h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-/* Account section divider styling */
 .account-section hr {
     margin-bottom: 1.5rem;
 }
 
-/* Account section subheading styling */
 .account-section h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-/* Form section divider styling */
 .form-divider {
     border-right: 1px solid #ccc;
 }
 
-/* Account form label styling */
 .account-section form label {
     font-weight: 500;
     margin-bottom: 0.3rem;
 }
 
-/* Account form input field styling */
 .account-section input[type=text],
 .account-section input[type=password],
 .account-section input[type=email] {
@@ -336,7 +294,6 @@ hr {
     border-radius: 4px;
 }
 
-/* Custom button styling */
 .btn-custom {
     background-color: #4b0830;
     color: #fff;
@@ -347,13 +304,11 @@ hr {
     margin-top: 0.5rem;
 }
 
-/* Custom button hover effect */
 .btn-custom:hover {
     background-color: #4b0830;
     color: #fff
 }
 
-/* Avatar container styling */
 .avatar-container {
     width: 150px;
     height: 150px;
@@ -362,21 +317,18 @@ hr {
     margin: 0 auto;
 }
 
-/* Avatar image styling */
 .avatar-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Final image styling */
 .final-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Banner text positioning - top */
 .banner-text-top {
     position: absolute;
     top: 20px;
@@ -389,7 +341,6 @@ hr {
     font-weight: bold;
 }
 
-/* Banner text positioning - bottom */
 .banner-text-bottom {
     position: absolute;
     bottom: 20px;
@@ -402,21 +353,17 @@ hr {
     font-weight: bold;
 }
 
-
-/* ——— ADMIN cards ——— */
 .product-card        { position: relative; overflow: hidden; }
 .product-card img    { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* tmavé „sklo“ + animácia */
 .product-card-overlay{
     position:absolute; inset:0;
     background:rgba(0,0,0,.45);
-    color:#fff; opacity:0;             /* skryté */
+    color:#fff; opacity:0;             
     transition:opacity .25s ease;
 }
 .product-card:hover .product-card-overlay{ opacity:1; }
 
-/* ikony vpravo hore */
 .product-card .action-icons{
     position:absolute; top:.5rem; right:.5rem;
     display:flex; gap:.5rem; font-size:1.25rem;
@@ -429,7 +376,6 @@ hr {
     font-weight:600; letter-spacing:.02em;
 }
 
-/* odstráni spin-buttons */
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -439,7 +385,7 @@ hr {
     -moz-appearance: textfield;
 }
 
-/* voliteľne, ak potrebuješ kaderovanie a veľkosť wrapperu */
 .quantity-wrapper {
-    /* napr. gap, veľkosť tlačidiel, zarovnanie atď. */
+
 }
+

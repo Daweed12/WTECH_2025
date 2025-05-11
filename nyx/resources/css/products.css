@@ -1,15 +1,13 @@
 :root { --brand: #722243; }
 
-/* ===================== GENERAL ==================================== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;             /* kill any page‐wide horizontal scroll */
+    overflow-x: hidden;             
 }
 
-/* ===================== SORT + FILTER BAR ========================== */
 .sort-filter-container {
     display: flex;
     align-items: center;
@@ -32,7 +30,6 @@ body {
     color: var(--brand);
 }
 
-/* ===================== PRODUCT GRID =============================== */
 .products-wrapper {
     display: grid;
     gap: 2rem;
@@ -90,7 +87,6 @@ body {
     margin-top: .25rem;
 }
 
-/* ===================== PAGINATION ================================= */
 .pagination .page-link {
     color: var(--brand);
     border-color: var(--brand);
@@ -100,14 +96,12 @@ body {
     color: #fff;
 }
 
-/* hover */
 .pagination .page-link:hover {
-    background:#fff;             /* nechaj biele */
-    border-color:#d4af37;        /* zlatý border */
-    color:#d4af37;               /* zlatý text */
+    background:#fff;             
+    border-color:#d4af37;        
+    color:#d4af37;               
 }
 
-/* focus (po kliknutí / TAB) – zlatý „ring“ namiesto modrého */
 .pagination .page-link:focus {
     background:#fff;
     border-color:#d4af37;
@@ -115,14 +109,12 @@ body {
     box-shadow:0 0 0 .25rem rgba(212,175,55,.4);
 }
 
-/* aktívna stránka – nechaj fialovú, aby bola zreteľná */
 .pagination .page-item.active .page-link {
     background:#3d0c2f;
     border-color:#3d0c2f;
     color:#fff;
 }
 
-/* ===================== OVERLAY + FILTER SIDEBAR =================== */
 #overlay {
     position: fixed;
     inset: 0;
@@ -149,8 +141,8 @@ body {
     z-index: 2001;
     padding: 20px;
 
-    overflow-x: hidden;            /* prevent any horizontal scroll */
-    /* allow vertical if needed */
+    overflow-x: hidden;            
+
     overflow-y: auto;
 }
 #filterSidebar.active {
@@ -170,14 +162,12 @@ body {
     cursor: pointer;
 }
 
-/* ========= Filter content no horizontal scroll ========= */
 .filter-content {
-    overflow-x: hidden !important; /* disable horizontal scrollbar */
-    overflow-y: auto;              /* still allow vertical scroll */
+    overflow-x: hidden !important; 
+    overflow-y: auto;              
     max-height: calc(100vh - 60px);
 }
 
-/* ===================== FILTER GROUPS ============================ */
 .filter-group {
     margin-bottom: 20px;
 }
@@ -186,7 +176,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Buttons */
 .btn-apply-filter {
     background: #000;
     color: #fff;
@@ -205,7 +194,6 @@ body {
     font-weight: bold;
 }
 
-/* ===================== PRICE SLIDER =============================== */
 .slider {
     position: relative;
     height: 5px;
@@ -250,5 +238,5 @@ body {
     text-align: center;
 }
 
-/* Hide native ranges */
 input[type=range] { display: none; }
+

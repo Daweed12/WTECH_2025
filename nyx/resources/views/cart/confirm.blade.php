@@ -4,9 +4,6 @@
     <div class="container my-5">
         <h2>Order confirmation</h2>
 
-        {{-- Adresa, doprava, platba atď. ako doteraz --}}
-
-        {{-- Položky v objednávke --}}
         <div class="card mb-4">
             <div class="card-body">
                 <h4>Items in your order</h4>
@@ -30,15 +27,15 @@
                 </ul>
 
                 @php
-                    // Dynamický výpočet Subtotal
+
                     $subtotal    = $order->items->sum(function($item) {
                         $unit = $item->price - ($item->discount ?? 0);
                         return $unit * $item->quantity;
                     });
-                    // Poplatky z objednávky
+
                     $deliveryFee = $order->delivery_fee ?? 0;
                     $paymentFee  = $order->payment_fee  ?? 0;
-                    // Celková suma
+
                     $total       = $subtotal + $deliveryFee + $paymentFee;
                 @endphp
 
@@ -61,7 +58,6 @@
             </div>
         </div>
 
-        {{-- Späť / Potvrdiť --}}
         <form action="{{ route('cart.finalize') }}" method="POST">
             @csrf
             <div class="d-flex justify-content-between">
@@ -71,3 +67,4 @@
         </form>
     </div>
 @endsection
+

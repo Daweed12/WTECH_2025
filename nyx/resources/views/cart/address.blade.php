@@ -8,9 +8,9 @@
             @csrf
 
             <div class="row">
-                {{-- Left column: address details --}}
+
                 <div class="col-md-6">
-                    {{-- First Name --}}
+
                     <div class="mb-3">
                         <label for="first_name" class="form-label">First Name</label>
                         <input
@@ -29,7 +29,6 @@
                         @enderror
                     </div>
 
-                    {{-- Last Name --}}
                     <div class="mb-3">
                         <label for="last_name" class="form-label">Last Name</label>
                         <input
@@ -48,7 +47,6 @@
                         @enderror
                     </div>
 
-                    {{-- Address Line 1 --}}
                     <div class="mb-3">
                         <label for="address_line_1" class="form-label">Address</label>
                         <input
@@ -65,7 +63,6 @@
                         @enderror
                     </div>
 
-                    {{-- City --}}
                     <div class="mb-3">
                         <label for="city" class="form-label">City</label>
                         <input
@@ -84,7 +81,6 @@
                         @enderror
                     </div>
 
-                    {{-- ZIP / Postcode --}}
                     <div class="mb-3">
                         <label for="zip" class="form-label">Postcode</label>
                         <input
@@ -103,7 +99,6 @@
                         @enderror
                     </div>
 
-                    {{-- Country --}}
                     <div class="mb-3">
                         <label for="country" class="form-label">Country</label>
                         <input
@@ -122,7 +117,6 @@
                         @enderror
                     </div>
 
-                    {{-- Phone --}}
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone</label>
                         <input
@@ -142,7 +136,6 @@
                     </div>
                 </div>
 
-                {{-- Right column: order summary --}}
                 <div class="col-md-6">
                     <h3>Order Summary</h3>
                     <div class="card">
@@ -168,7 +161,6 @@
                 </div>
             </div>
 
-            {{-- Buttons under the form --}}
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
@@ -180,3 +172,4 @@
         </form>
     </div>
 @endsection
+

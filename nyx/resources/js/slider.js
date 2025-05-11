@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //
-    // 1) FILTER SIDEBAR TOGGLE
-    //
+
     const openBtn       = document.getElementById('openFilter'),
         closeBtn      = document.getElementById('closeFilter'),
         filterSidebar = document.getElementById('filterSidebar'),
@@ -20,9 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('active');
     });
 
-    //
-    // 2) CUSTOM DUAL‐THUMB PRICE SLIDER
-    //
     const slider    = document.getElementById('priceSlider'),
         thumbMin  = slider.querySelector('.thumb-min'),
         thumbMax  = slider.querySelector('.thumb-max'),
@@ -33,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         priceGap  = 10;
     let activeThumb = null;
 
-    // Redraw thumbs + fill bar based on input values
     function updateUI() {
         const minVal  = parseInt(inputMin.value, 10),
             maxVal  = parseInt(inputMax.value, 10),
@@ -46,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         progress.style.width   = `${rightPct - leftPct}%`;
     }
 
-    // While dragging, clamp and enforce gap
     function onPointerMove(e) {
         const rect   = slider.getBoundingClientRect(),
             x      = Math.min(Math.max(0, e.clientX - rect.left), rect.width),
@@ -79,18 +72,55 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('pointerup',   onPointerUp);
     }
 
-    // Attach dragging handlers
     thumbMin.addEventListener('pointerdown', onThumbDown);
     thumbMax.addEventListener('pointerdown', onThumbDown);
 
-    // Also update if user manually types numbers
     inputMin.addEventListener('input', updateUI);
     inputMax.addEventListener('input', updateUI);
 
-    // Initial defaults if inputs are empty
     if (!inputMin.value) inputMin.value = 0;
     if (!inputMax.value) inputMax.value = maxRange;   // 500
 
-// Initial draw
     updateUI();
+
+    const rangeInputs = document.querySelectorAll('input[type="range"]');
+    const priceInputs = document.querySelectorAll('input[type="number"]');
+    const minGap = 100;
+
+    priceInputs.forEach(input => {
+        input.addEventListener('change', e => {
+            let minPrice = parseInt(priceInputs[0].value);
+            let maxPrice = parseInt(priceInputs[1].value);
+
+            if ((maxPrice - minPrice >= minGap) && maxPrice <= rangeInputs[1].max) {
+                if (e.target.className === "min-input") {
+                    rangeInputs[0].value = minPrice;
+                    rangeInputs[0].style.background = `linear-gradient(to right, #d3d3d3 ${(minPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(minPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(maxPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #d3d3d3 ${(maxPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%)`;
+                } else {
+                    rangeInputs[1].value = maxPrice;
+                    rangeInputs[0].style.background = `linear-gradient(to right, #d3d3d3 ${(minPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(minPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(maxPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #d3d3d3 ${(maxPrice - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%)`;
+                }
+            }
+        });
+    });
+
+    rangeInputs.forEach(input => {
+        input.addEventListener('input', e => {
+            let minVal = parseInt(rangeInputs[0].value);
+            let maxVal = parseInt(rangeInputs[1].value);
+
+            if ((maxVal - minVal) < minGap) {
+                if (e.target.className === "min-range") {
+                    rangeInputs[0].value = maxVal - minGap;
+                } else {
+                    rangeInputs[1].value = minVal + minGap;
+                }
+            } else {
+                priceInputs[0].value = minVal;
+                priceInputs[1].value = maxVal;
+                rangeInputs[0].style.background = `linear-gradient(to right, #d3d3d3 ${(minVal - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(minVal - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #722243 ${(maxVal - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%, #d3d3d3 ${(maxVal - rangeInputs[0].min) / (rangeInputs[0].max - rangeInputs[0].min) * 100}%)`;
+            }
+        });
+    });
 });
+

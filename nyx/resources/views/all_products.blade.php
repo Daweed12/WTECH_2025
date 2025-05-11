@@ -1,4 +1,4 @@
-{{-- resources/views/all_products.blade.php --}}
+
 @extends('layout.app')
 
 @php use Illuminate\Support\Str; @endphp
@@ -11,31 +11,30 @@
 @section('contents')
     <div class="container py-4"><!-- Content starts right under NYX header -->
 
-        {{-- SORT + FILTER TOGGLE BAR --}}
         <div class="sort-filter-container">
             <a href="javascript:void(0)" id="openFilter" class="btn-filter">FILTER</a>
 
             <form method="GET" action="{{ route('products.index') }}">
-                {{-- preserve category --}}
+
                 @if($category)
                     <input type="hidden" name="category" value="{{ $category }}">
                 @endif
-                {{-- preserve material/color --}}
+
                 @foreach(request('color', []) as $c)
                     <input type="hidden" name="color[]" value="{{ $c }}">
                 @endforeach
-                {{-- preserve gender --}}
+
                 @foreach(request('gender', []) as $g)
                     <input type="hidden" name="gender[]" value="{{ $g }}">
                 @endforeach
-                {{-- preserve price --}}
+
                 @if(request('min_price'))
                     <input type="hidden" name="min_price" value="{{ request('min_price') }}">
                 @endif
                 @if(request('max_price'))
                     <input type="hidden" name="max_price" value="{{ request('max_price') }}">
                 @endif
-                {{-- preserve search --}}
+
                 @if($query)
                     <input type="hidden" name="q" value="{{ $query }}">
                 @endif
@@ -60,7 +59,6 @@
             </form>
         </div>
 
-        {{-- OVERLAY & SIDEBAR --}}
         <div id="overlay"></div>
         <div id="filterSidebar">
             <div class="filter-header">
@@ -69,7 +67,7 @@
             </div>
             <div class="filter-content">
                 <form method="GET" action="{{ route('products.index') }}">
-                    {{-- preserve search + sort --}}
+
                     @if($query)
                         <input type="hidden" name="q" value="{{ $query }}">
                     @endif
@@ -77,7 +75,6 @@
                         <input type="hidden" name="sort" value="{{ $sort }}">
                     @endif
 
-                    {{-- CATEGORY --}}
                     <div class="filter-group">
                         <h5>Category</h5>
                         @foreach([
@@ -102,7 +99,6 @@
 
                     <hr>
 
-                    {{-- MATERIAL --}}
                     <div class="filter-group">
                         <h5>Material</h5>
                         @foreach(['diamond','gold','silver'] as $c)
@@ -121,7 +117,6 @@
 
                     <hr>
 
-                    {{-- GENDER --}}
                     <div class="filter-group">
                         <h5>Gender</h5>
                         @foreach([
@@ -145,7 +140,6 @@
 
                     <hr>
 
-                    {{-- PRICE --}}
                     <div class="filter-group">
                         <h5>Price</h5>
                         <div class="d-flex align-items-center mb-3">
@@ -187,7 +181,6 @@
             </div>
         </div>
 
-        {{-- NO PRODUCTS / GRID --}}
         @if($products->isEmpty())
             <div class="text-center my-5">
                 <p>No products found.</p>
@@ -216,7 +209,6 @@
             </div>
         @endif
 
-        {{-- PAGINATION --}}
         <div class="d-flex justify-content-center mt-4">
             {{ $products->links('vendor.pagination.bootstrap-5') }}
         </div>
@@ -224,3 +216,4 @@
     </div>
 
 @endsection
+

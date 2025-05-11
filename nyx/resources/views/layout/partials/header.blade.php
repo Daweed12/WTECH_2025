@@ -1,11 +1,10 @@
-{{-- resources/views/header.blade.php --}}
 
 @php
     use App\Http\Controllers\CartController;
-    // Resolve the CartController and get current cart (guest or user)
+
     $cartCtrl  = app(CartController::class);
     $cart      = $cartCtrl->getCart();
-    // Sum up all item quantities
+
     $cartCount = $cart->items->sum('quantity');
 @endphp
 
@@ -62,7 +61,6 @@
         <!-- Header icons (search, wishlist, account, cart) -->
         <div class="d-flex align-items-center ms-auto">
 
-            {{-- ADMIN icon – visible only to users with role = 1 --}}
             @auth
                 @if(Auth::user()->role === 1)
                     <a href="{{ route('admin.dashboard') }}"
@@ -118,3 +116,4 @@
         </form>
     </div>
 </div>
+

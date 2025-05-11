@@ -1,6 +1,4 @@
-/* resources/css/product_detail.css */
 
-/* =============== MAIN IMAGE & CONTAINER =============== */
 .product-detail .main-img {
     width: 100%;
     max-width: 600px;
@@ -11,7 +9,6 @@
     margin: 0 auto;
 }
 
-/* =============== PRODUCT INFO (TITLE, PRICE, DESCRIPTION) =============== */
 .product-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -30,31 +27,30 @@
     margin-bottom: 1.5rem;
 }
 
-/* =============== QUANTITY + ADD TO CART =============== */
 .quantity-wrapper {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     overflow: hidden;
     display: inline-flex;
-    height: 40px;                 /* menšie na výšku */
+    height: 40px;                 
 }
 
 .qty-btn {
     background: transparent;
     border: none;
-    width: 32px;                  /* 40 → 32 */
-    height: 40px;                 /* 48 → 40 */
-    font-size: 1rem;              /* 1.25 → 1 */
+    width: 32px;                  
+    height: 40px;                 
+    font-size: 1rem;              
     line-height: 1;
     cursor: pointer;
 }
 
 .qty-input {
-    width: 48px;                  /* 60 → 48 */
+    width: 48px;                  
     border: none;
     box-shadow: none;
     text-align: center;
-    font-size: 1rem;              /* vyrovnané s .qty-btn */
+    font-size: 1rem;              
     padding: 0;
 }
 
@@ -66,8 +62,8 @@
 .add-to-cart-form .btn-primary {
     background-color: #540032;
     border: none;
-    padding: 0.6rem 1.75rem;      /* užšie a nižšie */
-    font-size: 1rem;              /* 1.125–1.25 → 1 */
+    padding: 0.6rem 1.75rem;      
+    font-size: 1rem;              
     border-radius: 0.5rem;
 }
 
@@ -75,7 +71,6 @@
     background-color: #3d0024;
 }
 
-/* =============== DETAIL LIST =============== */
 .detail-heading {
     margin-top: 2rem;
     font-size: 1.25rem;
@@ -91,17 +86,15 @@
     margin-bottom: 0.5rem;
 }
 
-/* =============== CAROUSEL CONTAINER =============== */
 #productCarousel.carousel {
     position: relative;
 }
 
-/* =============== CAROUSEL ARROWS – VERTIKÁLNE V STREDE =============== */
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50% !important;          /* presun na stred           */
-    bottom: auto !important;      /* zruší pôvodné bottom: 0;  */
+    top: 50% !important;          
+    bottom: auto !important;      
     transform: translateY(-50%);
 
     width: 48px;
@@ -118,14 +111,12 @@
 .carousel-control-prev  { left: 1rem; }
 .carousel-control-next  { right: 1rem; }
 
-/* väčšia ikonka, svetlá farba */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1) brightness(1.2);
     background-size: 1.5rem 1.5rem;
 }
 
-/* =============== THUMBNAILS =============== */
 .custom-indicators {
     display: flex;
     justify-content: center;
@@ -159,7 +150,6 @@
     display: block;
 }
 
-/* =============== RESPONSIVE ADJUSTMENTS =============== */
 @media (max-width: 992px) {
     .quantity-wrapper { width: auto; }
     .add-to-cart-form .btn-primary { flex: 1; }
@@ -177,9 +167,9 @@
     }
 
     .qty-input {
-        width: 48px;          /* fyzická šírka čísla               */
-        flex: 0 0 48px;       /* 0 grow, 0 shrink, 48px basis      */
-        padding: 0;           /* voliteľne – vyhodí vnútorný offset */
+        width: 48px;          
+        flex: 0 0 48px;       
+        padding: 0;           
         font-size: 1rem;
     }
 
@@ -199,3 +189,4 @@
     .carousel-control-next  { right: 0.5rem; }
     .custom-indicators { gap: 0.5rem; }
 }
+

@@ -2,7 +2,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        /* Initialize collapse elements */
+
         const categoriesMenu = document.getElementById('categoriesMenu');
         const searchBar = document.getElementById('navbarSearch');
 
@@ -16,7 +16,6 @@
             searchCollapse = new bootstrap.Collapse(searchBar, { toggle: false });
         }
 
-        /* Toggle buttons for collapsible sections */
         const searchLink = document.querySelector('[data-bs-target="#navbarSearch"]');
         const hamburgerToggler = document.querySelector('.navbar-toggler[data-bs-target="#categoriesMenu"]');
 
@@ -36,7 +35,6 @@
             categoriesCollapse.toggle();
         });
 
-        /* Close collapsible panels when clicking outside */
         document.addEventListener("click", function(e) {
             if (searchBar.classList.contains("show") &&
                 !searchBar.contains(e.target) &&
@@ -51,3 +49,4 @@
         });
     });
 </script>
+

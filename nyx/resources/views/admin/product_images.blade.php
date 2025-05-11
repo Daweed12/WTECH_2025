@@ -5,11 +5,8 @@
 @section('contents')
     <div class="container py-4">
 
-
-
         <h1 class="fw-bold mb-4">Edit images – {{ $product->title }}</h1>
 
-        {{-- flash --}}
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
@@ -19,7 +16,6 @@
             </div>
         @endif
 
-        {{-- aktuálne obrázky --}}
         <div class="row g-4 mb-5">
             @forelse($product->images as $img)
                 <div class="col-6 col-md-3">
@@ -41,7 +37,6 @@
             @endforelse
         </div>
 
-        {{-- upload nových --}}
         <h4 class="mb-3">Upload new images</h4>
         <form  method="POST"
                action="{{ route('admin.products.images.store', $product) }}"
@@ -56,8 +51,7 @@
 
             <button class="btn btn-primary">Add images</button>
 
-
-
         </form>
     </div>
 @endsection
+

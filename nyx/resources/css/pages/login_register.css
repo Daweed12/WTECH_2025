@@ -1,4 +1,4 @@
-/* Banner overlay top text */
+
 .banner-text-top {
     position: absolute;
     top: 20px;
@@ -11,7 +11,6 @@
     font-weight: bold;
 }
 
-/* Banner overlay bottom text */
 .banner-text-bottom {
     position: absolute;
     bottom: 20px;
@@ -24,7 +23,6 @@
     font-weight: bold;
 }
 
-/* Custom button style with purple background */
 .btn-custom {
     background-color: #722243;
     color: #fff;
@@ -38,7 +36,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom button hover state */
 .btn-custom:hover {
     background-color: #5a1d33;
     color: #fff;

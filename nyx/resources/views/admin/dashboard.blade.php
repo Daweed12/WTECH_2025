@@ -1,11 +1,11 @@
-{{-- resources/views/admin/dashboard.blade.php --}}
+
 @extends('layout.app')
 
 @section('title', 'Admin Dashboard')
 
 @section('contents')
     <div class="container py-4">
-        {{-- Flash messages --}}
+
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
@@ -22,7 +22,6 @@
         <h1 class="mb-4 fw-bold">Admin mode</h1>
         <h4 class="mb-3">All items</h4>
 
-        {{-- Add Product button --}}
         <button type="button"
                 class="btn btn-primary mb-4"
                 data-bs-toggle="modal"
@@ -30,7 +29,6 @@
             ➕ Add Product
         </button>
 
-        {{-- Search form --}}
         <form method="GET"
               action="{{ route('admin.dashboard') }}"
               class="mb-4">
@@ -46,7 +44,6 @@
             </div>
         </form>
 
-        {{-- ═════════════ MODAL: Add Product ═════════════ --}}
         <div class="modal fade" id="addProductModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -60,7 +57,7 @@
                         </div>
 
                         <div class="modal-body">
-                            {{-- --- základné údaje --- --}}
+
                             <div class="row g-3">
                                 <div class="col-md-4">
                                     <label class="form-label">Title*</label>
@@ -121,7 +118,6 @@
                                 </div>
                             </div>
 
-                            {{-- --- detail & popisy --- --}}
                             <div class="mt-3">
                                 <label class="form-label">Detail (short label)</label>
                                 <input name="details" class="form-control">
@@ -139,7 +135,6 @@
                                           class="form-control"></textarea>
                             </div>
 
-                            {{-- --- obrázky --- --}}
                             <div class="mt-3">
                                 <label class="form-label">Images (2 – 4)</label>
                                 <input type="file" name="images[]" accept="image/*"
@@ -159,9 +154,7 @@
                 </div>
             </div>
         </div>
-        {{-- ═════════════ /MODAL ═════════════ --}}
 
-        {{-- ═════════════ GRID ═════════════ --}}
         <div class="row row-cols-2 row-cols-md-4 g-4">
             @forelse ($products as $product)
                 <div class="col">
@@ -200,6 +193,7 @@
                 <p>No products found.</p>
             @endforelse
         </div>
-        {{-- ═════════════ /GRID ═════════════ --}}
+
     </div>
 @endsection
+

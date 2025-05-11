@@ -16,15 +16,12 @@
 
             <div class="row g-5">
 
-                {{-- ĽAVÝ STĹPEC – náhľad + obrázky --}}
                 <div class="col-12 col-md-4">
 
-                    {{-- Hlavný obrázok --}}
                     <img  src="{{ $product->first_image_url ?? asset('storage/defaults/no-image.png') }}"
                           class="img-fluid mb-4 shadow-sm border"
                           alt="{{ $product->title }}">
 
-                    {{-- Tlačidlo na samostatnú stránku / modal pre obrázky --}}
                     <a  href="{{ route('admin.products.images.edit', $product) }}"
                         class="btn w-100 text-white"
                         style="background:#3d0c2f">
@@ -32,10 +29,8 @@
                     </a>
                 </div>
 
-                {{-- PRAVÝ STĹPEC – formulár --}}
                 <div class="col-12 col-md-8">
 
-                    {{-- TITLE --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Name</label>
                         <input type="text"
@@ -45,7 +40,6 @@
                         @error('title') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- PRICE --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Price (€)</label>
                         <input type="number" step="0.01"
@@ -55,7 +49,6 @@
                         @error('price') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- DISCOUNT --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Discount (%)</label>
                         <input type="number"
@@ -65,7 +58,6 @@
                         @error('discount') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- CATEGORY --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Category</label>
                         <input type="text"
@@ -75,7 +67,6 @@
                         @error('category') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- COLOR + GENDER (dvojstĺpec) --}}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-semibold">Color</label>
@@ -99,7 +90,6 @@
                         </div>
                     </div>
 
-                    {{-- DESCRIPTION --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Description</label>
                         <textarea  name="description"
@@ -108,7 +98,6 @@
                         @error('description') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- SUMMARY --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Summary</label>
                         <textarea  name="summary"
@@ -117,7 +106,6 @@
                         @error('summary') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- DETAILS (JSON / text) --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Details (JSON / key-value)</label>
                         <textarea  name="details"
@@ -126,7 +114,6 @@
                         @error('details') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- SKU & SLUG (dvojstĺpec) --}}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label fw-semibold">SKU</label>
@@ -147,7 +134,6 @@
                         </div>
                     </div>
 
-                    {{-- POPULARITY --}}
                     <div class="mb-4">
                         <label class="form-label fw-semibold">Popularity</label>
                         <input type="number"
@@ -157,7 +143,6 @@
                         @error('popularity') <div class="invalid-feedback">{{ $message }}</div> @enderror
                     </div>
 
-                    {{-- SAVE BUTTON --}}
                     <button type="submit"
                             class="btn w-100 text-white py-2 fw-semibold"
                             style="background:#3d0c2f">
@@ -169,3 +154,4 @@
 
     </div>
 @endsection
+

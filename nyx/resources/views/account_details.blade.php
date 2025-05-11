@@ -3,7 +3,6 @@
 @section('contents')
     <main class="container my-5">
 
-        {{-- flash message --}}
         @if(session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
@@ -42,12 +41,10 @@
 
                 <h4 class="mb-3">Update Your Details</h4>
 
-                {{-- Update form --}}
                 <form method="POST" action="{{ route('account.update') }}">
                     @csrf
                     @method('PUT')
 
-                    {{-- First & Last --}}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName" class="form-label">First Name</label>
@@ -79,7 +76,6 @@
                         </div>
                     </div>
 
-                    {{-- Phone --}}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="phoneNumber" class="form-label">Phone Number</label>
@@ -96,7 +92,6 @@
                         </div>
                     </div>
 
-                    {{-- Password change --}}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="password" class="form-label">New Password</label>
@@ -121,7 +116,6 @@
                         </div>
                     </div>
 
-                    {{-- Form actions --}}
                     <div class="mt-4 d-flex">
                         <a href="{{ route('home') }}" class="btn btn-secondary me-3">
                             Cancel
@@ -132,7 +126,6 @@
                     </div>
                 </form>
 
-                {{-- Logout button --}}
                 <form method="POST" action="{{ route('logout') }}" class="mt-3">
                     @csrf
                     <button type="submit" class="btn btn-danger">
@@ -174,3 +167,4 @@
         </div>
     </main>
 @endsection
+

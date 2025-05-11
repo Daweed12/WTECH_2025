@@ -7,7 +7,7 @@
         <form action="{{ route('cart.payment') }}" method="POST" id="payment-form">
             @csrf
             <div class="row">
-                {{-- Ľavý stĺpec: doprava & platba --}}
+
                 <div class="col-md-6">
                     <h4>Shipping</h4>
                     @foreach($deliveryMethods as $method)
@@ -48,12 +48,11 @@
                     @endforeach
                 </div>
 
-                {{-- Pravý stĺpec: zhrnutie a adresa --}}
                 <div class="col-md-6">
                     <h3>Order Summary</h3>
                     <div class="card mb-3">
                         <div class="card-body">
-                            {{-- Adresa --}}
+
                             @if($address)
                                 <p><strong>Shipping to:</strong><br>
                                     @if(is_array($address))
@@ -73,7 +72,6 @@
                                 <hr>
                             @endif
 
-                            {{-- Položky košíka --}}
                             @if($cart->items->count())
                                 <ul class="list-group mb-3">
                                     @foreach($cart->items as $item)
@@ -117,7 +115,6 @@
                 </div>
             </div>
 
-            {{-- Tlačidlá pod formulárom --}}
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-between">
@@ -156,3 +153,4 @@
         });
     </script>
 @endsection
+
